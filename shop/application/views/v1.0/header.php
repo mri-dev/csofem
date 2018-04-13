@@ -11,7 +11,7 @@
     <?php endif; ?>
     <? $this->render('meta'); ?>
 </head>
-<body class="<?=$this->bodyclass?>" ng-controller="App" ng-init="init(<?=($this->gets[0] == 'kosar' && $this->gets[1] == 4)?'true':'false'?>)">
+<body class="<?=$this->bodyclass?><?=($this->showslideshow)?' slidered':''?>" ng-controller="App" ng-init="init(<?=($this->gets[0] == 'kosar' && $this->gets[1] == 4)?'true':'false'?>)">
 <div ng-show="showed" ng-controller="popupReceiver" class="popupview" data-ng-init="init({'contentWidth': 1150, 'domain': '.csofem.web-pro.hu', 'receiverdomain' : '<?=POPUP_RECEIVER_URL?>', 'imageRoot' : '<?=POPUP_IMG_ROOT?>/'})"><ng-include src="'/<?=VIEW?>popupview.html'"></ng-include></div>
 <? if(!empty($this->settings[google_analitics])): ?>
 <script>
@@ -62,7 +62,7 @@
       <div class="navs">
         <div class="flex">
           <div class="ugyfelkapu">
-            <a href="/user/belepes"><i class="fa fa-user"></i> Ügyfélkapu</a>
+            <a href="/user/belepes"><i class="fa fa-lock"></i> Ügyfélkapu</a>
           </div>
           <div class="kedvencek">
             <a href="/kedvencek"><i class="fa fa-star"></i> Kedvencek <span class="badge">{{fav_num}}</span></a>
@@ -156,9 +156,12 @@
       </div>
     </div>
   </div>
+  <?php if ( $this->showslideshow ): ?>
   <div class="slideshow">
     <?php $this->render('templates/slideshow'); ?>
   </div>
+  <?php endif; ?>
+  <?php if ($this->homepage): ?>
   <div class="bottom">
     <div class="pw">
       <div class="flex">
@@ -171,6 +174,7 @@
       </div>
     </div>
   </div>
+  <?php endif; ?>
 </header>
 <?php if ( !$this->homepage ): ?>
 <!-- Content View -->

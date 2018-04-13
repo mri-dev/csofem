@@ -141,29 +141,29 @@ body.singlepage{
 				float: left;
 			}
 			.main {
-				background: $color-blue;
-				color: white;
-				text-transform: uppercase;
-				font-weight: bold;
-		    padding: 15px;
-		    font-size: 3em;
+				background: rgba(0, 0, 0, 0.6);
+		    color: #ffffff;
+		    text-transform: uppercase;
+		    font-weight: 300;
+		    padding: 15px 30px;
+		    font-size: 5em;
 		    line-height: 1.2;
 			}
 			.second{
-				background: $color-grey;
-				padding: 8px;
-				font-size: 1.6em;
-				line-height: 1.2;
-				margin-top: 10px;
+				background: rgba(86, 86, 86, 0.46);
+		    padding: 8px 16px;
+		    font-size: 1.6em;
+		    line-height: 1.2;
+		    margin-top: 20px;
 			}
 		}
 	}
 
 	.more-link a {
-		background: $color-pr;
-		padding: 5px 10px;
+		background: #113f8e;
+		padding: 20px 40px;
 		color: white;
-		font-size: 1em;
+		font-size: 2em;
 		font-family: $font-cond;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -173,8 +173,8 @@ body.singlepage{
 	}
 	.more-link {
 		position: absolute;
-		right: 0;
-		bottom: -50px;
+		left: 0;
+		bottom: -80px;
 	}
 
 	.slick-dots {
