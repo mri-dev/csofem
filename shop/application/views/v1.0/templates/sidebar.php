@@ -80,7 +80,7 @@
   <? if( $this->live_products_list ): ?>
   <div class="liveproducts side-group">
     <div class="head">
-      Most <strong>nézik</strong>
+      Mások most ezt nézik
     </div>
     <div class="wrapper">
       <div class="product-side-items imaged-style">
@@ -94,10 +94,12 @@
               <div class="name">
                 <?php echo $livep['product_nev']; ?>
               </div>
-              <div class="desc">
-                <?php echo $livep['csoport_kategoria']; ?>
-              </div>
             </a>
+            <div class="price">
+              <strong><?php echo Helper::cashFormat($livep['ar']); ?> Ft</strong> <?php if ($livep['akcios'] == 1): ?>
+                <span class="old"><?php echo Helper::cashFormat($livep['brutto_ar']); ?> Ft</span>
+              <?php endif; ?>
+            </div>
           </div>
         </div>
         <? } ?>
@@ -109,27 +111,36 @@
   <? if( $this->top_products && $this->top_products->hasItems() ): ?>
   <div class="topproducts side-group">
     <div class="head">
-      Legtöbbet <strong>vásárolt</strong>
+      A legtöbbet vásárolt
     </div>
     <div class="wrapper">
       <div class="product-side-items imaged-style">
         <? foreach ( $this->top_products_list as $topp ) { ?>
           <div class="item">
             <div class="img">
-              <a href="<?php echo $livep['link']; ?>"><img src="<?php echo $livep['profil_kep']; ?>" alt="<?php echo $livep['product_nev']; ?>"></a>
+              <a href="<?php echo $topp['link']; ?>"><img src="<?php echo $topp['profil_kep']; ?>" alt="<?php echo $topp['product_nev']; ?>"></a>
             </div>
             <div class="data">
-              <a href="<?php echo $livep['link']; ?>">
+              <a href="<?php echo $topp['link']; ?>">
                 <div class="name">
-                  <?php echo $livep['product_nev']; ?>
-                </div>
-                <div class="desc">
-                  <?php echo $livep['csoport_kategoria']; ?>
+                  <?php echo $topp['product_nev']; ?>
                 </div>
               </a>
+              <div class="price">
+                <strong><?php echo Helper::cashFormat($topp['ar']); ?> Ft</strong> <?php if ($topp['akcios'] == 1): ?>
+                  <span class="old"><?php echo Helper::cashFormat($topp['brutto_ar']); ?> Ft</span>
+                <?php endif; ?>
+              </div>
             </div>
           </div>
         <? } ?>
+      </div>
+      <div class="stock-info">
+        <?php if ($this->top_products_list[0][raktar_keszlet] > 0): ?>
+          Ebből a termékünkből már csak <?=$this->top_products_list[0][raktar_keszlet]?> db van!
+        <?php else: ?>
+          Ez a termékünk elfogyott!
+        <?php endif; ?>
       </div>
     </div>
   </div>
@@ -145,17 +156,19 @@
         <? foreach ( $this->viewed_products_list as $viewed ) { ?>
           <div class="item">
             <div class="img">
-              <a href="<?php echo $livep['link']; ?>"><img src="<?php echo $livep['profil_kep']; ?>" alt="<?php echo $livep['product_nev']; ?>"></a>
+              <a href="<?php echo $viewed['link']; ?>"><img src="<?php echo $viewed['profil_kep']; ?>" alt="<?php echo $viewed['product_nev']; ?>"></a>
             </div>
             <div class="data">
-              <a href="<?php echo $livep['link']; ?>">
+              <a href="<?php echo $viewed['link']; ?>">
                 <div class="name">
-                  <?php echo $livep['product_nev']; ?>
-                </div>
-                <div class="desc">
-                  <?php echo $livep['csoport_kategoria']; ?>
+                  <?php echo $viewed['product_nev']; ?>
                 </div>
               </a>
+              <div class="price">
+                <strong><?php echo Helper::cashFormat($viewed['ar']); ?> Ft</strong> <?php if ($viewed['akcios'] == 1): ?>
+                  <span class="old"><?php echo Helper::cashFormat($viewed['brutto_ar']); ?> Ft</span>
+                <?php endif; ?>
+              </div>
             </div>
           </div>
         <? } ?>

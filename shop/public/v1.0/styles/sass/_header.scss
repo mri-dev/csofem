@@ -38,6 +38,25 @@ header {
 		}
 		.navs{
 			flex: 1;
+
+			.badge{
+				font-size: 1em;
+				position: absolute;
+				pointer-events: none;
+				right: 10px;
+    		top: 50%;
+		    color: white;
+		    width: 20px;
+		    z-index: 10;
+		    height: 20px;
+		    padding: 0;
+		    line-height: 20px;
+		    text-align: center;
+		    border-radius: 30px;
+				-webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+			}
+
 			.flex {
 				justify-content: flex-end;
 				& > div {
@@ -52,6 +71,15 @@ header {
 						text-decoration: none;
 						position: relative;
 						padding: 0 25px;
+
+						img{
+							margin: 0 5px 0 0;
+							height: 12px;
+    					vertical-align: text-top;
+						}
+						i{
+							margin: 0 5px 0 0;
+						}
 					}
 
 					&.div{
@@ -87,7 +115,7 @@ header {
 					}
 					&.elofoglalas{
 						a{
-							padding: 0 35px 0 25px;
+							padding: 0 35px 0 15px;
 						}
 						.badge{
 							background: $color-blue-light;
@@ -95,7 +123,7 @@ header {
 					}
 					&.kedvencek{
 						a{
-							padding: 0 35px 0 25px;
+							padding: 0 35px 0 15px;
 						}
 						.badge{
 							background: $color-green;
@@ -109,7 +137,9 @@ header {
 						.ico {
 							float: left;
 							height: 40px;
-							width: 40px;
+							width: 45px;
+							padding: 8px;
+							margin-left: 5px;
 							img {
 								max-height: 100%;
 							}
@@ -121,18 +151,30 @@ header {
 							padding: 0 0 0 15px;
 							font-size: 1.2em;
 							font-weight: bold;
+
+							.badge{
+								position: relative;
+								top: initial;
+						    right: initial;
+						    -webkit-transform: none;
+						    transform: none;
+						    margin-left: 5px;
+						    background: #303030;
+						    font-size: 0.6em;
+    						vertical-align: text-bottom;
+							}
 						}
 
 						.floating{
 							display: none;
-							right: -15px;
+							right: 0;
 							top: 100%;
 							width: 450px;
 							position: absolute;
 							z-index: 10;
 							background: #ffffff;
 							box-shadow: 0 5px 50px -10px #000000;
-							border-top: 5px solid black;
+							border-top: 5px solid $color-blue;
 
 							.adder i,
 							.remove i {
@@ -203,25 +245,6 @@ header {
 						}
 					}
 				}
-			}
-
-			.badge{
-				font-size: 1em;
-				position: absolute;
-				pointer-events: none;
-		    position: absolute;
-				right: 10px;
-    		top: 50%;
-		    color: white;
-		    width: 20px;
-		    z-index: 10;
-		    height: 20px;
-		    padding: 0;
-		    line-height: 20px;
-		    text-align: center;
-		    border-radius: 30px;
-				-webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 			}
 		}
 	}
@@ -381,6 +404,26 @@ header {
 		.contact-phone {
 			flex-basis: 250px;
 			text-align: center;
+
+			img{
+				height: 38px;
+				float: left;
+				margin: 0 15px 0 0;
+			}
+
+			a{
+				display: block;
+				float: left;
+				font-size: 1.6em;
+				line-height: 38px;
+				color: #4c4c4c;
+				text-decoration: none;
+
+				.korzet{
+					color: $color-blue;
+    			font-size: 1.4em;
+				}
+			}
 		}
 
 		.searchform {

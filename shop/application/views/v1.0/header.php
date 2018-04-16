@@ -69,15 +69,14 @@
           </div>
           <div class="div"></div>
           <div class="elofoglalas">
-            <a href="/user/elofoglalas"><i class="fa fa-pause-circle-o"></i> Előfoglalás <span class="badge">{{fav_num}}</span></a>
+            <a href="/user/elofoglalas"><img src="<?=IMG?>icons/target.svg" alt="Előfoglalás"> Előfoglalás <span class="badge">{{fav_num}}</span></a>
           </div>
           <div class="cart">
             <div class="holder" id="mb-cart" mb-event="true" data-mb='{ "event": "toggleOnClick", "target" : "#mb-cart" }'>
-              <span class="badge" id="cart-item-num-v">0</span>
               <div class="ico">
                 <img src="<?=IMG?>icons/cart.svg" alt="Kosár" />
               </div>
-              <div class="cash"><span class="amount" id="cart-item-prices">0</span> Ft</div>
+              <div class="cash"><span class="amount" id="cart-item-prices">0</span> Ft <span class="badge" id="cart-item-num-v">0</span></div>
               <div class="floating">
                 <div id="cartContent" class="overflowed">
                   <div class="noItem"><div class="inf">A kosár üres</div></div>
@@ -152,7 +151,8 @@
         </ul>
       </div>
       <div class="contact-phone">
-        asd
+        <img src="<?=IMG?>icons/contact-phone-talk.svg" alt="Telefon">
+        <a href="tel:<?=$this->settings['page_author_phone']?>"><?=str_replace(array('(', ')'), array('<span class="korzet">(',')</span>'), $this->settings['page_author_phone'])?></a>
       </div>
     </div>
   </div>

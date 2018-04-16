@@ -4,6 +4,7 @@
 }
 .site-container {
 	position: relative;
+	padding: 15px 0;
 }
 
 h1{
@@ -150,7 +151,7 @@ body.singlepage{
 		    line-height: 1.2;
 			}
 			.second{
-				background: rgba(86, 86, 86, 0.46);
+				background: rgba(86, 86, 86, 0.45);
 		    padding: 8px 16px;
 		    font-size: 1.6em;
 		    line-height: 1.2;
@@ -705,22 +706,16 @@ body.singlepage{
 
 .filter-sidebar{
 	.side-group {
-		border: 0.4px solid #d2d2d2;
 		color: #404040;
 		margin: 0 0 15px 0;
 
 		.head{
-			font-size: 1.32em;
-			padding: 0 10px;
+			font-size: 1.15em;
 			line-height: 40px;
-			font-weight: bold;
+			font-weight: 400;
 			height: 40px;
-			color: #202020;
+			color: #333333;
 			text-transform: uppercase;
-
-			strong {
-				color: $color-blue;
-			}
 		}
 
 		.section-group {
@@ -749,6 +744,7 @@ body.singlepage{
 				font-size: 0.9em;
 			}
 		}
+
 
 		.section-wrapper{
 			padding: 10px;
@@ -845,33 +841,38 @@ body.singlepage{
 			.head{
 				background: $color-yellow;
 			}
+
 		}
 
-		&.lastviewed{
-			.head{
-				background: #747272;
-				color: white;
-			}
-			.wrapper{
-				padding: 5px;
-			}
-		}
-		&.liveproducts,
 		&.topproducts{
+			background: white;
+			border: 0.6px solid $color-red;
+			padding: 0px;
 			.head{
-				background: lighten($color-grey, 5%);
+				text-align: center;
+				color: $color-red;
+				font-size: 1.6em;
 			}
-			.wrapper{
-				padding: 5px;
+
+			.item {
+				border: none !important;
+				background: none !important;
+			}
+			.stock-info{
+				background: $color-red;
+				color: white;
+				text-align: center;
+				padding: 10px 5px;
 			}
 		}
-
 	}
 	.product-side-items{
 		margin: -5px 0;
 		.item {
-			border-bottom: 1px solid #f1f1f1;
-			padding: 5px 0;
+			border: 0.6px solid #e8e8e8;
+			background: white;
+			margin: 5px 0;
+			padding: 5px;
 			color: #404040;
 			display: -webkit-box;
 		  display: -ms-flexbox;
@@ -898,8 +899,25 @@ body.singlepage{
 				}
 			}
 
-			.desc {
-				font-size: 0.9em;
+			.name {
+				text-transform: uppercase;
+				color: black;
+				font-weight: bold;
+			}
+
+			.price {
+				margin-top: 10px;
+				font-size: 1.2em;
+
+				strong {
+					color: $color-blue;
+				}
+
+				.old{
+					text-decoration: line-through;
+					color: #333333;
+					margin-left: 8px;
+				}
 			}
 
 			&:last-child{
@@ -917,9 +935,10 @@ body.singlepage{
 				}
 			}
 			.img{
+				text-align: center;
 				img {
-					max-width: 100%;
-					width: 100%;
+					max-width: 90%;
+					width: 90%;
 				}
 			}
 		}
