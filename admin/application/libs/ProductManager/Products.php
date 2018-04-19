@@ -667,6 +667,12 @@ class Products
 			$size_whr .= $add;
 		}
 
+		if ( $arg['ujdonsag'] ) {
+			$add = " and p.ujdonsag = 1 ";
+			$whr .= $add;
+			$size_whr .= $add;
+		}
+
 		if ( $arg['akcios'] === true ) {
 			$add = " and p.akcios = 1 ";
 			$whr .= $add;

@@ -1,6 +1,7 @@
 <?
 use PortalManager\News;
 use PortalManager\Template;
+use ProductManager\Products;
 
 class home extends Controller{
 		function __construct(){
@@ -13,6 +14,7 @@ class home extends Controller{
 
 			$news = new News( false, array( 'db' => $this->db ) );
 			$temp = new Template( VIEW .'hirek/template/' );
+			$ptemp = new Template( VIEW .'templates/' );
 
 			$arg = array(
 				'limit' => 30,
@@ -23,6 +25,37 @@ class home extends Controller{
 			);
 			$this->out( 'news', $news->getTree( $arg ) );
 			$this->out( 'template', $temp );
+			$this->out( 'ptemplate', $ptemp );
+
+			// Újdonságok
+			$arg = array(
+				'limit' 	=> 3,
+				'ujdonsag' => true,
+				'order' => array(
+					'by' => 'rand()'
+				)
+			);
+			$ujdonsag_products = (new Products( array(
+				'db' => $this->db,
+				'user' => $this->User->get()
+			) ))->prepareList( $arg );
+			$this->out( 'ujdonsag_products', $ujdonsag_products );
+			$this->out( 'ujdonsag_products_list', $ujdonsag_products->getList() );
+
+			// Kiemelt termékek
+			$arg = array(
+				'limit' 	=> 6,
+				'kiemelt' => true,
+				'order' => array(
+					'by' => 'rand()'
+				)
+			);
+			$kiemelt_products = (new Products( array(
+				'db' => $this->db,
+				'user' => $this->User->get()
+			) ))->prepareList( $arg );
+			$this->out( 'kiemelt_products', $kiemelt_products );
+			$this->out( 'kiemelt_products_list', $kiemelt_products->getList() );
 
 			// SEO Információk
 			$SEO = null;

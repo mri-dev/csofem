@@ -4,7 +4,7 @@
 }
 .site-container {
 	position: relative;
-	padding: 15px 0;
+	padding: 0;
 }
 
 h1{
@@ -419,7 +419,9 @@ body.singlepage{
 	}
 }
 
-
+.webshop-product-top{
+	margin: 0 0 25px 0;
+}
 .webshop-product-top,
 .related-products {
 	.items {
@@ -453,7 +455,6 @@ body.singlepage{
 				position: relative;
 				overflow: hidden;
 				border-bottom: 0.4px solid #eaeaea;
-				margin: 0 0 10px 0;
 				background: white;
 
 				.discount-percent{
@@ -506,11 +507,17 @@ body.singlepage{
 			}
 
 			.prices{
-				padding: 5px;
+				padding: 0 10px 25px 10px;
 				position: relative;
 
 				& > .wrapper {
 					text-align: center;
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					align-items: center;
+					flex-wrap: nowrap;
+					justify-content: space-between;
 
 					.ar{
 						display: -webkit-box;
@@ -521,7 +528,7 @@ body.singlepage{
 						justify-content: center;
 
 						& > div {
-							padding: 0 8px;
+							padding: 0 4px;
 						}
 						.current{
 							font-weight: bold;
@@ -531,9 +538,8 @@ body.singlepage{
 						}
 
 						.old {
-							color: #4c4c4c;
+							color: #c8cbcc;
 							position: relative;
-							text-decoration: line-through;
 						}
 					}
 					&.wo-price{
@@ -545,54 +551,29 @@ body.singlepage{
 
 							strong {
 								color: #747272;
-								font-size: 1.64em;
+								font-size: 1.3em;
 							}
 						}
 					}
 				}
 			}
 
-			.add{
-				text-align: center;
-				button {
-					margin: 0 auto;
-					background: $color-blue;
-					border-radius: 3px;
-					color: white;
-					text-transform: uppercase;
-					font-weight: bold;
-					font-size: 0.9em;
-					padding: 10px 12px;
-					border: none;
-					&.in-progress{
-						background: $color-green;
-					}
-
-					img {
-						float: left;
-						margin: 0 10px 0 0;
-						height: 12px;
-					}
-				}
-				margin: 0 0 10px 0;
-			}
-
-
 			.title{
-				text-align: center;
-				padding: 5px;
+				text-align: left;
+				padding: 10px 15px;
 
 				h3{
 					font-size: 1.05em;
-					font-weight: bold;
 				}
 
 				a{
-					color: #202020;
+					color: #333333;
 					display: block;
-					height: 26px;
-					max-height: 26px;
+					text-transform: uppercase;
 					overflow: hidden;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+			    width: 240px;
 				}
 			}
 			.variation{
@@ -602,10 +583,10 @@ body.singlepage{
 				font-size: 1.2em;
 			}
 			.subtitle{
-				padding: 5px;
-				text-align: center;
-		    font-size: 0.8em;
-		    color: #9c9c9c;
+				text-align: left;
+		    font-size: 0.9em;
+		    color: #949494;
+				margin: 5px 0 0 0;
 			}
 			.buttons{
 				display: -webkit-box;
@@ -621,14 +602,51 @@ body.singlepage{
 					height: 32px;
 					text-align: center;
 					font-size: 0.9em;
-					background: lighten($color-grey, 10%);
 					color: $color-grey-dark;
 				}
 
 				a{
-					color: $color-grey-dark;
+					color: #949494;
 					display: block;
 					height: 32px;
+					text-transform: uppercase;
+
+					img {
+						height: 14px;
+						margin: 0 5px 0 0;
+						vertical-align: text-top;
+					}
+					&:hover{
+						background: #f1f1f1;
+					}
+				}
+
+				.add{
+					flex-basis: 50%;
+					box-shadow: inset -1px 0 #ececec;
+
+					button {
+						width: 100%;
+						height: 32px;
+						border: none;
+						text-transform: uppercase;
+						background: transparent;
+						color: #949494;
+						img {
+							height: 14px;
+							margin: 0 5px 0 0;
+							vertical-align: text-top;
+						}
+
+						&:hover{
+							background: #f1f1f1;
+						}
+
+						&.in-progress{
+							background: $color-green;
+							color: white;
+						}
+					}
 				}
 
 				.link {
@@ -636,21 +654,6 @@ body.singlepage{
 
 					a{
 						border-right: 0.4px solid #e0e0e0;
-					}
-				}
-
-				.fav {
-					flex-basis: 50%;
-					text-align: center;
-					cursor: pointer;
-					&:hover{
-						background: $color-orange;
-						color: white;
-					}
-
-					&.selected{
-						background: $color-red;
-						color: white;
 					}
 				}
 			}
@@ -945,6 +948,24 @@ body.singlepage{
 	}
 }
 
+.title-header{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 0.5px solid #c8cbcc;
+	padding: 0 0 10px 0;
+	margin: 0 0 10px 0;
+
+	h2 {
+		text-transform: uppercase;
+		color: #333333;
+		margin: 0 0 0 5px;
+	}
+}
+
 .nav-container{
 	text-align: center;
 }
@@ -971,6 +992,7 @@ body.singlepage{
 	}
 	.inside-content{
 		flex: 1;
+		padding: 0 0 0 15px;
 	}
 }
 
