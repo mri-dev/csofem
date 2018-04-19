@@ -1,4 +1,6 @@
 <?
+use PortalManager\News;
+use PortalManager\Template;
 
 class home extends Controller{
 		function __construct(){
@@ -7,6 +9,20 @@ class home extends Controller{
 
 			$this->out('homepage', true);
 			$this->out('showslideshow', true);
+			$this->out('bodyclass', 'homepage');
+
+			$news = new News( false, array( 'db' => $this->db ) );
+			$temp = new Template( VIEW .'hirek/template/' );
+
+			$arg = array(
+				'limit' => 30,
+				'page' 	=> 1,
+				'order' => array(
+					'by' => 'rand()'
+				)
+			);
+			$this->out( 'news', $news->getTree( $arg ) );
+			$this->out( 'template', $temp );
 
 			// SEO Információk
 			$SEO = null;

@@ -9,10 +9,10 @@ use PortalManager\Redirector;
 use ShopManager\Shop;
 use ShopManager\Categories;
 use PortalManager\News;
+use ProductManager\Products;
 use PortalManager\Portal;
 use Applications\Captcha;
 use FileManager\FileLister;
-use ProductManager\Products;
 
 
 class Controller {
@@ -83,6 +83,42 @@ class Controller {
         {
           $redrirector = new Redirector('shop', ltrim($_SERVER['REQUEST_URI'], '/'), array('db' => $this->db));
           $redrirector->start();
+        }
+
+        if ( defined('PRODUCTIONSITE') ) {
+          /****
+          * TOP TERMÉKEK
+          *****/
+          $arg = array(
+            'limit' 	=> 1,
+            'collectby' => 'top'
+          );
+          $top_products = (new Products( array(
+            'db' => $this->db,
+            'user' => $this->User->get()
+          ) ))->prepareList( $arg );
+          $this->out( 'top_products', $top_products );
+          $this->out( 'top_products_list', $top_products->getList() );
+
+          /****
+          * MEGNÉZETT TERMÉKEK
+          *****/
+          $arg = array();
+          $viewed_products = (new Products( array(
+            'db' => $this->db,
+            'user' => $this->User->get()
+          ) ))->getLastviewedList( \Helper::getMachineID(), 5, $arg );
+          $this->out( 'viewed_products_list', $viewed_products );
+
+          /****
+          * Live TERMÉKEK
+          *****/
+          $arg = array();
+          $live_products = (new Products( array(
+            'db' => $this->db,
+            'user' => $this->User->get()
+          ) ))->getLiveviewedList( \Helper::getMachineID(), 5, $arg );
+          $this->out( 'live_products_list', $live_products );
         }
 
         $templates = new Template( VIEW . 'templates/' );
