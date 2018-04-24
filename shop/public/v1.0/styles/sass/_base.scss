@@ -373,7 +373,7 @@ body.singlepage{
 	  display: -ms-flexbox;
 	  display: flex;
 		flex-wrap: wrap;
-		margin: 0 -10px;
+		margin: 0 -5px;
 	}
 
 	.title {
@@ -394,11 +394,12 @@ body.singlepage{
 
 	.item {
 		flex-basis: calc(100%/4);
-		padding: 10px;
+		padding: 5px;
 
 		& > .wrapper{
-			border: 5px solid #f7f7f7;
-			padding: 10px;
+			border: 5px solid #eaeaea;
+	    padding: 10px;
+	    background: white;
 		}
 
 		.img {
@@ -409,12 +410,12 @@ body.singlepage{
 		}
 
 		.title a {
-		    font-weight: bold;
-		    display: block;
-		    padding: 10px 0;
-    		text-align: center;
-    		font-size: 1em;
-    		color: $color-grey-dark;
+	    font-weight: bold;
+	    display: block;
+	    padding: 10px 0;
+  		text-align: center;
+  		font-size: 1em;
+  		color: $color-grey-dark;
 		}
 	}
 }
@@ -436,13 +437,14 @@ body.singlepage{
 
 		.item {
 			flex-basis: calc(100%/3);
-			padding: 10px;
+			padding: 0;
 
 			& > .wrapper {
 				padding: 0.3px;
 				position: relative;
 				border: .4px solid #e0e0e0;
 				background: white;
+				margin: 9px;
 			}
 
 			a {
@@ -456,29 +458,6 @@ body.singlepage{
 				overflow: hidden;
 				border-bottom: 0.4px solid #eaeaea;
 				background: white;
-
-				.discount-percent{
-					color: white;
-					pointer-events: none;
-					font-size: 1.1em;
-					position: absolute;
-					left: 0;
-					top: 0;
-					font-weight: bold;
-					width: 100px;
-					height: 100px;
-					background: url('#{$imgroot}discount_half_square.svg');
-					background-position: center;
-					background-repeat: no-repeat;
-
-					.p {
-						position: absolute;
-						left: 34%;
-    				top: 28%;
-						-webkit-transform: translate(-50%,-50%);
-          	transform: translate(-50%,-50%);
-					}
-				}
 
 				img {
 					width: 80%;
@@ -503,6 +482,68 @@ body.singlepage{
 					pointer-events: none;
 					-webkit-transition:all .4s;
   				transition:all .4s;
+				}
+				.data-board{
+					pointer-events: none;
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					& > .wrapper{
+						display: -webkit-box;
+					  display: -ms-flexbox;
+					  display: flex;
+				    align-items: center;
+				    flex-wrap: nowrap;
+				    justify-content: space-between;
+						padding: 5px;
+
+						& > div {
+							padding: 2px;
+							height: 26px;
+							border-radius: 4px;
+							overflow: hidden;
+						}
+
+						& > .factory{
+							flex-basis: 50%;
+						}
+						& > .ujdonsag,
+						& > .discount{
+							flex-basis: 25%;
+						}
+
+						.marka{
+							height: 22px;
+							line-height: 22px;
+							color: #525252;
+							background: white;
+							border: 0.4px solid #f1f1f1;
+							text-align: center;
+							font-size: 0.8em;
+							border-radius: 4px;
+							font-weight: bold;
+						}
+
+						.discount-label,
+						.ujdonsag-label{
+							height: 22px;
+							line-height: 22px;
+							text-align: center;
+							font-size: 0.9em;
+							border-radius: 4px;
+						}
+
+						.discount-label{
+							color: white;
+							background: desaturate(lighten($color-red, 15%), 15);
+						}
+
+						.ujdonsag-label{
+							color: white;
+							background: $color-blue-light;
+						}
+					}
 				}
 			}
 
@@ -540,6 +581,13 @@ body.singlepage{
 						.old {
 							color: #c8cbcc;
 							position: relative;
+						}
+					}
+					.fav{
+						&.selected{
+							i{
+								color: $color-green;
+							}
 						}
 					}
 					&.wo-price{
@@ -651,10 +699,6 @@ body.singlepage{
 
 				.link {
 					flex-basis: 50%;
-
-					a{
-						border-right: 0.4px solid #e0e0e0;
-					}
 				}
 			}
 			&:hover{
@@ -971,11 +1015,17 @@ body.singlepage{
 }
 
 .pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus{
-	background-color: #ffcc00;
-	border-color:#e6b904;
+	background-color: $color-blue;
+}
+.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus{
+	background-color: $color-blue;
+	color: white;
 }
 .pagination>li>a, .pagination>li>span{
-	color: #f09f0f;
+	color: #ffffff;
+	border: none;
+	margin: 2px;
+	background: #c3c3c3;
 }
 
 .home {
@@ -1263,6 +1313,7 @@ body.singlepage{
 						.wrp {
 							padding: 5px;
 							border: .4px solid #e0e0e0;
+							background: white;
 						}
 					}
 				}
@@ -2309,8 +2360,10 @@ md-toast{
 			margin-left:4px;
 		}
 		.info .name .in {
-			font-weight: bold;
-			font-size:1.2em;
+			font-weight: normal;
+	    font-size: 0.8em;
+	    color: #9a9a9a;
+	    margin-right: 5px;
 		}
 		.info .remove {
 			cursor: pointer;
@@ -2323,7 +2376,7 @@ md-toast{
 		}
 
 		.info .name a {
-			font-size: 1.5em;
+			font-size: 1.3em;
 			color: black;
 			line-height: 18px;
 			font-weight: bold;

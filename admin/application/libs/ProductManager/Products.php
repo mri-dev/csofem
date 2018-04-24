@@ -594,6 +594,7 @@ class Products
 			p.termek_site_url,
 			p.ajandek,
 			p.rovid_leiras,
+			m.neve as marka_nev,
 			GROUP_CONCAT(CONCAT('p_',pa.parameterID,':',pa.ertek)) as paramErtek,
 			IF(p.egyedi_ar IS NOT NULL,
 				p.egyedi_ar,
@@ -610,6 +611,7 @@ class Products
 		$qry .= " FROM
 		shop_termekek as p
 		LEFT OUTER JOIN shop_termek_parameter as pa ON pa.termekID = p.ID
+		LEFT OUTER JOIN shop_markak as m ON m.ID = p.marka
 		WHERE 1 = 1
 		";
 

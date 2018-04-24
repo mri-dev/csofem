@@ -6,13 +6,23 @@
   ?>
   <div class="wrapper">
     <div class="image">
-      <?php if ( $akcios == '1' ): ?>
-      <div class="discount-percent">
-        <div class="p">
-          -<? echo 100-round($akcios_fogy_ar / ($brutto_ar / 100)); ?>%
+      <div class="data-board">
+        <div class="wrapper">
+          <div class="ujdonsag">
+            <?php if ( $ujdonsag == '1' ): ?>
+            <div class="ujdonsag-label">ÚJ</div>
+            <?php endif; ?>
+          </div>
+          <div class="factory"><div class="marka"><?=$marka_nev?></div></div>
+          <div class="discount">
+            <?php if ( $akcios == '1' ): ?>
+            <div class="discount-label">
+              <div class="p">-<? echo 100-round($akcios_fogy_ar / ($brutto_ar / 100)); ?>%</div>
+            </div>
+            <?php endif; ?>
+          </div>
         </div>
       </div>
-      <?php endif; ?>
 			<a href="<?=$link?>"><img title="<?=$product_nev?>" src="<?=$profil_kep?>" alt="<?=$product_nev?>"></a>
       <div class="short-desc">
         <?php echo $rovid_leiras; ?>
