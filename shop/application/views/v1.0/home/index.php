@@ -10,9 +10,9 @@
 						<h2>Újdonságok</h2>
 					</div>
 				</div>
-				<div class="webshop-product-top">
+				<div class="webshop-product-top slide-style">
 					<?php if (true): ?>
-						<div class="items">
+						<div class="items trackwidth">
 							<? foreach ( $this->ujdonsag_products_list as $p ) {
 									$p['itemhash'] = hash( 'crc32', microtime() );
 									$p['sizefilter'] = ( count($this->ujdonsag_products->getSelectedSizes()) > 0 ) ? true : false;
@@ -29,9 +29,9 @@
 						<h2>Kiemelt ajánlataink</h2>
 					</div>
 				</div>
-				<div class="webshop-product-top">
+				<div class="webshop-product-top slide-style">
 					<?php if (true): ?>
-						<div class="items">
+						<div class="items trackwidth">
 							<? foreach ( $this->kiemelt_products_list as $p ) {
 									$p['itemhash'] = hash( 'crc32', microtime() );
 									$p['sizefilter'] = ( count($this->kiemelt_products->getSelectedSizes()) > 0 ) ? true : false;
@@ -67,6 +67,25 @@
 			  slidesToScroll: 1,
 				dots: true
 			});
+
+			$('.webshop-product-top .items').slick({
+			  slidesToShow: 3,
+			  slidesToScroll: 3,
+				dots: true
+			});
+
+			trackwidth();
+
+			$(window).resize(function(){
+				trackwidth();
+			});
 		})
+
+		function trackwidth(){
+			var w = $('.home > .pw').width() - $('.filter-sidebar').width() - 15;
+			$('.trackwidth').css({
+				width: w
+			});
+		}
 	</script>
 </div>

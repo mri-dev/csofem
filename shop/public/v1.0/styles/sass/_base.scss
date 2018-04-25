@@ -433,18 +433,20 @@ body.singlepage{
 		flex-wrap: wrap;
 		border-right: none;
 		border-bottom: none;
-		margin: -10px;
+		margin: -13px;
 
 		.item {
 			flex-basis: calc(100%/3);
-			padding: 0;
+			padding: 10px;
 
 			& > .wrapper {
 				padding: 0.3px;
 				position: relative;
 				border: .4px solid #e0e0e0;
 				background: white;
-				margin: 9px;
+				margin: 0;
+				box-shadow: 0 0 8px -2px rgba(169, 169, 169, 0.8);
+    		border-radius: 3px;
 			}
 
 			a {
@@ -453,16 +455,25 @@ body.singlepage{
 
 			.image {
 				text-align: center;
-    		padding: 5px;
+    		padding: 0;
 				position: relative;
 				overflow: hidden;
-				border-bottom: 0.4px solid #eaeaea;
 				background: white;
+    		height: 250px;
+    		border-radius: 3px 3px 0 0;
 
 				img {
-					width: 80%;
-					max-width: 80%;
+					width: initial;
+					max-width: auto;
+					height: 100%;
 					margin: 0 auto;
+					position: absolute;
+					z-index: 1;
+					top: 50%;
+					left: 50%;
+					-webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+
 				}
 				.short-desc {
 					z-index: 2;
@@ -486,6 +497,7 @@ body.singlepage{
 				.data-board{
 					pointer-events: none;
 					position: absolute;
+					z-index: 2;
 					top: 0;
 					left: 0;
 					right: 0;
@@ -523,6 +535,11 @@ body.singlepage{
 							font-size: 0.8em;
 							border-radius: 4px;
 							font-weight: bold;
+
+							img {
+								height: 20px !important;
+								max-height: 20px !important;
+							}
 						}
 
 						.discount-label,
@@ -609,6 +626,7 @@ body.singlepage{
 			.title{
 				text-align: left;
 				padding: 10px 15px;
+    		border-top: 0.4px solid #ededed;
 
 				h3{
 					font-size: 1.05em;
@@ -663,6 +681,7 @@ body.singlepage{
 						height: 14px;
 						margin: 0 5px 0 0;
 						vertical-align: text-top;
+						display: initial !important;
 					}
 					&:hover{
 						background: #f1f1f1;
@@ -684,6 +703,7 @@ body.singlepage{
 							height: 14px;
 							margin: 0 5px 0 0;
 							vertical-align: text-top;
+							display: initial !important;
 						}
 
 						&:hover{
@@ -709,6 +729,102 @@ body.singlepage{
 				.short-desc{
 					bottom: 0;
 				}
+			}
+		}
+	}
+}
+.webshop-product-top.slide-style{
+	position: relative;
+	.items {
+		margin: 0;
+		.item {
+			flex-basis: 100%;
+		}
+	}
+	.slick-dots{
+		position: absolute;
+		right: 70px;
+		top: -42px;
+
+		li {
+			width: 25px;
+			height: 25px;
+			background: white;
+			display: inline-block;
+			*display: inline;
+			zoom: 1;
+			margin-left: 5px;
+
+			button {
+				width: 25px;
+				height: 25px;
+				border:none;
+				text-align: center;
+				color: #555555;
+				background: none;
+				font-weight: bold;
+				font-size: 0.9em;
+			}
+			&.slick-active{
+				background: #333333;
+				button {
+					color: white;
+				}
+			}
+			&:hover{
+				background: #666666;
+				button {
+					color: white;
+				}
+			}
+		}
+	}
+
+	.slick-arrow{
+		position: absolute;
+		top: -42px;
+		width: 25px;
+		height: 25px;
+		border: none;
+		background: white;
+		text-indent: -9999px;
+		color: #555555;
+		z-index: 2;
+
+		&:after{
+			font-family: 'FontAwesome';
+			font-size: 16px;
+			width: 25px;
+			height: 25px;
+			line-height: 25px;
+			top: 50%;
+			color: #555555;
+			left: 50%;
+    	text-indent: initial;
+			position: absolute;
+			-webkit-transform: translate(-50%,-50%);
+			transform: translate(-50%,-50%);
+		}
+
+		&.slick-prev{
+			right: 40px;
+			&:after{
+				content: "\f104";
+			}
+		}
+		&.slick-next{
+			right: 10px;
+			&:after{
+				content: "\f105";
+			}
+		}
+
+		&:hover{
+			background: #333333;
+			color: white;
+
+			&:after{
+				color: white;
 			}
 		}
 	}
@@ -912,6 +1028,14 @@ body.singlepage{
 				padding: 10px 5px;
 			}
 		}
+		&.lastviewed{
+			.product-side-items.imaged-style .img{
+				flex-basis: 20% !important;
+			}
+			.product-side-items .item .price{
+				font-size: 0.85em;
+			}
+		}
 	}
 	.product-side-items{
 		margin: -5px 0;
@@ -954,7 +1078,7 @@ body.singlepage{
 
 			.price {
 				margin-top: 10px;
-				font-size: 1.2em;
+				font-size: 1em;
 
 				strong {
 					color: $color-blue;
@@ -1001,7 +1125,7 @@ body.singlepage{
 	justify-content: space-between;
 	border-bottom: 0.5px solid #c8cbcc;
 	padding: 0 0 10px 0;
-	margin: 0 0 10px 0;
+	margin: 10px;
 
 	h2 {
 		text-transform: uppercase;
@@ -2335,12 +2459,12 @@ md-toast{
 		.img {
 			float: left;
 			margin: 0 8px 0 0;
-			width: 75px;
-			height: 75px;
+			width: 55px;
+			height: 55px;
 		}
 		.img img {
-			max-width: 68px;
-			max-height: 68px;
+			max-width: 48px;
+			max-height: 48px;
 		}
 		.info {
 			z-index: 10;
@@ -2380,6 +2504,8 @@ md-toast{
 			color: black;
 			line-height: 18px;
 			font-weight: bold;
+			display: block;
+			margin: 0 0 10px 0;
 		}
 		.info .sub .tipus{
 			font-size: 1.1em;
@@ -6165,8 +6291,6 @@ a.cetelem-startrans {
 				color: white;
 			}
 		}
-
-
 	}
 
 	.articles {

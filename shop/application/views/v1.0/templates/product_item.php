@@ -13,7 +13,9 @@
             <div class="ujdonsag-label">ÚJ</div>
             <?php endif; ?>
           </div>
-          <div class="factory"><div class="marka"><?=$marka_nev?></div></div>
+          <?php
+          ?>
+          <div class="factory"><div class="marka" style="background-color: <?=$marka_szin?>; color: <?=$marka_tszin?>;"><?php if($marka_img == ''){ echo $marka_nev; }else{ echo '<img src="'.IMGDOMAIN.$marka_img.'" alt="'.$marka_nev.'"/>'; } ?></div></div>
           <div class="discount">
             <?php if ( $akcios == '1' ): ?>
             <div class="discount-label">
@@ -23,9 +25,9 @@
           </div>
         </div>
       </div>
-			<a href="<?=$link?>"><img title="<?=$product_nev?>" src="<?=$profil_kep?>" alt="<?=$product_nev?>"></a>
+			<a href="<?=$link?>"><img title="<?=$product_nev?>" src="<?=$profil_kep_mid?>" alt="<?=$product_nev?>"></a>
       <div class="short-desc">
-        <?php echo $rovid_leiras; ?>
+        Tartalom
       </div>
 		</div>
     <div class="title">

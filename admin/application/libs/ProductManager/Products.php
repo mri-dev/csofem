@@ -469,7 +469,7 @@ class Products
 
 		$q = "SELECT
 			v.*,
-			t.nev as product_nev,
+			CONCAT(m.neve,' ',t.nev) as product_nev,
 			t.ID as product_id,
 			t.profil_kep,
 			t.csoport_kategoria,
@@ -495,7 +495,7 @@ class Products
 		foreach($data as $d){
 			$kep = $d['profil_kep'];
 			$d['profil_kep'] 		=  \PortalManager\Formater::productImage( $kep, false, self::TAG_IMG_NOPRODUCT );
-			$d['profil_kep_small'] 	=  \PortalManager\Formater::productImage( $kep, 75, self::TAG_IMG_NOPRODUCT );
+			$d['profil_kep_small'] 	=  \PortalManager\Formater::productImage( $kep, 150, self::TAG_IMG_NOPRODUCT );
 			$d['link'] = DOMAIN.'termek/'.\PortalManager\Formater::makeSafeUrl( $d['product_nev'], '_-'.$d['product_id'] );
 
 			$bdata[]	 			= $d;
@@ -510,7 +510,7 @@ class Products
 
 		$q = "SELECT
 			v.*,
-			t.nev as product_nev,
+			CONCAT(m.neve,' ',t.nev) as product_nev,
 			t.ID as product_id,
 			t.profil_kep,
 			t.csoport_kategoria,
@@ -535,7 +535,7 @@ class Products
 		foreach($data as $d){
 			$kep = $d['profil_kep'];
 			$d['profil_kep'] 		=  \PortalManager\Formater::productImage( $kep, false, self::TAG_IMG_NOPRODUCT );
-			$d['profil_kep_small'] 	=  \PortalManager\Formater::productImage( $kep, 75, self::TAG_IMG_NOPRODUCT );
+			$d['profil_kep_small'] 	=  \PortalManager\Formater::productImage( $kep, 150, self::TAG_IMG_NOPRODUCT );
 			$d['link'] = DOMAIN.'termek/'.\PortalManager\Formater::makeSafeUrl( $d['product_nev'], '_-'.$d['product_id'] );
 
 			$bdata[]	 			= $d;
@@ -563,7 +563,7 @@ class Products
 		$qry = "
 		SELECT SQL_CALC_FOUND_ROWS
 			p.ID as product_id,
-			p.nev as product_nev,
+			CONCAT(m.neve,' ',p.nev) as product_nev,
 			p.cikkszam,
 			p.kulcsszavak,
 			p.pickpackszallitas,
@@ -595,6 +595,9 @@ class Products
 			p.ajandek,
 			p.rovid_leiras,
 			m.neve as marka_nev,
+			m.colorscheme as marka_szin,
+			m.textcolor as marka_tszin,
+			m.image as marka_img,
 			GROUP_CONCAT(CONCAT('p_',pa.parameterID,':',pa.ertek)) as paramErtek,
 			IF(p.egyedi_ar IS NOT NULL,
 				p.egyedi_ar,
@@ -963,7 +966,8 @@ class Products
 
 			$kep = $d['profil_kep'];
 			$d['profil_kep'] 		=  \PortalManager\Formater::productImage( $kep, false, self::TAG_IMG_NOPRODUCT );
-			$d['profil_kep_small'] 	=  \PortalManager\Formater::productImage( $kep, 75, self::TAG_IMG_NOPRODUCT );
+			$d['profil_kep_mid'] 	=  \PortalManager\Formater::productImage( $kep, 300, self::TAG_IMG_NOPRODUCT );
+			$d['profil_kep_small'] 	=  \PortalManager\Formater::productImage( $kep, 150, self::TAG_IMG_NOPRODUCT );
 
 			$arInfo 		= $this->getProductPriceCalculate( $d['marka_id'], $brutto_ar );
 			$akcios_arInfo 	= $this->getProductPriceCalculate( $d['marka_id'], $akcios_brutto_ar );
@@ -1610,7 +1614,7 @@ class Products
 
 		$kep = $data['profil_kep'];
 		$data['profil_kep'] 		=  \PortalManager\Formater::productImage( $kep, false, self::TAG_IMG_NOPRODUCT );
-		$data['profil_kep_small'] 	=  \PortalManager\Formater::productImage( $kep, 75, self::TAG_IMG_NOPRODUCT );
+		$data['profil_kep_small'] 	=  \PortalManager\Formater::productImage( $kep, 150, self::TAG_IMG_NOPRODUCT );
 
 		$arInfo 		= $this->getProductPriceCalculate( $data['marka'], $brutto_ar );
 		$akcios_arInfo 	= $this->getProductPriceCalculate( $data['marka'], $akcios_brutto_ar );
