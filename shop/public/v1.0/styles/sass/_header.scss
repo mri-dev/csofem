@@ -292,6 +292,7 @@ header {
 					   display: block;
 		 				 height: 38px;
 						 line-height: 38px;
+						 text-align: left;
 						 color: $color-grey-dark !important;
 						 border: 0.4px solid transparent;
 
@@ -311,6 +312,12 @@ header {
 						}
 						& > .sub {
 							display: block;
+						}
+					}
+
+					&.has-sub {
+						& > a{
+							height: 62px;
 						}
 					}
 
@@ -373,6 +380,7 @@ header {
 						border: 0.5px solid $color-grey;
 						border-top: none;
 						z-index: 100;
+    				margin-top: -1px;
 
 						.inside{
 							padding: 0;
@@ -384,6 +392,7 @@ header {
 									color: $color-grey-dark;
 									text-decoration: none;
 									font-size: 0.9em;
+									text-align: left !important;
 									&:hover{
 										background: darken($color-grey, 20%);
 										color: white;
@@ -396,6 +405,12 @@ header {
 					&:hover{
 						& > .sub{
 							display: block;
+						}
+					}
+
+					&.searcher:hover{
+						.searchform{
+							display: block !important;
 						}
 					}
 				}
@@ -428,30 +443,32 @@ header {
 
 		.searchform {
 			display: none;
+			position: absolute;
 			padding: 0px;
-			float: right;
-			width: 85%;
 			background: white;
 			border: 0.4px solid #cacaca;
+			border-top: none;
+			z-index: 100;
+			width: 250px;
+			background: #fafafa;
+			margin-top: -1px;
+			box-shadow: 4px 10px 20px -3px rgba(0, 0, 0, 0.3);
 
-			.flex {
-				.input {
-					flex: 1;
+			& > .wrapper{
+				padding: 15px;
+
+				h2{
+					text-transform: uppercase;
+					color: #7e7e7e;
+    			letter-spacing: -1px;
+					font-size: 1.7em;
+    			margin: 0 0 15px 0;
 				}
-				.button {
-					button {
-						width: 100%;
-						text-align: center;
-						text-transform: uppercase;
-						font-size: 0.7em;
-						color: $color-grey-dark;
 
-						i {
-							font-size: 18px;
-							vertical-align: middle;
-							margin: -1px 0 0 0;
-						}
-					}
+				.input{
+					border: 0.4px solid #c8cbcc;
+					background: white;
+					margin: 0 0 15px 0;
 				}
 			}
 
@@ -459,25 +476,28 @@ header {
 				background: transparent;
 				border: none;
 				width: 100%;
-				line-height: 40px;
-				color: $color-red;
-
-				@include border-radius-left(5px);
+				line-height: 36px;
+				color: $color-blue;
 			}
 
 			input[type=text],
 			button {
-				line-height: 40px;
-				padding: 0 15px;
+				line-height: 36px;
+				padding: 0 12px;
 			}
 
 			button {
-				background: transparent;
-				color: $color-grey-dark;
+				background: $color-grey-dark;
+				color: white;
 				border: none;
 				padding: 0 12px;
+				width: 100%;
 				vertical-align: middle;
 				cursor: pointer;
+
+				&:hover{
+					background: $color-blue;
+				}
 			}
 		}
 	}

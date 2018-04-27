@@ -112,7 +112,7 @@
             </div>
           </li>
           <? foreach ( $this->menu_header->tree as $menu ): ?>
-          <li>
+          <li class="<?=($menu['child'])?'has-sub':''?>">
             <a href="<?=($menu['link']?:'')?>">
               <? if($menu['kep']): ?><img src="<?=\PortalManager\Formater::sourceImg($child['kep'])?>"><? endif; ?>
               <?=$menu['nev']?> <? if($menu['child']): ?><i class="fa fa-angle-down"></i><? endif; ?></a>
@@ -133,19 +133,20 @@
               <? endif; ?>
           </li>
           <? endforeach; ?>
-          <li class="searcher">
+          <li class="searcher has-sub">
             <a href="javascript:void(0);">Keresés <i class="fa fa-search"></i></a>
             <div class="searchform">
-              <form class="" action="/termekek/" method="get">
-              <div class="flex flexmob-exc-resp">
+              <div class="wrapper">
+                <form class="" action="/termekek/" method="get">
+                <h2>Termékek keresése</h2>
                 <div class="input">
-                  <input type="text" name="src" value="<?=$_GET['src']?>" placeholder="Keresési kifejezés megadása">
+                  <input type="text" name="src" value="<?=$_GET['src']?>" placeholder="TERMÉK NÉV / CIKKSZÁM">
                 </div>
                 <div class="button">
-                  <button type="submit"><i class="fa fa-search"></i></button>
+                  <button type="submit">KERESÉS <i class="fa fa-search"></i></button>
                 </div>
+                </form>
               </div>
-              </form>
             </div>
           </li>
         </ul>
