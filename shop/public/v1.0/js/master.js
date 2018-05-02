@@ -262,7 +262,7 @@ $(function(){
 			$('.highlight-view .items li[index='+prev+']').addClass('active');
 		}
 
-	}, 2500);
+	}, 10000);
 
 
 	$('.highlight-view .items a[key]').click( function(){

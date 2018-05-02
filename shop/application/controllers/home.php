@@ -26,6 +26,7 @@ class home extends Controller{
 			$this->out( 'news', $news->getTree( $arg ) );
 			$this->out( 'template', $temp );
 			$this->out( 'ptemplate', $ptemp );
+			$this->out( 'factorylist', $this->shop->getFactoryList( 'm.ID, m.neve, m.image', array('onlyimaged' => true)) );
 
 			// Újdonságok
 			$arg = array(

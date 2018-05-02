@@ -21,14 +21,11 @@
         });
 
 	})
-     $(function(){
-
-    })
-
-    function responsive_filemanager_callback(field_id){
-        var imgurl = $('#'+field_id).val();
-        $('#logo_preview').attr('src',imgurl);
-    }
+    
+  function responsive_filemanager_callback(field_id){
+      var imgurl = $('#'+field_id).val();
+      $('#logo_preview').attr('src',imgurl);
+  }
 </script>
 <h1>Beállítások</h1>
 <br><br>

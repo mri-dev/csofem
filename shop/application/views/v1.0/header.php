@@ -162,15 +162,34 @@
     <?php $this->render('templates/slideshow'); ?>
   </div>
   <?php endif; ?>
-  <?php if ($this->homepage): ?>
+  <?php if ( $this->showslideshow && count($this->highlight_text) > 0): ?>
   <div class="bottom">
     <div class="pw">
       <div class="flex">
-        <div class="">
-          1
+        <div class="tudta-head">
+          <div class="ico"><i class="fa fa-lightbulb-o "></i></div>
+          <div class="text">Tudta hogy...</div>
+          <div class="clr"></div>
         </div>
-        <div class="">
-          2
+        <div class="tudta-cont">
+          <? if( count($this->highlight_text) > 0 ): ?>
+        <div class="highlight-view">
+          <? if( count($this->highlight_text['data']) > 1 && false ): ?>
+          <a href="javascript:void(0);" title="Előző" class="prev handler" key="prev"><i class="fa fa-arrow-circle-left"></i></a>
+          <a href="javascript:void(0);" title="Következő" class="next handler" key="next"><i class="fa fa-arrow-circle-right"></i></a>
+          <? endif; ?>
+          <div class="items">
+            <div class="hl-cont">
+              <ul>
+                <? $step = 0; foreach( $this->highlight_text['data'] as $text ): $step++; ?>
+                <li class="<?=($step == 1)?'active':''?>" index="<?=$step?>"><?=$text['tartalom']?></li>
+                <? endforeach; ?>
+              </ul>
+              <div class="clr"></div>
+            </div>
+          </div>
+        </div>
+        <? endif; ?>
         </div>
       </div>
     </div>

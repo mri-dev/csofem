@@ -91,7 +91,7 @@ body.singlepage{
 		}
 
 		.page{
-			padding: 25px 0 0 0;
+			padding: 25px 0;
 		}
 
 		.page.page-width{
@@ -1020,6 +1020,9 @@ body.singlepage{
 			.item {
 				border: none !important;
 				background: none !important;
+				.price strong {
+					color: black !important;
+				}
 			}
 			.stock-info{
 				background: $color-red;
@@ -1364,7 +1367,81 @@ body.singlepage{
 	}
 }
 
+.factory-preview{
+	background: white;
+	padding: 40px 0;
 
+	.factories{
+		border: 0.4px solid #d9d9d9;
+		position: relative;
+		padding: 20px 1px;
+
+	  .slick-slide{
+			height: 40px !important;
+			position: relative;
+			img {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				height: 90%;
+				max-height: 90%;
+				-webkit-transform: translate(-50%,-50%);
+				transform: translate(-50%,-50%);
+			}
+		}
+
+		.slick-arrow{
+			position: absolute;
+			top: 50%;
+			width: 25px;
+			height: 25px;
+			border: none;
+			background: #d9d9d9;
+			text-indent: -9999px;
+			color: white;
+			z-index: 2;
+			-webkit-transform:translateY(-50%);
+          transform:translateY(-50%);
+
+			&:after{
+				font-family: 'FontAwesome';
+				font-size: 20px;
+				width: 25px;
+				height: 25px;
+				line-height: 25px;
+				top: 50%;
+				color: white;
+				left: 50%;
+	    	text-indent: initial;
+				position: absolute;
+				-webkit-transform: translate(-50%,-50%);
+				transform: translate(-50%,-50%);
+			}
+
+			&.slick-prev{
+				left: -30px;
+				&:after{
+					content: "\f104";
+				}
+			}
+			&.slick-next{
+				right: -30px;
+				&:after{
+					content: "\f105";
+				}
+			}
+
+			&:hover{
+				background: #acacac;
+				color: white;
+
+				&:after{
+					color: white;
+				}
+			}
+		}
+	}
+}
 
 .product-view {
 	.divider {
@@ -4142,26 +4219,26 @@ input[type=checkbox] {
 	display: none;
 }
 input[type=checkbox] + label {
-	margin-left:30px !important;
+	margin-left: 20px !important;
 	line-height: 24px !important;
 	cursor: pointer;
 }
 input[type=checkbox] + label:before {
 	position: absolute;
 	content: "";
-	width: 24px;
-	margin-left:-30px;
-	height: 24px;
+	width: 16px;
+	margin-left: -22px;
+	height: 16px;
 	background-color: #ffffff;
 	border: 0.5px solid darken($color-grey, 20%);
 }
 input[type=checkbox]:checked + label:before {
 	content: "\f00c";
 	font-family: FontAwesome;
-    color: $color-grey-dark;
-    font-size:18px;
-    text-align: center;
-    line-height: 24px;
+  color: $color-grey-dark;
+	font-size: 13px;
+  text-align: center;
+  line-height: 16px;
 }
 
 .viewSwitcher{

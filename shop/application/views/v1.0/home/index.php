@@ -45,6 +45,33 @@
 			</div>
 		</div>
 	</div>
+
+	<?php if (count($this->factorylist) > 0): ?>
+	<div class="factory-preview">
+		<div class="pw">
+			<div class="factories">
+				<?php foreach ( $this->factorylist as $f ): ?>
+				<div class="fact">
+					<img src="<?=IMGDOMAIN.$f['image']?>" alt="<?=$f['neve']?>">
+				</div>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$('.factories').slick({
+				infinite: true,
+			  slidesToShow: 6,
+			  slidesToScroll: 1,
+				dots: false,
+				autoplay: true,
+				speed: 1500
+			});
+		});
+	</script>
+	<?php endif; ?>
+
 	<div class="news">
 		<div class="pw">
 			<div class="articles">
