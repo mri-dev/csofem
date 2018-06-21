@@ -3211,6 +3211,11 @@ md-toast{
 .cart .mustReload {
 	visibility:hidden;
 }
+.cartItems{
+	table.table-bordered tr td {
+		background: white;
+	}
+}
 .cartItems .cart-head {
 	padding: 15px 0;
 
@@ -3302,7 +3307,9 @@ md-toast{
 	font-family: 'Din Comp', sans-serif;
 	margin-bottom: 8px;
 }
-
+.nextOrded{
+	margin: 0 0 25px 0;
+}
 .nextOrded .steps {
 	display: none;
 	padding: 0;
@@ -3547,7 +3554,8 @@ md-toast{
     left: 50%;
     z-index: 50;
     pointer-events:none;
-    background: #87D435;
+		background: $color-blue;
+    color: white;
     padding: 4px;
 	border: 2px solid #fff;
     @include border-radius(15px);
@@ -3572,7 +3580,7 @@ md-toast{
 .nextOrded .atvetel > li > input[type=radio] + label{
 	position:relative;
 	z-index:1;
-	background:#eee;
+	background: #e3e3e3;
 	display:block;
 	margin:0;
 	padding:25px;
@@ -3592,7 +3600,7 @@ md-toast{
 	background:#e3e3e3;
 }
 .nextOrded .atvetel > li > input[type=radio]:checked + label{
-	background: darken($color-pr, 5%);
+	background: $color-blue;
 	color:white;
 }
 .nextOrded .atvetel > li > input[type=radio]:disabled + label{
@@ -3704,7 +3712,7 @@ md-toast{
 	font-size:16px;
 }
 .nextOrded .steps .price .p.end .ar{
-	color:$color-pr;
+	color:$color-blue;
 }
 
 .nextOrded .step4 .kedvezmeny > div {
@@ -3995,7 +4003,7 @@ md-toast{
 			font-family: $font-cond;
 			color: #a9a9a9;
 	    margin-bottom: 10px;
-	    background: #eceff2;
+	    background: $color-grey-dark;
 	    padding: 10px;
 	    text-align: center;
 	    text-transform: uppercase;
@@ -4006,11 +4014,6 @@ md-toast{
 			margin: 5px 0 15px 0;
 			text-align: center;
 			font-style: italic;
-
-		}
-
-		a {
-			color: $color-pr;
 		}
 	}
 
@@ -4027,7 +4030,10 @@ md-toast{
 			font-family: $font-cond;
 			line-height: 1.5;
 			margin: 15px 0 25px 0;
-			font-size: 1.8em;
+			font-size: 1.5em;
+			background: $color-grey;
+			color: #444444;
+			padding: 10px;
 		}
 
 		.row {
@@ -4043,6 +4049,7 @@ md-toast{
 	    font-size: 1.1em;
 		}
 		h4 {
+			font-weight: bold;
 			font-family: $font-cond;
 			line-height: 1.5;
 			font-size: 1.8em;
@@ -4061,11 +4068,12 @@ md-toast{
 			font-size: 0.9em;
 			vertical-align: middle;
 			color: black;
+			background: white;
 		}
 	}
 
 	.flatInfoBox {
-		background: #eceff2;
+		background: #ebebeb;
     border: 1px solid #d2d2d2;
 		margin: 20px 0;
 		padding: 10px 0;
@@ -4125,7 +4133,7 @@ md-toast{
 			}
 
 			a{
-				background: #eceff2;
+				background: #ffffff;
 				width: 100%;
 				display: block;
 				text-align: center;
@@ -4134,13 +4142,13 @@ md-toast{
 				text-transform: uppercase;
 				font-weight: bold;
 				text-decoration: none;
-		    color: $color-orange;
+		    color: $color-blue;
 				@include border-radius(10px);
 				-webkit-transition: all .4s;
   				transition: all .4s;
 
 				&:hover{
-					background: $color-red;
+					background: $color-blue;
 					color: white;
 				}
 			}
@@ -4150,6 +4158,7 @@ md-toast{
 
 
 .account {
+	padding: 25px 0;
 	.grid-layout > .grid-row-80{
 		padding: 0 20px 0 0 !important;
 	}
@@ -4165,10 +4174,11 @@ md-toast{
 		color: black;
 		font-family: $font-cond;
 		font-size: 1.1em;
+		text-align: right;
 		text-decoration: none;
-		border-right: 5px solid #eceff2;
+		border-right: 5px solid #e8e8e8;
 		&:hover{
-			background-color: #eceff2;
+			background-color: #aeaea;
 		}
 	}
 	ul li {
@@ -4176,11 +4186,10 @@ md-toast{
 	}
 
 	ul li.logout a {
-		text-align: center;
+		text-align: right;
 		color: $color-red;
 		font-size: 0.9em;
 		border: none !important;
-		border-top: 1px solid #f7f7f7 !important;
 	}
 
 	ul li.head:first-child{
@@ -4222,6 +4231,7 @@ input[type=checkbox] + label {
 	margin-left: 20px !important;
 	line-height: 24px !important;
 	cursor: pointer;
+	position: relative;
 }
 input[type=checkbox] + label:before {
 	position: absolute;
@@ -4229,13 +4239,14 @@ input[type=checkbox] + label:before {
 	width: 16px;
 	margin-left: -22px;
 	height: 16px;
+	top: 2px;
 	background-color: #ffffff;
 	border: 0.5px solid darken($color-grey, 20%);
 }
 input[type=checkbox]:checked + label:before {
 	content: "\f00c";
 	font-family: FontAwesome;
-  color: $color-grey-dark;
+  color: $color-blue;
 	font-size: 13px;
   text-align: center;
   line-height: 16px;

@@ -1125,7 +1125,8 @@ class Shop
 			$totalPrice += $d[ar] * $d[me];
 
 
-			$d['profil_kep'] = \PortalManager\Formater::productImage( $d['profil_kep'] );
+			$d['profil_kep'] = \PortalManager\Formater::productImage( $d['profil_kep'], 150, false );
+
 
 			if( $d['prices']['old_each'] != 0 && $d['prices']['old_each'] != $d['prices']['current_each']  )
 			{
