@@ -3837,13 +3837,16 @@ md-toast{
 		height: 75px;
 		width: 75px;
 		margin: 0 10px 0 0;
+		img{
+			max-width: 100%;
+		}
 	}
 	.items .name a {
 		font-family: $font-cond;
 		text-transform: uppercase;
 		font-size:1.2em;
 		font-weight: bold;
-		color: $color-pr;
+		color: $color-blue;
 		line-height: 28px;
 	}
 	.orderpage .head {
@@ -3870,7 +3873,7 @@ md-toast{
 		font-weight: bold;
 		margin: 0 0 10px 0 ;
 		font-family: $font-cond;
-		color: $color-pr;
+		color: $color-blue;
 	}
 
 	.sub {
@@ -3893,13 +3896,17 @@ md-toast{
 		font-family: $font-cond;
 		text-align: center;
 		margin: 0;
-		color: $color-grey;
+		color: $color-grey-dark;
 	}
 	.items-table {
 		padding: 10px 0;
 
 		table {
 			margin: 0;
+
+			td {
+				background: white;
+			}
 		}
 	}
 	.items td {
@@ -3928,7 +3935,7 @@ md-toast{
 	.datas .head {
 		font-size: 1em;
 		padding: 8px;
-		background-color: #eceff2;
+		background-color: #e6e6e6;
 		font-family: $font-cond;
 		margin: 10px 0 0 0;
 	}
@@ -3985,6 +3992,10 @@ md-toast{
     letter-spacing: 1px;
 	text-transform: uppercase;
 	font-family: $font-cond;
+}
+
+.orderpage{
+	margin: 0 0 25px 0;
 }
 
 .account  {
