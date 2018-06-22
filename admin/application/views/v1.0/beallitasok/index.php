@@ -21,7 +21,7 @@
         });
 
 	})
-    
+
   function responsive_filemanager_callback(field_id){
       var imgurl = $('#'+field_id).val();
       $('#logo_preview').attr('src',imgurl);
@@ -178,7 +178,7 @@
                             <div class="input-group-addon"><a title="Kép kiválasztása a galériából" href="<?=FILE_BROWSER_IMAGE?>&field_id=basics_logo" data-fancybox-type="iframe" class="iframe-btn" ><i class="fa fa-link"></i></a></div>
                         </div>
                         <div style="margin-top: 5px;
-    background: #c5171e;
+    background: #e0e0e0;
     padding: 10px;
     float: left;">
                             <img src="<?=$this->settings['logo']?>" id="logo_preview" alt="" style="max-width:180px;">
