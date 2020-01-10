@@ -1,9 +1,4 @@
 <div class="item">
-  <?php
-    $ar = $brutto_ar;
-    $wo_price = ($without_price == '1') ? true : false;
-    if( $akcios == '1' ) $ar = $akcios_fogy_ar;
-  ?>
   <div class="wrapper">
     <div class="image">
       <div class="data-board">
@@ -44,16 +39,21 @@
     <?php endif; ?>
 
     <div class="prices">
-      <div class="wrapper <?=($wo_price)?'wo-price':''?>">
-        <?php if ( $wo_price ): ?>
+      <div class="wrapper <?=($wo_price || $ar <= 0)?'wo-price':''?>">
+        <?php if ( $wo_price || $ar <= 0 ): ?>
           <div class="ar">
-            <strong>ÉRDEKLŐDJÖN!</strong>
+            <div class="">
+               <strong>ÉRDEKLŐDJÖN!</strong>
+            </div>
+            <div class="">
+              Kérje szakértőnk tanácsát!
+            </div>
           </div>
         <?php else: ?>
           <?php if ( $akcios == '1' ): ?>
             <div class="ar akcios">
-              <div class="old"><?=Helper::cashFormat($brutto_ar)?> <?=$valuta?></div>
               <div class="current"><?=Helper::cashFormat($ar)?> <?=$valuta?></div>
+              <div class="old"><?=Helper::cashFormat($eredeti_ar)?> <?=$valuta?></div>
             </div>
           <?php else: ?>
             <div class="ar">
@@ -61,10 +61,6 @@
             </div>
           <?php endif; ?>
         <?php endif; ?>
-        <div class="fav" ng-class="(fav_ids.indexOf(<?=$product_id?>) !== -1)?'selected':''" title="Kedvencekhez adom" ng-click="productAddToFav(<?=$product_id?>, $event)">
-          <i class="fa fa-star" ng-show="fav_ids.indexOf(<?=$product_id?>) !== -1"></i>
-          <i class="fa fa-star-o" ng-show="fav_ids.indexOf(<?=$product_id?>) === -1"></i>
-        </div>
       </div>
     </div>
 

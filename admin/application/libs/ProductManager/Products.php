@@ -1016,6 +1016,8 @@ class Products
 			$d['profil_kep'] 		=  \PortalManager\Formater::productImage( $kep, false, self::TAG_IMG_NOPRODUCT );
 			$d['profil_kep_small'] 	=  \PortalManager\Formater::productImage( $kep, 300, self::TAG_IMG_NOPRODUCT );
 
+			$this->makeKeywordsArray($d['kulcsszavak']);
+
 			$arInfo 		= $this->getProductPriceCalculate( $d['marka_id'], $brutto_ar );
 			$akcios_arInfo 	= $this->getProductPriceCalculate( $d['marka_id'], $akcios_brutto_ar );
 
@@ -1032,6 +1034,8 @@ class Products
 			$d['link'] 				= DOMAIN.'termek/'.\PortalManager\Formater::makeSafeUrl( $d['product_nev'], '_-'.$d['product_id'] );
 			$d['hasonlo_termek_ids']= $this->getProductRelatives( $d['product_id'] );
 			$d['parameters'] 		= $this->getParameters( $d['product_id'], $d['alapertelmezett_kategoria'] );
+
+			$d['variation_config'] = $this->getVariationConfig( $d['product_id'], $d['alapertelmezett_kategoria'] );
 			$d['price_groups'] 	= $this->priceGroups( $d['xml_import_origin'], $d['xml_import_res_id'] );
 			$d['inKatList'] 		= $in_cat;
 			$d['mertekegyseg_egysegar'] = $this->calcEgysegAr($d['mertekegyseg'], $d['mertekegyseg_ertek'], $d['ar']);
@@ -1681,14 +1685,18 @@ class Products
 		$data['arres_szazalek'] 	= $arInfo['arres'];
 		$data['hasonlo_termek_ids'] = $this->getProductRelatives( $product_id );
 		$in_kat = $this->getProductInCategory( $product_id, true );
+		$data['in_cats'] 				= $in_kat;
 		$data['in_cat_ids'] 		= $in_kat['id'];
 		$data['in_cat_names'] 		= $in_kat['name'];
 		$data['in_cat_hashkey']		= $in_kat['hashkey'];
 		$data['in_cat_page_hashkeys']= $in_kat['page_hashkeys'];
 		$data['images'] 			= $this->getProductImages( $product_id );
 		$data['parameters']			= $this->getParameters( $product_id, $data['alapertelmezett_kategoria'] );
+		$data['variation_config'] = $this->getVariationConfig( $product_id, $data['alapertelmezett_kategoria'] );
 		$data['related_products_ids']	= $this->getRelatedIDS( $product_id );
 		$data['nav'] = array_reverse($categories->getCategoryParentRow((int)$data['alapertelmezett_kategoria'], false));
+
+		$this->makeKeywordsArray($data['kulcsszavak']);
 
 		$data['keszlet_info'] = $this->checkProductStockName( $data['keszletID'], $data['raktar_keszlet'], true );
 		$data['szallitas_info'] = $this->checkProductTransportName( $data['szallitasID'], $data['raktar_keszlet'] );
@@ -1706,6 +1714,44 @@ class Products
 		$data['crm'] = $this->getFullCRMItemData( 1, $data['xml_import_res_id'] );
 
 		return $data;
+	}
+
+	public function getVariationConfig( $tid, $alapkat_id )
+	{
+		$list = array();
+
+		if ((int)$alapkat_id == 0) {
+			return $list;
+		}
+
+		$confparams = $this->db->squery("SELECT ID, parameter, mertekegyseg FROM shop_termek_kategoria_parameter WHERE kategoriaID = :id and kulcs = 1 ORDER BY CAST(priority as unsigned) ASC ", array('id' => $alapkat_id))->fetchAll(\PDO::FETCH_ASSOC);
+
+		if (empty($confparams)) {
+			return $list;
+		}
+
+		foreach ((array)$confparams as $cp)
+		{
+			$values = $this->db->squery("SELECT ID, defvalue as selected, config_value as value, lathato FROM shop_termek_variation_configs WHERE product_id = :tid and parameter_id = :pid ORDER BY config_value ASC ", array('tid' => $tid, 'pid' => $cp['ID']))->fetchAll(\PDO::FETCH_ASSOC);
+			$cp['values'] = $values;
+			$list[$cp['ID']] = $cp;
+		}
+
+		//shop_termek_variation_configs
+
+		return $list;
+	}
+
+	public function makeKeywordsArray( &$keywords )
+	{
+		if ($keywords == '') {
+			return array();
+		}
+
+		$keywords = str_replace(", ", ",", $keywords);
+		$keywords = explode(",", $keywords);
+
+		return $keywords;
 	}
 
 	public function getFullCRMItemData( $origin, $id )

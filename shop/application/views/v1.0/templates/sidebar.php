@@ -96,8 +96,12 @@
               </div>
             </a>
             <div class="price">
+              <?php if ( $livep['wo_price'] || $livep['ar'] <= 0 ): ?>
+                 <strong>ÉRDEKLŐDJÖN!</strong>
+              <?php else: ?>
               <strong><?php echo Helper::cashFormat($livep['ar']); ?> Ft</strong> <?php if ($livep['akcios'] == 1): ?>
                 <span class="old"><?php echo Helper::cashFormat($livep['brutto_ar']); ?> Ft</span>
+              <?php endif; ?>
               <?php endif; ?>
             </div>
           </div>
@@ -127,8 +131,12 @@
                 </div>
               </a>
               <div class="price">
+                <?php if ( $topp['wo_price'] || $topp['ar'] <= 0 ): ?>
+                   <strong>ÉRDEKLŐDJÖN!</strong>
+                <?php else: ?>
                 <strong><?php echo Helper::cashFormat($topp['ar']); ?> Ft</strong> <?php if ($topp['akcios'] == 1): ?>
                   <span class="old"><?php echo Helper::cashFormat($topp['brutto_ar']); ?> Ft</span>
+                <?php endif; ?>
                 <?php endif; ?>
               </div>
             </div>
@@ -165,8 +173,12 @@
                 </div>
               </a>
               <div class="price">
+                <?php if ( $viewed['wo_price'] || $viewed['ar'] <= 0 ): ?>
+                   <strong>ÉRDEKLŐDJÖN!</strong>
+                <?php else: ?>
                 <strong><?php echo Helper::cashFormat($viewed['ar']); ?> Ft</strong> <?php if ($viewed['akcios'] == 1): ?>
                   <span class="old"><?php echo Helper::cashFormat($viewed['brutto_ar']); ?> Ft</span>
+                <?php endif; ?>
                 <?php endif; ?>
               </div>
             </div>

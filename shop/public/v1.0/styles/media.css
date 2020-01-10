@@ -2841,15 +2841,15 @@ body.singlepage .website .page.covered-page .side-menu {
   color: white;
 }
 
-/* line 1447, sass/_base.scss */
+/* line 1446, sass/_base.scss */
 .product-view .divider {
-  margin: 15px 0;
+  margin: 8px 0;
 }
-/* line 1450, sass/_base.scss */
+/* line 1449, sass/_base.scss */
 .product-view > .product-data {
   padding: 25px 0 0 0;
 }
-/* line 1452, sass/_base.scss */
+/* line 1451, sass/_base.scss */
 .product-view > .product-data .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2858,18 +2858,47 @@ body.singlepage .website .page.covered-page .side-menu {
   align-items: flex-start;
   border-bottom: 1px solid #f1f1f1;
   margin: 0 0 10px 0;
-  padding: 0 0 10px 0;
 }
-/* line 1462, sass/_base.scss */
+/* line 1460, sass/_base.scss */
 .product-view > .product-data .nav > .pagi {
-  flex-basis: 70%;
+  flex-basis: 100%;
   text-align: left;
 }
-/* line 1467, sass/_base.scss */
+/* line 1465, sass/_base.scss */
 .product-view > .product-data .nav > .pagi .cat-nav {
   margin: 0 !important;
 }
-/* line 1473, sass/_base.scss */
+/* line 1471, sass/_base.scss */
+.product-view > .product-data .product-row-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 25px 0;
+}
+/* line 1481, sass/_base.scss */
+.product-view > .product-data .product-row-nav a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+}
+/* line 1488, sass/_base.scss */
+.product-view > .product-data .product-row-nav > div {
+  background: white;
+  border-radius: 5px;
+}
+/* line 1492, sass/_base.scss */
+.product-view > .product-data .product-row-nav > div:hover {
+  background: #007aff;
+}
+/* line 1495, sass/_base.scss */
+.product-view > .product-data .product-row-nav > div:hover a {
+  color: white;
+}
+/* line 1502, sass/_base.scss */
 .product-view > .product-data .top-datas {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2877,33 +2906,34 @@ body.singlepage .website .page.covered-page .side-menu {
   flex-wrap: wrap;
   align-items: flex-start;
 }
-/* line 1480, sass/_base.scss */
+/* line 1509, sass/_base.scss */
 .product-view > .product-data .top-datas > div {
   flex-basis: 50%;
 }
-/* line 1484, sass/_base.scss */
+/* line 1513, sass/_base.scss */
 .product-view > .product-data .top-datas .images {
   padding-right: 10px;
+  padding-top: 5px;
 }
-/* line 1486, sass/_base.scss */
+/* line 1516, sass/_base.scss */
 .product-view > .product-data .top-datas .images .main-img {
   border: .4px solid #e0e0e0;
   overflow: hidden;
   position: relative;
 }
-/* line 1491, sass/_base.scss */
+/* line 1521, sass/_base.scss */
 .product-view > .product-data .top-datas .images .main-img .img-thb {
   height: 100%;
   width: 100%;
 }
-/* line 1495, sass/_base.scss */
+/* line 1525, sass/_base.scss */
 .product-view > .product-data .top-datas .images .main-img .img-thb a {
   display: block;
   height: 100%;
   width: 100%;
   background: white;
 }
-/* line 1503, sass/_base.scss */
+/* line 1533, sass/_base.scss */
 .product-view > .product-data .top-datas .images .main-img img {
   max-width: 90%;
   position: absolute;
@@ -2912,100 +2942,224 @@ body.singlepage .website .page.covered-page .side-menu {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-/* line 1513, sass/_base.scss */
+/* line 1542, sass/_base.scss */
+.product-view > .product-data .top-datas .images .main-img .discount-percent {
+  z-index: 10;
+  color: white;
+  pointer-events: none;
+  font-size: 1.6em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  width: 150px;
+  height: 150px;
+  background: url("//www.cp.autoradiokeret.web-pro.hu/src/images/discount_half_square.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* line 1557, sass/_base.scss */
+.product-view > .product-data .top-datas .images .main-img .discount-percent .p {
+  position: absolute;
+  left: 33%;
+  top: 30%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* line 1567, sass/_base.scss */
 .product-view > .product-data .top-datas .images .all {
   position: relative;
-  width: 350px;
+  width: 450px;
   margin: 10px auto 0 auto;
 }
-/* line 1517, sass/_base.scss */
+/* line 1571, sass/_base.scss */
 .product-view > .product-data .top-datas .images .all .imgslide {
   padding: 3px;
 }
-/* line 1519, sass/_base.scss */
+/* line 1573, sass/_base.scss */
 .product-view > .product-data .top-datas .images .all .imgslide .wrp {
   padding: 5px;
-  border: .4px solid #e0e0e0;
   background: white;
+  border: .4px solid #e0e0e0;
+  position: relative;
 }
-/* line 1528, sass/_base.scss */
+/* line 1579, sass/_base.scss */
+.product-view > .product-data .top-datas .images .all .imgslide .wrp img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* line 1592, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data {
-  padding-left: 10px;
+  padding-left: 20px;
 }
-/* line 1530, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data h1 {
-  color: #deb200;
+/* line 1596, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .group-infos > div {
+  margin: 15px 0;
+}
+/* line 1599, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .group-infos > div .title {
   font-weight: bold;
-  font-size: 2.3em;
-  line-height: 1.2;
+  flex-basis: 25%;
 }
-/* line 1536, sass/_base.scss */
+/* line 1603, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .group-infos > div .val {
+  flex-basis: 75%;
+}
+/* line 1608, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .group-infos > div > .flex {
+  flex-wrap: nowrap;
+}
+/* line 1613, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data h1 {
+  font-weight: bold;
+  font-size: 2.4em;
+  line-height: 1.1;
+}
+/* line 1618, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data .csoport {
   color: #404040;
-  font-size: 1.35em;
+  font-size: 2em;
   margin: 5px 0;
 }
-/* line 1541, sass/_base.scss */
+/* line 1623, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data .prices {
   margin-top: 20px;
   font-size: 1.6em;
   position: relative;
 }
-/* line 1546, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .prices .old {
-  color: #727272;
-  font-weight: 100;
-}
-/* line 1551, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .prices .discount_percent {
-  background: #cc022e;
-  color: white;
-  padding: 5px;
-  font-size: 0.5em;
-  border-radius: 5px;
-}
-/* line 1561, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .prices .price-head,
-.product-view > .product-data .top-datas .main-data .prices .old,
-.product-view > .product-data .top-datas .main-data .prices .discount_percent {
-  margin-right: 10px;
-}
-/* line 1565, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .prices .current {
-  font-weight: bold;
-}
-/* line 1569, sass/_base.scss */
+/* line 1628, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data .prices .cimkek {
   position: absolute;
   right: 0;
   top: -12px;
 }
-/* line 1575, sass/_base.scss */
+/* line 1634, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data .prices .base {
   margin-right: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
+}
+/* line 1642, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .prices .base .pricehead {
+  font-size: 0.6em;
+  margin: 0 0 8px 0;
+}
+/* line 1647, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .prices .base .price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #3c3c3c;
+}
+/* line 1652, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .prices .base .price.current {
+  color: #007aff;
+  font-size: 1.3em;
+}
+/* line 1656, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .prices .base .price.current.discounted {
+  color: #cc022e;
+}
+/* line 1661, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .prices .base .price.old {
+  color: #454545;
+  font-size: 0.85em;
+  font-weight: 100;
+}
+/* line 1667, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .prices .base .price .unit-text {
+  font-size: 0.5em;
+  font-weight: 400;
+}
+/* line 1673, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .prices .base > div {
+  flex-basis: calc(100% / 2);
+}
+/* line 1676, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .prices .base > .kisker-addon-price {
+  flex-basis: 100%;
+  font-size: 1.1rem;
+  margin: 15px 0 0 0;
+}
+/* line 1680, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .prices .base > .kisker-addon-price .price {
+  font-size: 0.9rem;
+  color: black;
+}
+/* line 1683, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .prices .base > .kisker-addon-price .price .net {
+  font-weight: normal;
+}
+/* line 1691, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .status-params {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: nowrap;
   align-items: center;
+  justify-content: space-between;
+  margin: -5px;
+  font-size: 0.8em;
+  line-height: 25px;
 }
-/* line 1584, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .stock {
-  margin-top: 10px;
-  color: #959595;
-  font-size: 0.9em;
+/* line 1702, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .status-params > div {
+  padding: 0 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: nowrap;
 }
-/* line 1589, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .stock strong {
-  color: #747474;
+/* line 1709, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .status-params > div .v {
+  padding-left: 4px;
 }
-/* line 1593, sass/_base.scss */
+/* line 1714, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .status-params > div.avaibility span {
+  padding: 4px;
+  color: white;
+  border-radius: 2px;
+  line-height: 1;
+  font-weight: bold;
+}
+/* line 1723, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .status-params > div.transport span {
+  padding: 5px 10px;
+  color: #505050;
+  font-weight: bold;
+  background: #e8e8e8;
+  border: 0.5px solid #c9c9c9;
+  border-radius: 2px;
+  line-height: 1;
+}
+/* line 1736, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .status-params .free-transport .free-transport-ele {
+  background: #b0cb1f;
+  color: white;
+  padding: 5px 8px;
+  line-height: 1.4;
+  border-radius: 2px;
+  font-weight: bold;
+}
+/* line 1744, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .status-params .free-transport .free-transport-ele img {
+  float: left;
+  margin: 0 5px 0 0;
+  height: 15px;
+}
+/* line 1753, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data .short-desc {
-  font-size: 1.05em;
+  font-size: 0.9em;
   line-height: 1.3;
-  color: #404040;
+  color: #2c2c2c;
 }
-/* line 1598, sass/_base.scss */
+/* line 1758, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data .variation-header {
   text-align: center;
   font-family: 'Din Cond', arial;
@@ -3014,7 +3168,7 @@ body.singlepage .website .page.covered-page .side-menu {
   font-weight: bold;
   margin: 0 0 5px 0;
 }
-/* line 1606, sass/_base.scss */
+/* line 1766, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data .variation-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3022,12 +3176,12 @@ body.singlepage .website .page.covered-page .side-menu {
   flex-wrap: wrap;
   align-items: center;
 }
-/* line 1613, sass/_base.scss */
+/* line 1773, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data .variation-list .variation {
   flex: 1;
   padding: 3px;
 }
-/* line 1617, sass/_base.scss */
+/* line 1777, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data .variation-list .variation a {
   display: block;
   text-align: center;
@@ -3036,17 +3190,31 @@ body.singlepage .website .page.covered-page .side-menu {
   background: #dadada;
   text-decoration: none;
 }
-/* line 1625, sass/_base.scss */
+/* line 1785, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data .variation-list .variation a:hover {
   background: #c1c1c1;
 }
-/* line 1630, sass/_base.scss */
+/* line 1790, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data .variation-list .variation.actual a {
   background: #f09f0f;
   color: white;
   font-weight: bold;
 }
-/* line 1640, sass/_base.scss */
+/* line 1800, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .stock-info {
+  margin: 5px 0 0 5px;
+  font-size: 1rem;
+  color: #7ca720;
+}
+/* line 1804, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .stock-info.no-stock {
+  color: #3c3c3c;
+}
+/* line 1806, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .stock-info.no-stock strong {
+  color: #d58d16;
+}
+/* line 1811, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data .cart-info .out-of-stock {
   background: #ffeeee;
   padding: 20px;
@@ -3054,272 +3222,415 @@ body.singlepage .website .page.covered-page .side-menu {
   color: #cc022e;
   font-size: 1.1em;
 }
-/* line 1647, sass/_base.scss */
+/* line 1818, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data .cart-info .group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: flex-end;
   margin: 0 -10px;
 }
-/* line 1656, sass/_base.scss */
+/* line 1827, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data .cart-info .group .h {
   margin-bottom: 5px;
 }
-/* line 1660, sass/_base.scss */
+/* line 1831, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data .cart-info .group .v {
   font-size: 1.2em;
   font-weight: bold;
 }
-/* line 1665, sass/_base.scss */
+/* line 1836, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data .cart-info .group > div {
   padding: 0 10px;
   flex-basis: calc(100%/3);
 }
-/* line 1670, sass/_base.scss */
+/* line 1841, sass/_base.scss */
 .product-view > .product-data .top-datas .main-data .cart-info .group > div.size-selector, .product-view > .product-data .top-datas .main-data .cart-info .group > div.item-num {
   flex: 1;
 }
-/* line 1673, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .cart-info .group > div.order {
-  flex-basis: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
+/* line 1845, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.configs {
+  flex-basis: 40%;
 }
-/* line 1681, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .cart-info .group > div.order > div.men {
-  flex-basis: 60px;
-}
-/* line 1683, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .cart-info .group > div.order > div.men input[type=number] {
-  width: 60px;
-  height: 36px;
-  line-height: 36px;
-  font-size: 1.25em;
-  color: black;
-  padding: 0 6px;
-  border: 1px solid #eceff2;
-  border-right: none;
-  text-align: center;
-}
-/* line 1696, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .cart-info .group > div.order > div.requestbutton {
-  flex: 1;
-}
-/* line 1701, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .cart-info .group > div.order > div.buttonorder {
-  flex: 1;
-}
-/* line 1705, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .cart-info .group > div.order button {
-  width: 100%;
-  background: #cc022e;
-  color: white;
-  border: none;
-  font-size: 1.2em;
-  cursor: pointer;
-  height: 36px;
-  line-height: 36px;
-  text-transform: uppercase;
-}
-/* line 1716, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .cart-info .group > div.order button:hover {
-  background: #b30228;
-}
-/* line 1722, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .cart-info .group > div.order.requestprice button {
-  font-size: 0.9em;
-  background: #747272;
-}
-/* line 1731, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .cart-info .group .variation .v {
-  color: #f09f0f;
-}
-/* line 1737, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions {
-  width: 100%;
+/* line 1848, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.configs > .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
+}
+/* line 1855, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.configs > .list .conf {
+  padding: 5px;
+}
+/* line 1858, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.configs > .list .conf label {
+  display: block;
+  margin: 0 0 5px 0;
+}
+/* line 1863, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.configs > .list .conf input, .product-view > .product-data .top-datas .main-data .cart-info .group > div.configs > .list .conf select {
+  width: 100%;
+  max-width: 100%;
+}
+/* line 1869, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.configs > .list .conf:not(.men) {
+  flex: 1;
+}
+/* line 1873, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.configs > .list .conf.men {
+  flex-basis: 70px;
+}
+/* line 1878, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.configs.full {
+  flex-basis: 100%;
+}
+/* line 1883, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.order {
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: nowrap;
   align-items: center;
-  margin: 10px 0 0 0 !important;
+  justify-content: flex-end;
 }
-/* line 1746, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > div {
-  height: 45px;
-  padding: 0 5px !important;
+/* line 1892, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.order > .finalprice {
+  background: white;
+  font-size: 0.9em;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  border: 0.5px solid #e1dfdf;
 }
-/* line 1749, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > div > div.wrapper {
-  height: 100%;
-  border: .4px solid #e0e0e0;
-  overflow: hidden;
-  padding: .4px;
+/* line 1900, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.order > .finalprice .price {
+  font-weight: bold;
+  color: #cc022e;
+  margin: 10px 0 0 0;
+  font-size: 1.8em;
 }
-/* line 1755, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > div > div.wrapper.icoed {
+/* line 1905, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.order > .finalprice .price .unit-text {
+  font-size: 0.7em;
+  font-weight: 400;
+}
+/* line 1911, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.order > .finalprice .egysegar {
+  font-size: 0.8em;
+  margin: 4px 0 0 0;
+  color: #8c8c8c;
+}
+/* line 1915, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.order > .finalprice .egysegar strong {
+  color: #434343;
+}
+/* line 1925, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.order > div.buttonorder {
+  padding-left: 10px;
+  position: relative;
+}
+/* line 1929, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.order > div.buttonorder:before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  border-color: transparent #f40034 transparent transparent;
+  border-style: solid;
+  border-width: 10px;
+}
+/* line 1941, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.order > div.buttonorder:hover:before {
+  border-color: transparent #a2092a transparent transparent;
+}
+/* line 1947, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.order button {
+  text-transform: uppercase;
+  width: 100%;
+  background: #f40034;
+  color: white;
+  border: none;
+  font-size: 0.9em;
+  cursor: pointer;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+/* line 1960, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.order button img {
+  height: 18px;
+  vertical-align: text-bottom;
+}
+/* line 1965, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.order button:hover {
+  background: #b30228;
+}
+/* line 1971, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group > div.order.requestprice button {
+  font-size: 0.9em;
+  background: #747272;
+}
+/* line 1980, sass/_base.scss */
+.product-view > .product-data .top-datas .main-data .cart-info .group .variation .v {
+  color: #f09f0f;
+}
+/* line 1988, sass/_base.scss */
+.product-view > .product-data .more-datas {
+  background: #ffffff;
+  border-top: 2px solid #dbdbdb;
+  margin: 50px 0 0 0;
+  padding: 25px 0;
+}
+/* line 1994, sass/_base.scss */
+.product-view > .product-data .more-datas .actions {
+  position: absolute;
+  right: 0;
+  top: -55px;
+}
+/* line 1999, sass/_base.scss */
+.product-view > .product-data .more-datas .actions > .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 -5px;
+}
+/* line 2006, sass/_base.scss */
+.product-view > .product-data .more-datas .actions > .wrapper > div {
+  flex: 1;
+  padding: 5px;
+  cursor: pointer;
+}
+/* line 2012, sass/_base.scss */
+.product-view > .product-data .more-datas .actions > .wrapper > .fav {
+  color: #b132f3;
+}
+/* line 2014, sass/_base.scss */
+.product-view > .product-data .more-datas .actions > .wrapper > .fav .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
 }
-/* line 1762, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > div > div.wrapper.icoed .ico {
-  height: 43px;
-  flex-basis: 35px;
+/* line 2021, sass/_base.scss */
+.product-view > .product-data .more-datas .actions > .wrapper > .fav .wrapper i {
+  margin: 0 5px 0 0;
+}
+/* line 2027, sass/_base.scss */
+.product-view > .product-data .more-datas .actions > .wrapper > .lefoglal {
+  color: #007aff;
+}
+/* line 2029, sass/_base.scss */
+.product-view > .product-data .more-datas .actions > .wrapper > .lefoglal .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+/* line 2036, sass/_base.scss */
+.product-view > .product-data .more-datas .actions > .wrapper > .lefoglal .wrapper i {
+  margin: 0 5px 0 0;
+}
+/* line 2042, sass/_base.scss */
+.product-view > .product-data .more-datas .actions > .wrapper > .sep {
   position: relative;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
 }
-/* line 1767, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > div > div.wrapper.icoed .text {
-  flex: 1;
-  text-align: center;
-}
-/* line 1775, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .tudastar {
-  flex: 1;
-}
-/* line 1777, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .tudastar a {
-  color: white !important;
-  text-decoration: none;
-}
-/* line 1781, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .tudastar .wrapper {
-  background: #deb200;
-  color: white;
-}
-/* line 1785, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .tudastar .wrapper .ico {
-  background: white;
-}
-/* line 1788, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .tudastar .wrapper .ico .wrap {
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  background-color: #ffcc00;
-  color: white;
-  text-align: center;
-  font-size: 18px;
-  -webkit-border-radius: 24px;
-  -moz-border-radius: 24px;
-  -ms-border-radius: 24px;
-  border-radius: 24px;
+/* line 2047, sass/_base.scss */
+.product-view > .product-data .more-datas .actions > .wrapper > .sep:before {
+  content: "";
   position: absolute;
+  width: 1px;
+  height: 80%;
+  background: #acacac;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-/* line 1805, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .tudastar .wrapper .text {
+/* line 2064, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .no-setted-values,
+.product-view > .product-data .more-datas .compatiblity .compatible-msg {
+  border-radius: 5px;
+  border: 0.5px solid #dbdbdb;
+  padding: 15px;
+  line-height: 1.4;
+  background: white;
+  font-size: 0.8em;
+}
+/* line 2071, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .no-setted-values i,
+.product-view > .product-data .more-datas .compatiblity .compatible-msg i {
+  color: #007aff;
+  float: left;
+  font-size: 28px;
+  line-height: 36px;
+  margin: 0 15px 0 0;
+}
+/* line 2078, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .no-setted-values strong,
+.product-view > .product-data .more-datas .compatiblity .compatible-msg strong {
+  color: #007aff;
   font-size: 1.3em;
 }
-/* line 1808, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .tudastar .wrapper .text .t {
-  font-size: 0.7em;
+/* line 2083, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .no-setted-values.unsetted,
+.product-view > .product-data .more-datas .compatiblity .compatible-msg.unsetted {
+  background: #007aff;
+  color: white;
 }
-/* line 1815, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .callhelp {
-  flex: 1;
+/* line 2087, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .no-setted-values.unsetted i, .product-view > .product-data .more-datas .compatiblity .no-setted-values.unsetted strong,
+.product-view > .product-data .more-datas .compatiblity .compatible-msg.unsetted i,
+.product-view > .product-data .more-datas .compatiblity .compatible-msg.unsetted strong {
+  color: white;
 }
-/* line 1817, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .callhelp .wrapper {
-  background: #ffffff;
-  color: #404040;
-}
-/* line 1821, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .callhelp .wrapper .ico {
-  background: #eceff2;
-  border-right: .4px solid #e0e0e0;
-}
-/* line 1825, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .callhelp .wrapper .ico i {
-  font-size: 24px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  color: #747272;
-}
-/* line 1836, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .callhelp .wrapper .text {
-  font-size: 0.9em;
-}
-/* line 1838, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .callhelp .wrapper .text .phone {
+/* line 2091, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .no-setted-values.unsetted span.btn,
+.product-view > .product-data .more-datas .compatiblity .compatible-msg.unsetted span.btn {
+  cursor: pointer;
+  font-size: 11px;
+  color: black;
+  background: white;
+  border-radius: 4px;
+  padding: 2px 5px;
   margin: 5px 0 0 0;
 }
-/* line 1841, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .callhelp .wrapper .text .phone a {
-  font-weight: bold;
-  text-decoration: none;
+/* line 2100, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .no-setted-values.unsetted span.btn i,
+.product-view > .product-data .more-datas .compatiblity .compatible-msg.unsetted span.btn i {
+  color: black;
+  font-size: 12px;
+  line-height: 18px;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+}
+/* line 2111, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .no-setted-values.uncompatible i, .product-view > .product-data .more-datas .compatiblity .no-setted-values.uncompatible strong,
+.product-view > .product-data .more-datas .compatiblity .compatible-msg.uncompatible i,
+.product-view > .product-data .more-datas .compatiblity .compatible-msg.uncompatible strong {
   color: #cc022e;
+}
+/* line 2116, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .no-setted-values.compatible i, .product-view > .product-data .more-datas .compatiblity .no-setted-values.compatible strong,
+.product-view > .product-data .more-datas .compatiblity .compatible-msg.compatible i,
+.product-view > .product-data .more-datas .compatiblity .compatible-msg.compatible strong {
+  color: #b0cb1f;
+}
+/* line 2122, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+/* line 2129, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .list > div {
+  flex-basis: 50%;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 2136, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .list > div > .wrapper {
+  background: white;
+  border: 0.5px solid #dbdbdb;
+  width: 100%;
+  border-radius: 3px;
+}
+/* line 2142, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .list > div > .wrapper > .head {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
   font-size: 1.2em;
+  color: #444444;
+  background: #f1f1f1;
+  border-bottom: 0.5px solid #dbdbdb;
 }
-/* line 1852, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .fav {
-  flex-basis: 45px !important;
+/* line 2152, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .list > div > .wrapper > .all-model {
+  text-align: center;
+  padding: 15px;
+  color: #b0cb1f;
 }
-/* line 1854, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .fav .wrapper {
-  background: #ffcc00;
-  position: relative;
-  cursor: pointer;
+/* line 2158, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .list > div > .wrapper .model {
+  padding: 5px;
+  font-size: 1.3em;
+  line-height: 1;
+  color: #a0a0a0;
+  border-bottom: 0.5px solid #dbdbdb;
 }
-/* line 1859, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .fav .wrapper i {
-  transition: all .2s;
-  color: white;
-  font-size: 16px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+/* line 2165, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .list > div > .wrapper .model > .head {
+  padding: 5px 0;
+  color: #777777;
 }
-/* line 1870, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .fav .wrapper:hover i {
-  font-size: 18px;
+/* line 2170, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .list > div > .wrapper .model .restricts {
+  font-size: 0.65em;
+  padding: 5px 0 0 0;
+  border-top: 0.5px solid #dcdcdc;
 }
-/* line 1877, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > .fav.selected .wrapper {
-  background: #e6585e;
+/* line 2174, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .list > div > .wrapper .model .restricts .config {
+  border-bottom: 0.4px solid #f1f1f1;
+  padding: 3px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 25px;
 }
-/* line 1883, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > div:first-child {
-  padding-left: 0 !important;
+/* line 2185, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .list > div > .wrapper .model .restricts .config .title {
+  font-weight: bold;
 }
-/* line 1886, sass/_base.scss */
-.product-view > .product-data .top-datas .main-data .helpdesk-actions > div:last-child {
-  padding-right: 0 !important;
+/* line 2189, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .list > div > .wrapper .model .restricts .config:last-child {
+  border-bottom: none;
 }
-/* line 1892, sass/_base.scss */
-.product-view > .product-data .more-datas {
-  background: #fafafa;
-  border-top: 1px solid #949494;
-  margin: 50px 0 0 0;
-  padding: 25px 0;
+/* line 2195, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .list > div > .wrapper .model.compatible {
+  color: #222222;
 }
-/* line 1898, sass/_base.scss */
+/* line 2197, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .list > div > .wrapper .model.compatible > .head {
+  color: #b0cb1f;
+}
+/* line 2199, sass/_base.scss */
+.product-view > .product-data .more-datas .compatiblity .list > div > .wrapper .model.compatible > .head i {
+  font-weight: normal;
+  font-size: 12px;
+  vertical-align: middle;
+}
+/* line 2212, sass/_base.scss */
 .product-view > .product-data .more-datas .page-width {
   position: relative;
 }
-/* line 1902, sass/_base.scss */
+/* line 2216, sass/_base.scss */
 .product-view > .product-data .more-datas nav.tab-header {
   position: absolute;
   left: 0;
   top: -62px;
 }
-/* line 1906, sass/_base.scss */
+/* line 2220, sass/_base.scss */
 .product-view > .product-data .more-datas nav.tab-header ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3327,11 +3638,11 @@ body.singlepage .website .page.covered-page .side-menu {
   flex-wrap: wrap;
   align-items: center;
 }
-/* line 1913, sass/_base.scss */
+/* line 2227, sass/_base.scss */
 .product-view > .product-data .more-datas nav.tab-header ul > li {
   padding: 0 10px 0 0;
 }
-/* line 1916, sass/_base.scss */
+/* line 2230, sass/_base.scss */
 .product-view > .product-data .more-datas nav.tab-header ul > li a {
   font-size: 1.15em;
   display: block;
@@ -3345,13 +3656,13 @@ body.singlepage .website .page.covered-page .side-menu {
   color: #333333;
   text-decoration: none;
 }
-/* line 1931, sass/_base.scss */
+/* line 2245, sass/_base.scss */
 .product-view > .product-data .more-datas nav.tab-header ul > li.active a {
   background: #3e3e3e;
   color: white;
   border: 1px solid #3e3e3e;
 }
-/* line 1941, sass/_base.scss */
+/* line 2255, sass/_base.scss */
 .product-view > .product-data .more-datas .holder {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3359,15 +3670,15 @@ body.singlepage .website .page.covered-page .side-menu {
   flex-wrap: wrap;
   align-items: flex-start;
 }
-/* line 1948, sass/_base.scss */
+/* line 2262, sass/_base.scss */
 .product-view > .product-data .more-datas .holder > div {
   flex-basis: 50%;
 }
-/* line 1953, sass/_base.scss */
+/* line 2267, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts {
   padding-right: 10px;
 }
-/* line 1956, sass/_base.scss */
+/* line 2270, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts .no-data {
   font-size: 1.2em;
   background: white;
@@ -3377,7 +3688,7 @@ body.singlepage .website .page.covered-page .side-menu {
   color: #676767;
   line-height: 1.1;
 }
-/* line 1965, sass/_base.scss */
+/* line 2279, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts .no-data i {
   font-size: 24px;
   vertical-align: middle;
@@ -3386,24 +3697,24 @@ body.singlepage .website .page.covered-page .side-menu {
   color: #d4d4d4;
   margin: 0 10px 0 0;
 }
-/* line 1975, sass/_base.scss */
+/* line 2289, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts .tab-holder {
   display: none;
 }
-/* line 1978, sass/_base.scss */
+/* line 2292, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts .tab-holder.showed {
   display: block;
 }
-/* line 1984, sass/_base.scss */
+/* line 2298, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts .parameters .c {
   padding: 0;
 }
-/* line 1987, sass/_base.scss */
+/* line 2301, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts .parameters .params {
   background: white;
   border: 2px solid #e2e2e2;
 }
-/* line 1990, sass/_base.scss */
+/* line 2304, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts .parameters .params .param {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3412,61 +3723,69 @@ body.singlepage .website .page.covered-page .side-menu {
   align-items: center;
   border-bottom: 1px solid #f3f3f3;
 }
-/* line 1998, sass/_base.scss */
+/* line 2312, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts .parameters .params .param > div {
   flex-basis: 50%;
   padding: 10px;
 }
-/* line 2003, sass/_base.scss */
+/* line 2317, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts .parameters .params .param > div.key {
   border-right: 1px solid #f3f3f3;
 }
-/* line 2007, sass/_base.scss */
+/* line 2321, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts .parameters .params .param:nth-child(even) {
   background: #efefef;
 }
-/* line 2010, sass/_base.scss */
+/* line 2324, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts .parameters .params .param:last-child {
   border-bottom: none;
 }
-/* line 2018, sass/_base.scss */
+/* line 2332, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts .description .c {
   color: #404040;
-  line-height: 1.4;
+  line-height: 1.5;
   /* width */
   /* Track */
   /* Handle */
   /* Handle on hover */
 }
-/* line 2023, sass/_base.scss */
+/* line 2336, sass/_base.scss */
+.product-view > .product-data .more-datas .info-texts .description .c h1, .product-view > .product-data .more-datas .info-texts .description .c h2, .product-view > .product-data .more-datas .info-texts .description .c h3, .product-view > .product-data .more-datas .info-texts .description .c h4, .product-view > .product-data .more-datas .info-texts .description .c h5 {
+  margin: 5px 0 10px 0;
+}
+/* line 2341, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts .description .c::-webkit-scrollbar {
   width: 18px;
 }
-/* line 2028, sass/_base.scss */
+/* line 2346, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts .description .c::-webkit-scrollbar-track {
   background: #eceff2;
 }
-/* line 2033, sass/_base.scss */
+/* line 2351, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts .description .c::-webkit-scrollbar-thumb {
   background: #e0e0e0;
 }
-/* line 2038, sass/_base.scss */
+/* line 2356, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts .description .c::-webkit-scrollbar-thumb:hover {
   background: #d7d7d7;
 }
-/* line 2043, sass/_base.scss */
+/* line 2361, sass/_base.scss */
 .product-view > .product-data .more-datas .info-texts .description .c p {
   margin: 0 0 10px 0;
 }
-/* line 2050, sass/_base.scss */
+/* line 2368, sass/_base.scss */
 .product-view > .product-data .more-datas .related-products {
   padding-left: 10px;
 }
-/* line 2052, sass/_base.scss */
+/* line 2370, sass/_base.scss */
+.product-view > .product-data .more-datas .related-products .c {
+  padding: 25px 5px;
+}
+/* line 2373, sass/_base.scss */
 .product-view > .product-data .more-datas .related-products .head {
   padding: 10px 0;
 }
-/* line 2054, sass/_base.scss */
+/* line 2375, sass/_base.scss */
 .product-view > .product-data .more-datas .related-products .head h3 {
   text-align: center;
   font-size: 1.8em;
@@ -3476,7 +3795,69 @@ body.singlepage .website .page.covered-page .side-menu {
   color: #404040;
 }
 
-/* line 2068, sass/_base.scss */
+/* line 2391, sass/_base.scss */
+.sel-inp-wrapper,
+.num-inp-wrapper {
+  background: white;
+  border: 0.5px solid #cdcdcd;
+  overflow: hidden;
+  border-radius: 3px;
+}
+/* line 2397, sass/_base.scss */
+.sel-inp-wrapper input, .sel-inp-wrapper select,
+.num-inp-wrapper input,
+.num-inp-wrapper select {
+  background: transparent;
+  border: none;
+  width: 100%;
+  line-height: 30px;
+  height: 30px;
+  padding: 0 12px;
+  display: block;
+  cursor: pointer;
+}
+
+/* line 2409, sass/_base.scss */
+.sel-inp-wrapper {
+  position: relative;
+}
+/* line 2412, sass/_base.scss */
+.sel-inp-wrapper:after {
+  content: "";
+  width: 1.5em;
+  height: 100%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  position: absolute;
+  background: #007aff url("//www.cp.autoradiokeret.web-pro.hu/src/images/arrow-down.svg") no-repeat center;
+  background-size: 50%;
+}
+/* line 2424, sass/_base.scss */
+.sel-inp-wrapper select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 30px;
+}
+
+/* line 2433, sass/_base.scss */
+.num-inp-wrapper input[type=number] {
+  padding-right: 0;
+}
+/* line 2437, sass/_base.scss */
+.num-inp-wrapper input[type=number]::-webkit-inner-spin-button,
+.num-inp-wrapper input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  background: #007aff url("//www.cp.autoradiokeret.web-pro.hu/src/images/plusminus.svg") no-repeat center;
+  background-size: 70%;
+  cursor: pointer;
+  width: 1.5em;
+  opacity: 1;
+}
+
+/* line 2447, sass/_base.scss */
 .docs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3484,12 +3865,12 @@ body.singlepage .website .page.covered-page .side-menu {
   flex-wrap: wrap;
   align-items: flex-start;
 }
-/* line 2075, sass/_base.scss */
+/* line 2454, sass/_base.scss */
 .docs > .doc {
   flex-basis: 100%;
   margin: 10px 0;
 }
-/* line 2078, sass/_base.scss */
+/* line 2457, sass/_base.scss */
 .docs > .doc a {
   font-size: 1.2em;
   line-height: 1.4;
@@ -3497,24 +3878,24 @@ body.singlepage .website .page.covered-page .side-menu {
   color: #080808;
   text-decoration: none;
 }
-/* line 2085, sass/_base.scss */
+/* line 2464, sass/_base.scss */
 .docs > .doc a img {
   vertical-align: middle;
   margin-right: 8px;
   margin-top: -3px;
   height: 22px;
 }
-/* line 2092, sass/_base.scss */
+/* line 2471, sass/_base.scss */
 .docs > .doc a .size {
   font-size: 0.8em;
   color: #8c8c8c;
 }
-/* line 2097, sass/_base.scss */
+/* line 2476, sass/_base.scss */
 .docs > .doc a:hover {
   color: #f09f0f;
 }
 
-/* line 2106, sass/_base.scss */
+/* line 2485, sass/_base.scss */
 .productview .slick-prev,
 .productview .slick-next {
   position: absolute;
@@ -3528,7 +3909,7 @@ body.singlepage .website .page.covered-page .side-menu {
   z-index: 100;
   overflow: hidden;
 }
-/* line 2117, sass/_base.scss */
+/* line 2496, sass/_base.scss */
 .productview .slick-prev:before,
 .productview .slick-next:before {
   color: #c8c8c8;
@@ -3541,36 +3922,36 @@ body.singlepage .website .page.covered-page .side-menu {
   transform: translate(-50%, -50%);
   text-indent: 0;
 }
-/* line 2130, sass/_base.scss */
+/* line 2509, sass/_base.scss */
 .productview .slick-prev:hover:before,
 .productview .slick-next:hover:before {
   color: black;
 }
-/* line 2135, sass/_base.scss */
+/* line 2514, sass/_base.scss */
 .productview .slick-prev {
   left: -30px;
 }
-/* line 2137, sass/_base.scss */
+/* line 2516, sass/_base.scss */
 .productview .slick-prev:before {
   content: "\f104";
 }
-/* line 2141, sass/_base.scss */
+/* line 2520, sass/_base.scss */
 .productview .slick-next {
   right: -30px;
 }
-/* line 2143, sass/_base.scss */
+/* line 2522, sass/_base.scss */
 .productview .slick-next:before {
   content: "\f105";
 }
 
-/* line 2149, sass/_base.scss */
+/* line 2528, sass/_base.scss */
 .menu-widget {
   width: 100%;
   position: relative;
   background: #262626;
   padding-bottom: 20px;
 }
-/* line 2155, sass/_base.scss */
+/* line 2534, sass/_base.scss */
 .menu-widget .head {
   text-align: center;
   color: black;
@@ -3579,26 +3960,26 @@ body.singlepage .website .page.covered-page .side-menu {
   line-height: 1;
   padding: 10px 0;
 }
-/* line 2164, sass/_base.scss */
+/* line 2543, sass/_base.scss */
 .menu-widget .slides {
   width: 209px;
   margin: 0;
 }
-/* line 2168, sass/_base.scss */
+/* line 2547, sass/_base.scss */
 .menu-widget .slides .slide {
   width: 100%;
   max-width: 100%;
 }
-/* line 2172, sass/_base.scss */
+/* line 2551, sass/_base.scss */
 .menu-widget .slides .slide a {
   padding: 0 !important;
 }
-/* line 2176, sass/_base.scss */
+/* line 2555, sass/_base.scss */
 .menu-widget .slides .slide img {
   width: 100%;
   max-width: 100%;
 }
-/* line 2183, sass/_base.scss */
+/* line 2562, sass/_base.scss */
 .menu-widget .slick-next {
   background: url("//www.cp.autoradiokeret.web-pro.hu/src/images/src/images/arrow-right-sm.png") no-repeat center;
   width: 12px;
@@ -3611,7 +3992,7 @@ body.singlepage .website .page.covered-page .side-menu {
   margin-top: -10px;
   z-index: 999;
 }
-/* line 2196, sass/_base.scss */
+/* line 2575, sass/_base.scss */
 .menu-widget .slick-prev {
   background: url("//www.cp.autoradiokeret.web-pro.hu/src/images/src/images/arrow-left-sm.png") no-repeat center;
   width: 12px;
@@ -3625,7 +4006,7 @@ body.singlepage .website .page.covered-page .side-menu {
   z-index: 999;
 }
 
-/* line 2211, sass/_base.scss */
+/* line 2590, sass/_base.scss */
 .menu-widget.siker-tortenetek .text {
   position: absolute;
   top: 0;
@@ -3640,18 +4021,18 @@ body.singlepage .website .page.covered-page .side-menu {
   filter: alpha(opacity=70);
 }
 
-/* line 2229, sass/_base.scss */
+/* line 2606, sass/_base.scss */
 .search .search-hashs {
   font-size: 1.2em;
   color: #d9d9d9;
 }
-/* line 2233, sass/_base.scss */
+/* line 2610, sass/_base.scss */
 .search .subtitles {
   padding: 0 15px 15px 15px;
   line-height: 150%;
 }
 
-/* line 2239, sass/_base.scss */
+/* line 2616, sass/_base.scss */
 .no-product-items {
   text-align: center;
   padding: 80px 0;
@@ -3659,18 +4040,18 @@ body.singlepage .website .page.covered-page .side-menu {
   font-size: 1.2em;
   line-height: 1.5;
 }
-/* line 2246, sass/_base.scss */
+/* line 2623, sass/_base.scss */
 .no-product-items strong {
   font-size: 1.4em;
   color: black;
 }
-/* line 2251, sass/_base.scss */
+/* line 2628, sass/_base.scss */
 .no-product-items .icon {
   color: #007aff;
   font-size: 56px;
 }
 
-/* line 2257, sass/_base.scss */
+/* line 2634, sass/_base.scss */
 .cart-float {
   position: absolute;
   right: -81px;
@@ -3680,11 +4061,11 @@ body.singlepage .website .page.covered-page .side-menu {
   line-height: 70px;
   padding: 0 15px;
 }
-/* line 2265, sass/_base.scss */
+/* line 2642, sass/_base.scss */
 .cart-float img {
   vertical-align: middle;
 }
-/* line 2269, sass/_base.scss */
+/* line 2646, sass/_base.scss */
 .cart-float .cart-item-num-v {
   background: #d9d9d9;
   position: absolute;
@@ -3698,31 +4079,31 @@ body.singlepage .website .page.covered-page .side-menu {
   border-radius: 16px;
 }
 
-/* line 2279, sass/_base.scss */
+/* line 2656, sass/_base.scss */
 .cart-float > div * {
   cursor: auto;
 }
 
-/* line 2283, sass/_base.scss */
+/* line 2660, sass/_base.scss */
 .cart-float .sub .tipus {
   color: #fff;
   font-size: 0.8em;
 }
 
-/* line 2287, sass/_base.scss */
+/* line 2664, sass/_base.scss */
 .cart-float .sub .tipus .val {
   color: #fff;
   font-weight: bold;
 }
 
-/* line 2291, sass/_base.scss */
+/* line 2668, sass/_base.scss */
 .cart-float .sub .ar {
   color: #fff;
   font-size: 0.95em;
   font-weight: bold;
 }
 
-/* line 2296, sass/_base.scss */
+/* line 2673, sass/_base.scss */
 .cart-float .floating {
   display: none;
   background: black;
@@ -3738,37 +4119,37 @@ body.singlepage .website .page.covered-page .side-menu {
   box-shadow: 0 0 10px -2px #888888;
 }
 
-/* line 2311, sass/_base.scss */
+/* line 2688, sass/_base.scss */
 .cart-float:hover .floating,
 .cart-float.opened .floating {
   display: block;
 }
 
-/* line 2315, sass/_base.scss */
+/* line 2692, sass/_base.scss */
 #cart-msg {
   margin: 5px 0 15px 0;
 }
-/* line 2318, sass/_base.scss */
+/* line 2695, sass/_base.scss */
 #cart-msg a {
   color: white;
   text-decoration: underline;
   font-size: 0.85em;
 }
-/* line 2324, sass/_base.scss */
+/* line 2701, sass/_base.scss */
 #cart-msg .success {
   background: #2dc51a;
   color: white;
   padding: 8px;
   border: 1px solid #32ad22;
 }
-/* line 2330, sass/_base.scss */
+/* line 2707, sass/_base.scss */
 #cart-msg .error {
   background: #ff9900;
   color: white;
   padding: 8px;
   border: 1px solid #e28c0b;
 }
-/* line 2336, sass/_base.scss */
+/* line 2713, sass/_base.scss */
 #cart-msg .in-progress {
   background: #007aff;
   color: white;
@@ -3776,85 +4157,85 @@ body.singlepage .website .page.covered-page .side-menu {
   border: 1px solid #0062cc;
 }
 
-/* line 2344, sass/_base.scss */
+/* line 2721, sass/_base.scss */
 .md-dialog-content-body {
   margin-top: 20px;
 }
 
-/* line 2348, sass/_base.scss */
+/* line 2725, sass/_base.scss */
 .ajaxdialog {
   min-width: 350px;
   max-width: 750px;
 }
-/* line 2352, sass/_base.scss */
+/* line 2729, sass/_base.scss */
 .ajaxdialog md-toolbar {
   text-align: center;
 }
-/* line 2355, sass/_base.scss */
+/* line 2732, sass/_base.scss */
 .ajaxdialog md-input-container {
   margin: 0 !important;
 }
-/* line 2358, sass/_base.scss */
+/* line 2735, sass/_base.scss */
 .ajaxdialog md-input-container .hint {
   font-size: 0.7em !important;
   color: #7c7c7c;
   display: block;
   margin: 35px 0 0 0;
 }
-/* line 2366, sass/_base.scss */
+/* line 2743, sass/_base.scss */
 .ajaxdialog.recall md-toolbar {
   background: #cc022e !important;
 }
-/* line 2371, sass/_base.scss */
+/* line 2748, sass/_base.scss */
 .ajaxdialog.ajanlatkeres md-toolbar {
   background: #f09f0f !important;
 }
-/* line 2376, sass/_base.scss */
+/* line 2753, sass/_base.scss */
 .ajaxdialog.accept-order md-toolbar {
   background: #cc022e !important;
 }
-/* line 2380, sass/_base.scss */
+/* line 2757, sass/_base.scss */
 .ajaxdialog.accept-order .md-dialog-content {
   line-height: 1.3;
 }
-/* line 2382, sass/_base.scss */
+/* line 2759, sass/_base.scss */
 .ajaxdialog.accept-order .md-dialog-content p {
   margin: 0 0 10px 0;
 }
-/* line 2385, sass/_base.scss */
+/* line 2762, sass/_base.scss */
 .ajaxdialog.accept-order .md-dialog-content h1, .ajaxdialog.accept-order .md-dialog-content h2, .ajaxdialog.accept-order .md-dialog-content h3, .ajaxdialog.accept-order .md-dialog-content h4 {
   margin: 10px 0 5px 0;
 }
-/* line 2388, sass/_base.scss */
+/* line 2765, sass/_base.scss */
 .ajaxdialog.accept-order .md-dialog-content ul {
   list-style: disc;
   margin: 0 0 20px 20px;
 }
-/* line 2395, sass/_base.scss */
+/* line 2772, sass/_base.scss */
 .ajaxdialog.requestprice md-toolbar {
   background: #3c3c3c !important;
 }
-/* line 2398, sass/_base.scss */
+/* line 2775, sass/_base.scss */
 .ajaxdialog.requestprice h1 {
   font-weight: bold !important;
   color: #f09f0f !important;
 }
-/* line 2403, sass/_base.scss */
+/* line 2780, sass/_base.scss */
 .ajaxdialog.requestprice .csoport {
   margin: 5px 0 10px 0;
   color: #b3b3b3;
 }
-/* line 2407, sass/_base.scss */
+/* line 2784, sass/_base.scss */
 .ajaxdialog.requestprice .csoport .keszlet-info {
   color: black;
   margin-right: 10px;
 }
-/* line 2410, sass/_base.scss */
+/* line 2787, sass/_base.scss */
 .ajaxdialog.requestprice .csoport .keszlet-info span {
   font-weight: bold;
   color: #cc022e;
 }
-/* line 2417, sass/_base.scss */
+/* line 2794, sass/_base.scss */
 .ajaxdialog.requestprice .dialog-content-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3866,11 +4247,11 @@ body.singlepage .website .page.covered-page .side-menu {
   margin: 10px 0 0 0;
   padding: 10px 0 0 0;
 }
-/* line 2428, sass/_base.scss */
+/* line 2805, sass/_base.scss */
 .ajaxdialog.requestprice .dialog-content-wrapper .product-info {
   flex-basis: 300px;
 }
-/* line 2431, sass/_base.scss */
+/* line 2808, sass/_base.scss */
 .ajaxdialog.requestprice .dialog-content-wrapper .product-info .rack-infos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3878,20 +4259,20 @@ body.singlepage .website .page.covered-page .side-menu {
   flex-wrap: wrap;
   align-items: flex-start;
 }
-/* line 2438, sass/_base.scss */
+/* line 2815, sass/_base.scss */
 .ajaxdialog.requestprice .dialog-content-wrapper .product-info .rack-infos > div {
   flex: 1;
 }
-/* line 2443, sass/_base.scss */
+/* line 2820, sass/_base.scss */
 .ajaxdialog.requestprice .dialog-content-wrapper .product-info img {
   max-width: 100%;
 }
-/* line 2447, sass/_base.scss */
+/* line 2824, sass/_base.scss */
 .ajaxdialog.requestprice .dialog-content-wrapper .form {
   flex: 1;
   padding: 10px 0 0 20px;
 }
-/* line 2453, sass/_base.scss */
+/* line 2830, sass/_base.scss */
 .ajaxdialog.requestprice .dialog-content-wrapper .keszlet-info,
 .ajaxdialog.requestprice .dialog-content-wrapper .szallitas-info {
   margin: 5px 0;
@@ -3899,7 +4280,7 @@ body.singlepage .website .page.covered-page .side-menu {
   font-weight: bold;
   font-size: 1.1em;
 }
-/* line 2458, sass/_base.scss */
+/* line 2835, sass/_base.scss */
 .ajaxdialog.requestprice .dialog-content-wrapper .keszlet-info .title,
 .ajaxdialog.requestprice .dialog-content-wrapper .szallitas-info .title {
   text-align: center;
@@ -3907,7 +4288,7 @@ body.singlepage .website .page.covered-page .side-menu {
   font-weight: normal;
   font-size: 0.9em;
 }
-/* line 2465, sass/_base.scss */
+/* line 2842, sass/_base.scss */
 .ajaxdialog.requestprice .dialog-content-wrapper .short-desc {
   border-top: 1px solid #f1f1f1;
   margin: 5px 0 0 0;
@@ -3916,87 +4297,87 @@ body.singlepage .website .page.covered-page .side-menu {
   font-size: 0.85em;
   line-height: 1.2;
 }
-/* line 2476, sass/_base.scss */
+/* line 2853, sass/_base.scss */
 .ajaxdialog .sending-progress .message {
   font-size: 1.2em;
   padding: 10px 20px;
   text-align: center;
   color: #70a353;
 }
-/* line 2483, sass/_base.scss */
+/* line 2860, sass/_base.scss */
 .ajaxdialog .validate-text {
   font-size: 0.9em;
   color: #df5c61;
   line-height: 1.3;
 }
 
-/* line 2490, sass/_base.scss */
+/* line 2867, sass/_base.scss */
 md-toast {
   left: 50%;
   transform: translateX(-50%);
 }
 
-/* line 2495, sass/_base.scss */
+/* line 2872, sass/_base.scss */
 .alert-toast {
   position: fixed;
 }
-/* line 2498, sass/_base.scss */
+/* line 2875, sass/_base.scss */
 .alert-toast.mode-simple .md-toast-content {
   background: #f1f1f1;
   color: black;
 }
-/* line 2504, sass/_base.scss */
+/* line 2881, sass/_base.scss */
 .alert-toast.mode-alert .md-toast-content {
   background: #ffab00;
   color: white;
 }
-/* line 2510, sass/_base.scss */
+/* line 2887, sass/_base.scss */
 .alert-toast.mode-success .md-toast-content {
   background: #24b62a;
   color: #ffffff;
 }
 
-/* line 2517, sass/_base.scss */
+/* line 2894, sass/_base.scss */
 #cartContent {
   max-height: 450px;
   overflow: auto;
 }
-/* line 2521, sass/_base.scss */
+/* line 2898, sass/_base.scss */
 #cartContent .noItem {
   text-align: center;
   padding: 40px 0 20px 0;
 }
-/* line 2525, sass/_base.scss */
+/* line 2902, sass/_base.scss */
 #cartContent .noItem:before {
   font-family: FontAwesome;
   content: "\f009";
   font-size: 48px;
   color: #d7d7d7;
 }
-/* line 2531, sass/_base.scss */
+/* line 2908, sass/_base.scss */
 #cartContent .noItem .inf {
   font-family: 'Din Cond', sans-serif;
   font-size: 1em;
 }
-/* line 2536, sass/_base.scss */
+/* line 2913, sass/_base.scss */
 #cartContent .item {
   position: relative;
   padding: 12px;
   border-bottom: 1px solid #eceff2;
 }
-/* line 2541, sass/_base.scss */
+/* line 2918, sass/_base.scss */
 #cartContent .item .img {
   float: left;
   margin: 0 8px 0 0;
   width: 55px;
   height: 55px;
 }
-/* line 2547, sass/_base.scss */
+/* line 2924, sass/_base.scss */
 #cartContent .item .img img {
   max-width: 48px;
   max-height: 48px;
 }
-/* line 2551, sass/_base.scss */
+/* line 2928, sass/_base.scss */
 #cartContent .item .info {
   z-index: 10;
   position: relative;
@@ -4004,37 +4385,37 @@ md-toast {
   line-height: 24px;
   font-size: 0.8em;
 }
-/* line 2558, sass/_base.scss */
+/* line 2935, sass/_base.scss */
 #cartContent .item .adder {
   position: absolute;
   bottom: 0;
   right: 0;
 }
-/* line 2563, sass/_base.scss */
+/* line 2940, sass/_base.scss */
 #cartContent .item .adder i {
   cursor: pointer;
   z-index: 100;
   margin-left: 4px;
 }
-/* line 2568, sass/_base.scss */
+/* line 2945, sass/_base.scss */
 #cartContent .item .info .name .in {
   font-weight: normal;
   font-size: 0.8em;
   color: #9a9a9a;
   margin-right: 5px;
 }
-/* line 2574, sass/_base.scss */
+/* line 2951, sass/_base.scss */
 #cartContent .item .info .remove {
   cursor: pointer;
 }
-/* line 2577, sass/_base.scss */
+/* line 2954, sass/_base.scss */
 #cartContent .item .info .name a {
   font-size: 1.5em;
   color: #f09f0f;
   line-height: 18px;
   font-weight: bold;
 }
-/* line 2584, sass/_base.scss */
+/* line 2961, sass/_base.scss */
 #cartContent .item .info .name a {
   font-size: 1.3em;
   color: black;
@@ -4043,17 +4424,17 @@ md-toast {
   display: block;
   margin: 0 0 10px 0;
 }
-/* line 2592, sass/_base.scss */
+/* line 2969, sass/_base.scss */
 #cartContent .item .info .sub .tipus {
   font-size: 1.1em;
   color: #acacac;
 }
-/* line 2596, sass/_base.scss */
+/* line 2973, sass/_base.scss */
 #cartContent .item .info .sub .tipus .val {
   font-weight: bold;
   color: #3cb741;
 }
-/* line 2600, sass/_base.scss */
+/* line 2977, sass/_base.scss */
 #cartContent .item .remove {
   position: absolute;
   top: -5px;
@@ -4062,32 +4443,32 @@ md-toast {
   color: #444444;
   font-size: 20px;
 }
-/* line 2608, sass/_base.scss */
+/* line 2985, sass/_base.scss */
 #cartContent .item .sub .ar {
   color: #007aff;
   font-size: 1.3em;
   font-weight: bold;
 }
-/* line 2613, sass/_base.scss */
+/* line 2990, sass/_base.scss */
 #cartContent .item .info .remove :hover {
   cursor: pointer;
 }
-/* line 2617, sass/_base.scss */
+/* line 2994, sass/_base.scss */
 #cartContent .item:last-child {
   border-bottom: none;
 }
 
-/* line 2624, sass/_base.scss */
+/* line 3001, sass/_base.scss */
 .tudastar-page .header {
   text-align: center;
 }
-/* line 2626, sass/_base.scss */
+/* line 3003, sass/_base.scss */
 .tudastar-page .header i {
   color: #f09f0f;
   font-size: 64px;
   margin-bottom: 10px;
 }
-/* line 2631, sass/_base.scss */
+/* line 3008, sass/_base.scss */
 .tudastar-page .header h1 {
   text-align: center;
   color: black;
@@ -4095,16 +4476,16 @@ md-toast {
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 2639, sass/_base.scss */
+/* line 3016, sass/_base.scss */
 .tudastar-page .searcher {
   margin: 10px 0 40px 0;
 }
-/* line 2642, sass/_base.scss */
+/* line 3019, sass/_base.scss */
 .tudastar-page .searcher .filtered-categories {
   margin-top: 10px;
   font-size: 0.9em;
 }
-/* line 2645, sass/_base.scss */
+/* line 3022, sass/_base.scss */
 .tudastar-page .searcher .filtered-categories > span {
   margin-right: 5px;
   background: #f09f0f;
@@ -4113,20 +4494,20 @@ md-toast {
   font-size: 0.8em;
   color: white;
 }
-/* line 2655, sass/_base.scss */
+/* line 3032, sass/_base.scss */
 .tudastar-page .loading-screen {
   padding: 40px;
   text-align: center;
   color: #6aaf6a;
   font-size: 1.6em;
 }
-/* line 2661, sass/_base.scss */
+/* line 3038, sass/_base.scss */
 .tudastar-page h2 {
   margin: 0 0 10px 0;
   font-size: 1.5em;
   color: #888888;
 }
-/* line 2666, sass/_base.scss */
+/* line 3043, sass/_base.scss */
 .tudastar-page .picked-article {
   margin: 0 0 25px 0;
   background: #ffffff;
@@ -4134,7 +4515,7 @@ md-toast {
   border: 5px solid #cc022e;
   position: relative;
 }
-/* line 2673, sass/_base.scss */
+/* line 3050, sass/_base.scss */
 .tudastar-page .picked-article .pick-label {
   background: #cc022e;
   padding: 3px 5px;
@@ -4142,11 +4523,11 @@ md-toast {
   color: white;
   text-transform: uppercase;
 }
-/* line 2679, sass/_base.scss */
+/* line 3056, sass/_base.scss */
 .tudastar-page .picked-article .pick-label i {
   margin-right: 3px;
 }
-/* line 2684, sass/_base.scss */
+/* line 3061, sass/_base.scss */
 .tudastar-page .picked-article .closer {
   position: absolute;
   right: 10px;
@@ -4154,60 +4535,60 @@ md-toast {
   color: #cacaca;
   font-size: 0.8em;
 }
-/* line 2692, sass/_base.scss */
+/* line 3069, sass/_base.scss */
 .tudastar-page .picked-article h3 {
   color: #cc022e;
   font-weight: bold;
   font-size: 1.8em;
   margin: 10px 0 15px 0;
 }
-/* line 2698, sass/_base.scss */
+/* line 3075, sass/_base.scss */
 .tudastar-page .picked-article .description {
   color: #000000;
   line-height: 1.53;
   font-size: 1.1em;
 }
-/* line 2703, sass/_base.scss */
+/* line 3080, sass/_base.scss */
 .tudastar-page .picked-article .description h2, .tudastar-page .picked-article .description h3, .tudastar-page .picked-article .description h4, .tudastar-page .picked-article .description h5 {
   color: #000000;
 }
-/* line 2706, sass/_base.scss */
+/* line 3083, sass/_base.scss */
 .tudastar-page .picked-article .description h2 {
   font-size: 1.7em;
 }
-/* line 2707, sass/_base.scss */
+/* line 3084, sass/_base.scss */
 .tudastar-page .picked-article .description h3 {
   font-size: 1.5em;
 }
-/* line 2708, sass/_base.scss */
+/* line 3085, sass/_base.scss */
 .tudastar-page .picked-article .description h4 {
   font-size: 1.3em;
 }
-/* line 2709, sass/_base.scss */
+/* line 3086, sass/_base.scss */
 .tudastar-page .picked-article .description p {
   margin: 10px 0 5px 0;
 }
-/* line 2713, sass/_base.scss */
+/* line 3090, sass/_base.scss */
 .tudastar-page .picked-article .description ul {
   list-style: circle;
   margin: 0 0 0 25px;
 }
-/* line 2718, sass/_base.scss */
+/* line 3095, sass/_base.scss */
 .tudastar-page .picked-article .description ol {
   list-style-type: decimal;
   margin: 0 0 0 25px;
 }
-/* line 2723, sass/_base.scss */
+/* line 3100, sass/_base.scss */
 .tudastar-page .picked-article .metas {
   margin-top: 10px;
   font-size: 0.8em;
   color: #d9d9d9;
 }
-/* line 2727, sass/_base.scss */
+/* line 3104, sass/_base.scss */
 .tudastar-page .picked-article .metas > span {
   margin-right: 10px;
 }
-/* line 2732, sass/_base.scss */
+/* line 3109, sass/_base.scss */
 .tudastar-page .picked-article .metas .keywords .tag {
   background: #eaeaea;
   padding: 0 5px;
@@ -4216,13 +4597,13 @@ md-toast {
   line-height: 1;
   cursor: pointer;
 }
-/* line 2739, sass/_base.scss */
+/* line 3116, sass/_base.scss */
 .tudastar-page .picked-article .metas .keywords .tag.filtered {
   cursor: default;
   background: #59a359;
   color: white;
 }
-/* line 2748, sass/_base.scss */
+/* line 3125, sass/_base.scss */
 .tudastar-page .found-articles {
   font-size: 1.2em;
   font-weight: bold;
@@ -4231,7 +4612,7 @@ md-toast {
   color: black;
   position: relative;
 }
-/* line 2756, sass/_base.scss */
+/* line 3133, sass/_base.scss */
 .tudastar-page .found-articles:after {
   bottom: 0;
   left: 0;
@@ -4241,7 +4622,7 @@ md-toast {
   content: "";
   position: absolute;
 }
-/* line 2767, sass/_base.scss */
+/* line 3144, sass/_base.scss */
 .tudastar-page .categories .cat {
   padding: 15px 25px 15px 0;
   font-size: 0.9em;
@@ -4251,38 +4632,38 @@ md-toast {
   border-bottom: 1px solid #ececec;
   cursor: pointer;
 }
-/* line 2776, sass/_base.scss */
+/* line 3153, sass/_base.scss */
 .tudastar-page .categories .cat .badge {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
 }
-/* line 2782, sass/_base.scss */
+/* line 3159, sass/_base.scss */
 .tudastar-page .categories .cat.infilter {
   color: #cc022e;
 }
-/* line 2786, sass/_base.scss */
+/* line 3163, sass/_base.scss */
 .tudastar-page .categories .cat:last-child {
   border-bottom: none;
 }
-/* line 2791, sass/_base.scss */
+/* line 3168, sass/_base.scss */
 .tudastar-page .article-groups .article-group {
   margin: 0 0 35px 0;
 }
-/* line 2794, sass/_base.scss */
+/* line 3171, sass/_base.scss */
 .tudastar-page .article-groups .article-group h3.title {
   font-weight: bold;
   color: #f09f0f;
   margin: 10px 0 5px 0;
   font-size: 1.6em;
 }
-/* line 2801, sass/_base.scss */
+/* line 3178, sass/_base.scss */
 .tudastar-page .article-groups .article-group h3.title + .article-number {
   color: #4cbbea;
   margin: 15px 0 0 0;
 }
-/* line 2808, sass/_base.scss */
+/* line 3185, sass/_base.scss */
 .tudastar-page .article-groups .article-group .articles article .question {
   color: #767676;
   font-size: 1.4em;
@@ -4290,16 +4671,16 @@ md-toast {
   margin: 15px 0;
   cursor: pointer;
 }
-/* line 2815, sass/_base.scss */
+/* line 3192, sass/_base.scss */
 .tudastar-page .article-groups .article-group .articles article .question i {
   font-size: 14px;
   color: #cecece;
 }
-/* line 2819, sass/_base.scss */
+/* line 3196, sass/_base.scss */
 .tudastar-page .article-groups .article-group .articles article .question:hover {
   color: #4c4c4c;
 }
-/* line 2823, sass/_base.scss */
+/* line 3200, sass/_base.scss */
 .tudastar-page .article-groups .article-group .articles article .description {
   color: #7b7b7b;
   line-height: 1.53;
@@ -4307,45 +4688,45 @@ md-toast {
   margin-bottom: 20px;
   padding: 0 0 0 17px;
 }
-/* line 2830, sass/_base.scss */
+/* line 3207, sass/_base.scss */
 .tudastar-page .article-groups .article-group .articles article .description h2, .tudastar-page .article-groups .article-group .articles article .description h3, .tudastar-page .article-groups .article-group .articles article .description h4 {
   font-weight: bold;
   color: #343434;
 }
-/* line 2835, sass/_base.scss */
+/* line 3212, sass/_base.scss */
 .tudastar-page .article-groups .article-group .articles article .description p {
   margin: 10px 0 5px 0;
 }
-/* line 2839, sass/_base.scss */
+/* line 3216, sass/_base.scss */
 .tudastar-page .article-groups .article-group .articles article .description ul {
   list-style: circle;
   margin: 0 0 0 25px;
 }
-/* line 2844, sass/_base.scss */
+/* line 3221, sass/_base.scss */
 .tudastar-page .article-groups .article-group .articles article .description ol {
   list-style-type: decimal;
   margin: 0 0 0 25px;
 }
-/* line 2849, sass/_base.scss */
+/* line 3226, sass/_base.scss */
 .tudastar-page .article-groups .article-group .articles article .description .metas {
   margin-top: 10px;
   font-size: 0.8em;
   color: #d9d9d9;
 }
-/* line 2853, sass/_base.scss */
+/* line 3230, sass/_base.scss */
 .tudastar-page .article-groups .article-group .articles article .description .metas > span {
   margin-right: 10px;
 }
-/* line 2858, sass/_base.scss */
+/* line 3235, sass/_base.scss */
 .tudastar-page .article-groups .article-group .articles article .description .metas .ids a {
   color: #acacac;
 }
-/* line 2863, sass/_base.scss */
+/* line 3240, sass/_base.scss */
 .tudastar-page .article-groups .article-group .articles article .description .metas .totop {
   float: right;
   cursor: pointer;
 }
-/* line 2869, sass/_base.scss */
+/* line 3246, sass/_base.scss */
 .tudastar-page .article-groups .article-group .articles article .description .metas .keywords .tag {
   background: #eaeaea;
   padding: 0 5px;
@@ -4354,24 +4735,24 @@ md-toast {
   line-height: 1;
   cursor: pointer;
 }
-/* line 2876, sass/_base.scss */
+/* line 3253, sass/_base.scss */
 .tudastar-page .article-groups .article-group .articles article .description .metas .keywords .tag.filtered {
   cursor: default;
   background: #59a359;
   color: white;
 }
-/* line 2886, sass/_base.scss */
+/* line 3263, sass/_base.scss */
 .tudastar-page .article-groups .article-group .articles article.picked .question {
   color: black;
 }
 
-/* line 2896, sass/_base.scss */
+/* line 3273, sass/_base.scss */
 .places-bar {
   display: table;
   width: 100%;
   line-height: 120%;
 }
-/* line 2904, sass/_base.scss */
+/* line 3281, sass/_base.scss */
 .places-bar .search-places,
 .places-bar .current-place,
 .places-bar .webshop-btn {
@@ -4379,7 +4760,7 @@ md-toast {
   vertical-align: middle;
   padding: 0px 8px;
 }
-/* line 2911, sass/_base.scss */
+/* line 3288, sass/_base.scss */
 .places-bar .search-places {
   width: 15%;
   color: white;
@@ -4387,37 +4768,37 @@ md-toast {
   background: black;
   font-weight: bold;
 }
-/* line 2919, sass/_base.scss */
+/* line 3296, sass/_base.scss */
 .places-bar .current-place {
   color: white;
   background: black;
   padding: 4px 8px;
 }
-/* line 2924, sass/_base.scss */
+/* line 3301, sass/_base.scss */
 .places-bar .current-place .title {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 5px;
 }
-/* line 2930, sass/_base.scss */
+/* line 3307, sass/_base.scss */
 .places-bar .current-place .place-info {
   font-size: 0.95em;
 }
-/* line 2932, sass/_base.scss */
+/* line 3309, sass/_base.scss */
 .places-bar .current-place .place-info .place-name {
   font-weight: bold;
 }
-/* line 2936, sass/_base.scss */
+/* line 3313, sass/_base.scss */
 .places-bar .current-place .place-phone {
   float: left;
   width: 70%;
   text-align: left;
 }
-/* line 2940, sass/_base.scss */
+/* line 3317, sass/_base.scss */
 .places-bar .current-place .place-phone strong {
   color: white;
 }
-/* line 2944, sass/_base.scss */
+/* line 3321, sass/_base.scss */
 .places-bar .current-place .trackto {
   padding: 0 8px 0 0;
   float: right;
@@ -4438,7 +4819,7 @@ md-toast {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 2955, sass/_base.scss */
+/* line 3332, sass/_base.scss */
 .places-bar .current-place .trackto .ico {
   background: #545454;
   padding: 0 5px;
@@ -4446,12 +4827,12 @@ md-toast {
   -webkit-border-radius: 5px 0 0 5px;
   -moz-border-radius: 5px 0 0 5px;
 }
-/* line 2964, sass/_base.scss */
+/* line 3341, sass/_base.scss */
 .places-bar .current-place .trackto a {
   color: white;
   text-decoration: none;
 }
-/* line 2973, sass/_base.scss */
+/* line 3350, sass/_base.scss */
 .places-bar .webshop-btn {
   width: 25%;
   color: white;
@@ -4464,28 +4845,28 @@ md-toast {
   font-size: 22px;
   font-family: "Roboto", sans-serif;
 }
-/* line 2986, sass/_base.scss */
+/* line 3363, sass/_base.scss */
 .places-bar .webshop-btn img {
   margin-right: 8px;
 }
 
-/* line 2992, sass/_base.scss */
+/* line 3369, sass/_base.scss */
 .table.contact-table {
   font-size: 1.2em;
 }
-/* line 2995, sass/_base.scss */
+/* line 3372, sass/_base.scss */
 .table.contact-table td {
   padding: 10px;
 }
 
-/* line 3000, sass/_base.scss */
+/* line 3377, sass/_base.scss */
 .places-bar-inheader {
   display: table;
   width: 100%;
   line-height: 120%;
   font-size: 0.75em;
 }
-/* line 3009, sass/_base.scss */
+/* line 3386, sass/_base.scss */
 .places-bar-inheader .search-places,
 .places-bar-inheader .current-place,
 .places-bar-inheader .webshop-btn {
@@ -4493,42 +4874,42 @@ md-toast {
   vertical-align: middle;
   padding: 0px 8px;
 }
-/* line 3016, sass/_base.scss */
+/* line 3393, sass/_base.scss */
 .places-bar-inheader .search-places {
   width: 15%;
   color: white;
   text-align: center;
   font-weight: bold;
 }
-/* line 3023, sass/_base.scss */
+/* line 3400, sass/_base.scss */
 .places-bar-inheader .current-place {
   color: white;
   padding: 4px 8px;
 }
-/* line 3027, sass/_base.scss */
+/* line 3404, sass/_base.scss */
 .places-bar-inheader .current-place .title {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 3032, sass/_base.scss */
+/* line 3409, sass/_base.scss */
 .places-bar-inheader .current-place .place-info {
   font-size: 0.95em;
 }
-/* line 3034, sass/_base.scss */
+/* line 3411, sass/_base.scss */
 .places-bar-inheader .current-place .place-info .place-name {
   font-weight: bold;
 }
-/* line 3038, sass/_base.scss */
+/* line 3415, sass/_base.scss */
 .places-bar-inheader .current-place .place-phone {
   float: left;
   width: 70%;
   text-align: left;
 }
-/* line 3042, sass/_base.scss */
+/* line 3419, sass/_base.scss */
 .places-bar-inheader .current-place .place-phone strong {
   color: white;
 }
-/* line 3046, sass/_base.scss */
+/* line 3423, sass/_base.scss */
 .places-bar-inheader .current-place .trackto {
   padding: 0 8px 0 0;
   float: right;
@@ -4549,7 +4930,7 @@ md-toast {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 3057, sass/_base.scss */
+/* line 3434, sass/_base.scss */
 .places-bar-inheader .current-place .trackto .ico {
   background: #545454;
   padding: 0 5px;
@@ -4557,12 +4938,12 @@ md-toast {
   -webkit-border-radius: 5px 0 0 5px;
   -moz-border-radius: 5px 0 0 5px;
 }
-/* line 3066, sass/_base.scss */
+/* line 3443, sass/_base.scss */
 .places-bar-inheader .current-place .trackto a {
   color: white;
   text-decoration: none;
 }
-/* line 3075, sass/_base.scss */
+/* line 3452, sass/_base.scss */
 .places-bar-inheader .webshop-btn {
   width: 25%;
   color: white;
@@ -4575,37 +4956,37 @@ md-toast {
   font-size: 22px;
   font-family: "Roboto", sans-serif;
 }
-/* line 3088, sass/_base.scss */
+/* line 3465, sass/_base.scss */
 .places-bar-inheader .webshop-btn img {
   margin-right: 8px;
 }
 
-/* line 3095, sass/_base.scss */
+/* line 3472, sass/_base.scss */
 .recall h3 {
   color: white;
   background: #d9d9d9;
   padding: 15px 10px;
 }
-/* line 3100, sass/_base.scss */
+/* line 3477, sass/_base.scss */
 .recall h3 small {
   color: white;
 }
-/* line 3105, sass/_base.scss */
+/* line 3482, sass/_base.scss */
 .recall .row {
   margin-bottom: 10px;
 }
-/* line 3109, sass/_base.scss */
+/* line 3486, sass/_base.scss */
 .recall h4 {
   line-height: 150%;
   font-size: 1.4em;
   font-weight: bold;
   margin-bottom: 8px;
 }
-/* line 3116, sass/_base.scss */
+/* line 3493, sass/_base.scss */
 .recall .cont {
   padding: 15px;
 }
-/* line 3119, sass/_base.scss */
+/* line 3496, sass/_base.scss */
 .recall .cont .termek {
   color: #d9d9d9;
   font-weight: bold;
@@ -4615,7 +4996,7 @@ md-toast {
 
 /* Dialog box */
 /* line 391, scss/_base.scss */
-/* line 3132, sass/_base.scss */
+/* line 3509, sass/_base.scss */
 .dialogBox {
   position: fixed;
   width: 100%;
@@ -4625,14 +5006,14 @@ md-toast {
 }
 
 /* line 400, scss/_base.scss */
-/* line 3141, sass/_base.scss */
+/* line 3518, sass/_base.scss */
 .dialogBox.overlayed {
   background: rgba(74, 74, 74, 0.9);
   pointer-events: auto;
 }
 
 /* line 404, scss/_base.scss */
-/* line 3147, sass/_base.scss */
+/* line 3524, sass/_base.scss */
 .dialogBox > .content {
   font-size: 13px;
   position: fixed;
@@ -4655,7 +5036,7 @@ md-toast {
 }
 
 /* line 426, scss/_base.scss */
-/* line 3169, sass/_base.scss */
+/* line 3546, sass/_base.scss */
 .dialogBox > .content i[class*=fa-spin] {
   font-size: 56px;
   color: #272117;
@@ -4670,7 +5051,7 @@ md-toast {
 }
 
 /* line 438, scss/_base.scss */
-/* line 3183, sass/_base.scss */
+/* line 3560, sass/_base.scss */
 .dialogBox > .content > span.exit {
   content: "\f00d";
   font-family: FontAwesome;
@@ -4685,14 +5066,14 @@ md-toast {
 }
 
 /* line 450, scss/_base.scss */
-/* line 3197, sass/_base.scss */
+/* line 3574, sass/_base.scss */
 .dialogBox > .content > span.exit:hover {
   opacity: 1;
   filter: alpha(opacity=100);
 }
 
 /* line 454, scss/_base.scss */
-/* line 3203, sass/_base.scss */
+/* line 3580, sass/_base.scss */
 .dialogBox > .content i[class*=fa-spin].loaded {
   display: none;
 }
@@ -4700,28 +5081,28 @@ md-toast {
 /**
  * CART
  */
-/* line 3211, sass/_base.scss */
+/* line 3588, sass/_base.scss */
 .cart .mustReload {
   visibility: hidden;
 }
 
-/* line 3215, sass/_base.scss */
+/* line 3592, sass/_base.scss */
 .cartItems table.table-bordered tr td {
   background: white;
 }
 
-/* line 3219, sass/_base.scss */
+/* line 3596, sass/_base.scss */
 .cartItems .cart-head {
   padding: 15px 0;
 }
-/* line 3222, sass/_base.scss */
+/* line 3599, sass/_base.scss */
 .cartItems .cart-head h1 {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 2em;
   color: black;
 }
-/* line 3228, sass/_base.scss */
+/* line 3605, sass/_base.scss */
 .cartItems .cart-head a.clear-cart {
   background: #f7f7f7;
   color: #919191;
@@ -4731,44 +5112,44 @@ md-toast {
   border-radius: 5px;
   text-decoration: none;
 }
-/* line 3237, sass/_base.scss */
+/* line 3614, sass/_base.scss */
 .cartItems .cart-head a.clear-cart:hover {
   background: #f1f1f1;
   color: #404040;
 }
 
-/* line 3243, sass/_base.scss */
+/* line 3620, sass/_base.scss */
 .cartItems .item {
   padding: 0;
   border-top: 1px solid #eee;
 }
 
-/* line 3247, sass/_base.scss */
+/* line 3624, sass/_base.scss */
 .cartItems .item:last-child {
   border-bottom: 1px solid #eee;
 }
 
-/* line 3250, sass/_base.scss */
+/* line 3627, sass/_base.scss */
 .cartItems .item > div[class*=col-] {
   padding: 8px 0;
 }
 
-/* line 3253, sass/_base.scss */
+/* line 3630, sass/_base.scss */
 .cartItems .item > div[class*=col-] span {
   line-height: 85px;
 }
 
-/* line 3256, sass/_base.scss */
+/* line 3633, sass/_base.scss */
 .cartItems .item > div[class*=col-]:first-child span {
   line-height: 28px;
 }
 
-/* line 3259, sass/_base.scss */
+/* line 3636, sass/_base.scss */
 .cartItems .item > div[class*=col-]:nth-child(even) {
   background-color: #f6f6f6;
 }
 
-/* line 3263, sass/_base.scss */
+/* line 3640, sass/_base.scss */
 .cartItems .item .img {
   float: left;
   margin-right: 12px;
@@ -4776,45 +5157,45 @@ md-toast {
   height: 85px;
 }
 
-/* line 3270, sass/_base.scss */
+/* line 3647, sass/_base.scss */
 .cartItems .item .sel-types,
 .order .items .sel-types {
   color: #aaa;
   line-height: 28px;
 }
 
-/* line 3276, sass/_base.scss */
+/* line 3653, sass/_base.scss */
 .cartItems .item .sel-types em,
 .order .items .sel-types em {
   font-size: 0.85em;
 }
 
-/* line 3280, sass/_base.scss */
+/* line 3657, sass/_base.scss */
 .cartItems .item .sel-types strong,
 .order .items .sel-types strong {
   color: #3cb741;
   margin-right: 8px;
 }
 
-/* line 3284, sass/_base.scss */
+/* line 3661, sass/_base.scss */
 .cartItems .item .subLine {
   font-size: 0.8em;
   color: #888;
   line-height: 28px;
 }
 
-/* line 3290, sass/_base.scss */
+/* line 3667, sass/_base.scss */
 .cartItems .item > td {
   vertical-align: middle;
 }
 
-/* line 3293, sass/_base.scss */
+/* line 3670, sass/_base.scss */
 .cartItems .item .img img {
   max-width: 75px;
   max-height: 75px;
 }
 
-/* line 3297, sass/_base.scss */
+/* line 3674, sass/_base.scss */
 .cartItems .item .nev a {
   font-family: 'Din Comp', sans-serif;
   text-transform: uppercase;
@@ -4824,57 +5205,57 @@ md-toast {
   line-height: 28px;
 }
 
-/* line 3305, sass/_base.scss */
+/* line 3682, sass/_base.scss */
 .cartItems .item-header {
   color: #aaa;
   font-family: 'Din Comp', sans-serif;
   margin-bottom: 8px;
 }
 
-/* line 3310, sass/_base.scss */
+/* line 3687, sass/_base.scss */
 .nextOrded {
   margin: 0 0 25px 0;
 }
 
-/* line 3313, sass/_base.scss */
+/* line 3690, sass/_base.scss */
 .nextOrded .steps {
   display: none;
   padding: 0;
 }
-/* line 3318, sass/_base.scss */
+/* line 3695, sass/_base.scss */
 .nextOrded .steps .input-fields .row {
   margin-bottom: 15px;
   margin-top: 15px;
 }
-/* line 3324, sass/_base.scss */
+/* line 3701, sass/_base.scss */
 .nextOrded .steps .topDiv {
   margin-bottom: 10px;
 }
-/* line 3328, sass/_base.scss */
+/* line 3705, sass/_base.scss */
 .nextOrded .steps .order-contact-info > div.row {
   margin: 10px 0;
   border-bottom: 1px solid #f1f1f1;
 }
-/* line 3332, sass/_base.scss */
+/* line 3709, sass/_base.scss */
 .nextOrded .steps .order-contact-info > div.row > div[class*=col-sm] {
   padding: 5px 0;
 }
 
-/* line 3338, sass/_base.scss */
+/* line 3715, sass/_base.scss */
 .nextOrded .steps.on {
   display: block;
   color: black;
 }
 
-/* line 3345, sass/_base.scss */
+/* line 3722, sass/_base.scss */
 .nextOrded .coupon-code button, .nextOrded .coupon-code input, .nextOrded .referer-code button, .nextOrded .referer-code input {
   font-size: 12px;
 }
-/* line 3349, sass/_base.scss */
+/* line 3726, sass/_base.scss */
 .nextOrded .coupon-code button, .nextOrded .referer-code button {
   line-height: 20px;
 }
-/* line 3354, sass/_base.scss */
+/* line 3731, sass/_base.scss */
 .nextOrded .info-msg {
   font-size: 11px;
   line-height: 150%;
@@ -4882,7 +5263,7 @@ md-toast {
   margin: 4px 0;
 }
 
-/* line 3361, sass/_base.scss */
+/* line 3738, sass/_base.scss */
 .nextOrded h2.title {
   margin: 0 0 10px 0;
   text-align: center;
@@ -4895,7 +5276,7 @@ md-toast {
   font-size: 2.2em;
 }
 
-/* line 3372, sass/_base.scss */
+/* line 3749, sass/_base.scss */
 .nextOrded .errMsg {
   background-color: #f00;
   color: white;
@@ -4904,7 +5285,7 @@ md-toast {
   display: block;
 }
 
-/* line 3380, sass/_base.scss */
+/* line 3757, sass/_base.scss */
 .nextOrded .head {
   padding: 8px 0;
   background-color: #E6E6E6;
@@ -4915,11 +5296,11 @@ md-toast {
   margin-bottom: 8px;
 }
 
-/* line 3389, sass/_base.scss */
+/* line 3766, sass/_base.scss */
 .nextOrded .cash {
   margin-top: 8px;
 }
-/* line 3392, sass/_base.scss */
+/* line 3769, sass/_base.scss */
 .nextOrded .cash input[type=number] {
   border: none;
   border-bottom: 1px dashed #aaa;
@@ -4928,24 +5309,24 @@ md-toast {
   padding: 0 5px;
 }
 
-/* line 3400, sass/_base.scss */
+/* line 3777, sass/_base.scss */
 .nextOrded .head.orange {
   background-color: #f09f0f;
   color: white;
   font-size: 1.3em;
 }
 
-/* line 3405, sass/_base.scss */
+/* line 3782, sass/_base.scss */
 .nextOrded .col1 {
   padding-right: 8px !important;
 }
 
-/* line 3408, sass/_base.scss */
+/* line 3785, sass/_base.scss */
 .nextOrded .col2 {
   padding-left: 8px !important;
 }
 
-/* line 3411, sass/_base.scss */
+/* line 3788, sass/_base.scss */
 .nextOrded .regInfo {
   text-align: center;
   padding: 10px;
@@ -4953,7 +5334,7 @@ md-toast {
   color: #404040;
 }
 
-/* line 3417, sass/_base.scss */
+/* line 3794, sass/_base.scss */
 .nextOrded h3.offline-pretitle {
   text-align: center;
   font-family: 'Din Cond', sans-serif;
@@ -4961,15 +5342,15 @@ md-toast {
   font-size: 1.6em;
 }
 
-/* line 3423, sass/_base.scss */
+/* line 3800, sass/_base.scss */
 .nextOrded .logIn {
   text-align: center;
 }
-/* line 3426, sass/_base.scss */
+/* line 3803, sass/_base.scss */
 .nextOrded .logIn a {
   background: #f1f1f1;
 }
-/* line 3430, sass/_base.scss */
+/* line 3807, sass/_base.scss */
 .nextOrded .logIn fieldset > div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4977,7 +5358,7 @@ md-toast {
   align-items: center;
   flex-wrap: wrap;
 }
-/* line 3437, sass/_base.scss */
+/* line 3814, sass/_base.scss */
 .nextOrded .logIn fieldset > div > a {
   flex-basis: 50%;
   display: block;
@@ -4986,28 +5367,28 @@ md-toast {
   font-family: 'Din Cond', sans-serif;
   text-transform: uppercase;
 }
-/* line 3445, sass/_base.scss */
+/* line 3822, sass/_base.scss */
 .nextOrded .logIn fieldset > div > a.reg {
   background: #828282;
   color: white;
 }
-/* line 3449, sass/_base.scss */
+/* line 3826, sass/_base.scss */
 .nextOrded .logIn fieldset > div > a.login {
   background: #f09f0f;
   color: white;
 }
 
-/* line 3456, sass/_base.scss */
+/* line 3833, sass/_base.scss */
 .nextOrded .logIn .kedvezmeny i {
   color: #3dafd0;
 }
 
-/* line 3459, sass/_base.scss */
+/* line 3836, sass/_base.scss */
 .nextOrded .logIn .kedvezmeny {
   font-size: 0.9em;
 }
 
-/* line 3462, sass/_base.scss */
+/* line 3839, sass/_base.scss */
 .nextOrded .logIn .kedvezmeny h4 {
   font-size: 1.1em;
   text-transform: uppercase;
@@ -5016,30 +5397,30 @@ md-toast {
   font-weight: bold;
 }
 
-/* line 3469, sass/_base.scss */
+/* line 3846, sass/_base.scss */
 .nextOrded .logIn .kedvezmeny a {
   color: #aaa;
   font-size: 0.7em;
   line-height: 18px;
 }
 
-/* line 3474, sass/_base.scss */
+/* line 3851, sass/_base.scss */
 .nextOrded .logIn a.btn {
   font-family: 'Din Cond', sans-serif;
   text-transform: uppercase;
 }
 
-/* line 3478, sass/_base.scss */
+/* line 3855, sass/_base.scss */
 .nextOrded .discount-info {
   text-align: center;
 }
 
-/* line 3481, sass/_base.scss */
+/* line 3858, sass/_base.scss */
 .nextOrded .discount-info .list {
   color: #444;
 }
 
-/* line 3486, sass/_base.scss */
+/* line 3863, sass/_base.scss */
 .nextOrded .discount-info .dc-num,
 .nextOrded .discount-info .list .num {
   font-size: 1.3em;
@@ -5049,18 +5430,18 @@ md-toast {
   font-weight: bold;
 }
 
-/* line 3493, sass/_base.scss */
+/* line 3870, sass/_base.scss */
 .nextOrded .discount-info .list .num {
   font-size: 1em;
   color: black;
 }
 
-/* line 3497, sass/_base.scss */
+/* line 3874, sass/_base.scss */
 .nextOrded .discount-info .list {
   line-height: 28px;
 }
 
-/* line 3500, sass/_base.scss */
+/* line 3877, sass/_base.scss */
 .nextOrded .allStepView {
   background-color: #404040;
   margin: 0;
@@ -5070,12 +5451,12 @@ md-toast {
   box-shadow: inset 0 5px 15px -10px black;
 }
 
-/* line 3508, sass/_base.scss */
+/* line 3885, sass/_base.scss */
 .nextOrded .allStepView ul {
   margin: 0;
 }
 
-/* line 3511, sass/_base.scss */
+/* line 3888, sass/_base.scss */
 .nextOrded .allStepView ul li {
   position: relative;
   float: left;
@@ -5085,7 +5466,7 @@ md-toast {
   box-shadow: 0px 1px 1px #7a7a7a;
 }
 
-/* line 3519, sass/_base.scss */
+/* line 3896, sass/_base.scss */
 .nextOrded .allStepView ul li.active {
   background-color: #ffb533;
   -webkit-box-shadow: inset 0 5px 15px -10px black;
@@ -5093,7 +5474,7 @@ md-toast {
   box-shadow: inset 0 5px 15px -10px black;
 }
 
-/* line 3525, sass/_base.scss */
+/* line 3902, sass/_base.scss */
 .nextOrded .allStepView ul li.active:after {
   content: "";
   position: absolute;
@@ -5111,7 +5492,7 @@ md-toast {
   pointer-events: none;
 }
 
-/* line 3541, sass/_base.scss */
+/* line 3918, sass/_base.scss */
 .nextOrded .allStepView ul li.done {
   background-color: #f09f0f;
   -webkit-box-shadow: inset 0 5px 15px -10px black, 0px 1px 1px #f9d99f;
@@ -5119,7 +5500,7 @@ md-toast {
   box-shadow: inset 0 5px 15px -10px black, 0px 1px 1px #f9d99f;
 }
 
-/* line 3547, sass/_base.scss */
+/* line 3924, sass/_base.scss */
 .nextOrded .allStepView ul li.done:after {
   content: "\f00c";
   font-family: 'FontAwesome';
@@ -5140,7 +5521,7 @@ md-toast {
   border-radius: 15px;
 }
 
-/* line 3563, sass/_base.scss */
+/* line 3940, sass/_base.scss */
 .nextOrded .allStepView ul li a {
   display: block;
   color: white;
@@ -5149,23 +5530,23 @@ md-toast {
   font-size: 1.3em;
 }
 
-/* line 3570, sass/_base.scss */
+/* line 3947, sass/_base.scss */
 .nextOrded .atvetel {
   margin: 0;
 }
 
-/* line 3573, sass/_base.scss */
+/* line 3950, sass/_base.scss */
 .nextOrded .atvetel em {
   font-size: 0.8em;
   font-weight: normal;
 }
 
-/* line 3577, sass/_base.scss */
+/* line 3954, sass/_base.scss */
 .nextOrded .atvetel > li > input[type=radio] {
   display: none;
 }
 
-/* line 3580, sass/_base.scss */
+/* line 3957, sass/_base.scss */
 .nextOrded .atvetel > li > input[type=radio] + label {
   position: relative;
   z-index: 1;
@@ -5180,35 +5561,35 @@ md-toast {
   border-top: 1px solid #fff;
 }
 
-/* line 3593, sass/_base.scss */
+/* line 3970, sass/_base.scss */
 .nextOrded .atvetel > li:last-child > input[type=radio] + label {
   border-bottom: none;
 }
 
-/* line 3596, sass/_base.scss */
+/* line 3973, sass/_base.scss */
 .nextOrded .atvetel > li:first-child > input[type=radio] + label {
   border-top: none;
 }
 
-/* line 3599, sass/_base.scss */
+/* line 3976, sass/_base.scss */
 .nextOrded .atvetel > li > input[type=radio] + label:hover {
   background: #e3e3e3;
 }
 
-/* line 3602, sass/_base.scss */
+/* line 3979, sass/_base.scss */
 .nextOrded .atvetel > li > input[type=radio]:checked + label {
   background: #007aff;
   color: white;
 }
 
-/* line 3606, sass/_base.scss */
+/* line 3983, sass/_base.scss */
 .nextOrded .atvetel > li > input[type=radio]:disabled + label {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAMElEQVQIW2P89eLVfwYk8PHBIwZGZEGQAL+CHEIQJgDSBFaJLAAWfH3izH+QFmQAAEBWHrC7yezWAAAAAElFTkSuQmCC) repeat center;
   color: #cc2236;
   padding: 10px 25px;
 }
 
-/* line 3612, sass/_base.scss */
+/* line 3989, sass/_base.scss */
 .nextOrded .atvetel > li > input[type=radio] + label:after {
   position: absolute;
   content: '\f14a';
@@ -5217,24 +5598,24 @@ md-toast {
   color: #bcbbbb;
 }
 
-/* line 3619, sass/_base.scss */
+/* line 3996, sass/_base.scss */
 .nextOrded .atvetel > li > input[type=radio]:checked + label:after {
   color: #fff;
 }
 
-/* line 3622, sass/_base.scss */
+/* line 3999, sass/_base.scss */
 .nextOrded .atvetel > li > input[type=radio]:disabled + label:after {
   content: '\f057';
   color: #b82531;
 }
 
-/* line 3627, sass/_base.scss */
+/* line 4004, sass/_base.scss */
 .orderFooter {
   text-align: right;
   margin-top: 5px;
 }
 
-/* line 3633, sass/_base.scss */
+/* line 4010, sass/_base.scss */
 .orderFooter .btn-back,
 .orderFooter .btn-next,
 .orderFooter .btn-order {
@@ -5252,24 +5633,24 @@ md-toast {
   box-shadow: inset 0 5px 10px -10px black;
 }
 
-/* line 3648, sass/_base.scss */
+/* line 4025, sass/_base.scss */
 .orderFooter .btn-next {
   background-color: #f09f0f;
   color: white;
 }
 
-/* line 3652, sass/_base.scss */
+/* line 4029, sass/_base.scss */
 .orderFooter .btn-order {
   background: #cc022e !important;
   color: #fff;
 }
 
-/* line 3656, sass/_base.scss */
+/* line 4033, sass/_base.scss */
 .order-contact-info .row {
   margin-bottom: 5px;
 }
 
-/* line 3659, sass/_base.scss */
+/* line 4036, sass/_base.scss */
 .nextOrded .topDiv h4 {
   background-color: #E6E6E6;
   font-family: 'Din Comp',sans-serif;
@@ -5280,12 +5661,12 @@ md-toast {
   font-size: 1em;
 }
 
-/* line 3668, sass/_base.scss */
+/* line 4045, sass/_base.scss */
 .nextOrded .topDiv h4 + div {
   padding: 8px;
 }
 
-/* line 3672, sass/_base.scss */
+/* line 4049, sass/_base.scss */
 .nextOrded .steps .price {
   padding-top: 10px !important;
   border-top: 5px solid #d9d9d9;
@@ -5295,62 +5676,62 @@ md-toast {
   line-height: 25px;
 }
 
-/* line 3680, sass/_base.scss */
+/* line 4057, sass/_base.scss */
 .nextOrded .steps .price .p {
   width: 100%;
   text-align: right;
   display: table;
 }
 
-/* line 3685, sass/_base.scss */
+/* line 4062, sass/_base.scss */
 .nextOrded .steps .price .p.inf {
   border-bottom: 1px dashed #bbb;
   font-size: 12px;
   font-style: italic;
 }
 
-/* line 3690, sass/_base.scss */
+/* line 4067, sass/_base.scss */
 .nextOrded .steps .price .p .n {
   display: table-cell;
 }
 
-/* line 3693, sass/_base.scss */
+/* line 4070, sass/_base.scss */
 .nextOrded .steps .price .p .a {
   display: table-cell;
   width: 150px;
 }
 
-/* line 3697, sass/_base.scss */
+/* line 4074, sass/_base.scss */
 .nextOrded .steps .price .p .a .kedv {
   color: #cb2929;
   font-style: italic;
   font-size: 13px;
 }
 
-/* line 3702, sass/_base.scss */
+/* line 4079, sass/_base.scss */
 .nextOrded .steps .price .p .a .ar {
   font-weight: bold;
   color: black;
 }
 
-/* line 3706, sass/_base.scss */
+/* line 4083, sass/_base.scss */
 .nextOrded .steps .price .p.end {
   font-weight: bold;
   font-size: 18px;
 }
 
-/* line 3710, sass/_base.scss */
+/* line 4087, sass/_base.scss */
 .nextOrded .steps .price .p.end .a {
   font-weight: normal;
   font-size: 16px;
 }
 
-/* line 3714, sass/_base.scss */
+/* line 4091, sass/_base.scss */
 .nextOrded .steps .price .p.end .ar {
   color: #007aff;
 }
 
-/* line 3718, sass/_base.scss */
+/* line 4095, sass/_base.scss */
 .nextOrded .step4 .kedvezmeny > div {
   margin-top: 8px;
   background: #F4902A;
@@ -5359,19 +5740,19 @@ md-toast {
   padding: 8px;
 }
 
-/* line 3725, sass/_base.scss */
+/* line 4102, sass/_base.scss */
 .nextOrded .step4 .kedvezmeny > div a {
   color: white;
   font-size: 0.9em;
 }
 
-/* line 3729, sass/_base.scss */
+/* line 4106, sass/_base.scss */
 .nextOrded .step0 .col2 {
   display: table;
   text-align: center;
 }
 
-/* line 3734, sass/_base.scss */
+/* line 4111, sass/_base.scss */
 .nextOrded .stepzerostarter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5382,7 +5763,7 @@ md-toast {
   margin-top: 10px;
   height: 56px;
 }
-/* line 3744, sass/_base.scss */
+/* line 4121, sass/_base.scss */
 .nextOrded .stepzerostarter .cartInfo {
   color: white;
   background: #404040;
@@ -5391,33 +5772,33 @@ md-toast {
   font-size: 1.2em;
   flex: 1;
 }
-/* line 3752, sass/_base.scss */
+/* line 4129, sass/_base.scss */
 .nextOrded .stepzerostarter .cartInfo .tetel {
   color: #b5b5b5;
   margin-right: 10px;
 }
-/* line 3757, sass/_base.scss */
+/* line 4134, sass/_base.scss */
 .nextOrded .stepzerostarter .cartInfo .totalPrice .standardPrice {
   color: #f1c818;
   font-size: 0.9em;
   text-decoration: line-through;
 }
-/* line 3762, sass/_base.scss */
+/* line 4139, sass/_base.scss */
 .nextOrded .stepzerostarter .cartInfo .totalPrice .kedvPrice {
   color: #83f17c;
   font-size: 1.1em;
   margin: 0 5px;
 }
-/* line 3767, sass/_base.scss */
+/* line 4144, sass/_base.scss */
 .nextOrded .stepzerostarter .cartInfo .totalPrice .discountPrice {
   color: #f55057;
   font-size: 0.8em;
 }
-/* line 3773, sass/_base.scss */
+/* line 4150, sass/_base.scss */
 .nextOrded .stepzerostarter .megrendel {
   flex-basis: 250px;
 }
-/* line 3775, sass/_base.scss */
+/* line 4152, sass/_base.scss */
 .nextOrded .stepzerostarter .megrendel button {
   font-size: 1.3em;
   text-align: center;
@@ -5429,12 +5810,12 @@ md-toast {
   border-radius: 0 !important;
 }
 
-/* line 3788, sass/_base.scss */
+/* line 4165, sass/_base.scss */
 .nextOrded .step0 .col2 .cartInfo .totalPrice {
   font-size: 1.4em;
 }
 
-/* line 3791, sass/_base.scss */
+/* line 4168, sass/_base.scss */
 .nextOrded .step0 .col2 .megrendel button {
   font-size: 1.2em;
   text-transform: uppercase;
@@ -5442,25 +5823,25 @@ md-toast {
   border: 1px solid silver;
 }
 
-/* line 3797, sass/_base.scss */
+/* line 4174, sass/_base.scss */
 .nextOrded .step0 .col2 .cartInfo .totalPrice strike {
   color: #a7a7a7;
 }
 
-/* line 3800, sass/_base.scss */
+/* line 4177, sass/_base.scss */
 .nextOrded .step0 .col2 .cartInfo .totalPrice .standardPrice {
   color: red;
   font-size: 0.9em;
   text-decoration: line-through;
 }
 
-/* line 3805, sass/_base.scss */
+/* line 4182, sass/_base.scss */
 .nextOrded .step0 .col2 .cartInfo .totalPrice .kedvPrice {
   color: #00b300;
   font-size: 1.1em;
 }
 
-/* line 3809, sass/_base.scss */
+/* line 4186, sass/_base.scss */
 .nextOrded .step0 .col2 .cartInfo .totalPrice .discountPrice span {
   background: #8C8C8C;
   color: white;
@@ -5472,14 +5853,14 @@ md-toast {
   border-radius: 5px;
 }
 
-/* line 3817, sass/_base.scss */
+/* line 4194, sass/_base.scss */
 .orderDone {
   text-align: center;
   margin: 10% 0;
   line-height: 1.4;
 }
 
-/* line 3822, sass/_base.scss */
+/* line 4199, sass/_base.scss */
 .orderDone h1 {
   color: black;
   text-transform: uppercase;
@@ -5487,25 +5868,25 @@ md-toast {
   margin: 0 0 15px 0;
 }
 
-/* line 3828, sass/_base.scss */
+/* line 4205, sass/_base.scss */
 .orderDone h1 i {
   font-size: 86px;
   margin-bottom: 12px;
   color: #b0cb1f;
 }
 
-/* line 3835, sass/_base.scss */
+/* line 4212, sass/_base.scss */
 .order .items .img {
   float: left;
   height: 75px;
   width: 75px;
   margin: 0 10px 0 0;
 }
-/* line 3840, sass/_base.scss */
+/* line 4217, sass/_base.scss */
 .order .items .img img {
   max-width: 100%;
 }
-/* line 3844, sass/_base.scss */
+/* line 4221, sass/_base.scss */
 .order .items .name a {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -5514,27 +5895,27 @@ md-toast {
   color: #007aff;
   line-height: 28px;
 }
-/* line 3852, sass/_base.scss */
+/* line 4229, sass/_base.scss */
 .order .orderpage .head {
   position: relative;
   padding: 20px 0;
 }
-/* line 3856, sass/_base.scss */
+/* line 4233, sass/_base.scss */
 .order .serial {
   float: right;
   font-size: 1.4em;
   font-family: "Roboto", sans-serif;
 }
-/* line 3862, sass/_base.scss */
+/* line 4239, sass/_base.scss */
 .order .orderState {
   padding: 30px 0;
   line-height: 2;
 }
-/* line 3866, sass/_base.scss */
+/* line 4243, sass/_base.scss */
 .order .orderState h5 {
   margin-bottom: 5px;
 }
-/* line 3871, sass/_base.scss */
+/* line 4248, sass/_base.scss */
 .order h1 {
   text-transform: uppercase;
   font-weight: bold;
@@ -5542,19 +5923,19 @@ md-toast {
   font-family: "Roboto", sans-serif;
   color: #007aff;
 }
-/* line 3879, sass/_base.scss */
+/* line 4256, sass/_base.scss */
 .order .sub {
   color: #444444;
 }
-/* line 3882, sass/_base.scss */
+/* line 4259, sass/_base.scss */
 .order .sub em {
   color: #acacac;
 }
-/* line 3887, sass/_base.scss */
+/* line 4264, sass/_base.scss */
 .order .orderStatus {
   font-size: 1.8em;
 }
-/* line 3891, sass/_base.scss */
+/* line 4268, sass/_base.scss */
 .order h4 {
   font-size: 1.4em;
   padding: 12px;
@@ -5565,27 +5946,27 @@ md-toast {
   margin: 0;
   color: #333333;
 }
-/* line 3901, sass/_base.scss */
+/* line 4278, sass/_base.scss */
 .order .items-table {
   padding: 10px 0;
 }
-/* line 3904, sass/_base.scss */
+/* line 4281, sass/_base.scss */
 .order .items-table table {
   margin: 0;
 }
-/* line 3907, sass/_base.scss */
+/* line 4284, sass/_base.scss */
 .order .items-table table td {
   background: white;
 }
-/* line 3912, sass/_base.scss */
+/* line 4289, sass/_base.scss */
 .order .items td {
   vertical-align: middle;
 }
-/* line 3916, sass/_base.scss */
+/* line 4293, sass/_base.scss */
 .order .datas .data {
   padding: 10px 0;
 }
-/* line 3919, sass/_base.scss */
+/* line 4296, sass/_base.scss */
 .order .datas .data .payu-paid-done {
   background: green;
   color: white;
@@ -5593,7 +5974,7 @@ md-toast {
   padding: 2px 5px;
   line-height: 1.4;
 }
-/* line 3926, sass/_base.scss */
+/* line 4303, sass/_base.scss */
 .order .datas .data .payu-paidonly {
   background: orange;
   color: white;
@@ -5601,7 +5982,7 @@ md-toast {
   padding: 2px 5px;
   line-height: 1.4;
 }
-/* line 3935, sass/_base.scss */
+/* line 4312, sass/_base.scss */
 .order .datas .head {
   font-size: 1em;
   padding: 8px;
@@ -5609,22 +5990,22 @@ md-toast {
   font-family: "Roboto", sans-serif;
   margin: 10px 0 0 0;
 }
-/* line 3943, sass/_base.scss */
+/* line 4320, sass/_base.scss */
 .order .inforows {
   margin: 10px -10px;
 }
-/* line 3945, sass/_base.scss */
+/* line 4322, sass/_base.scss */
 .order .inforows div {
   margin-bottom: 5px;
   line-height: 20px;
 }
-/* line 3949, sass/_base.scss */
+/* line 4326, sass/_base.scss */
 .order .inforows div:nth-child(odd) {
   color: #aaa;
   font-size: 1em;
 }
 
-/* line 3957, sass/_base.scss */
+/* line 4334, sass/_base.scss */
 .mustSelect {
   color: white;
   background: #c83636;
@@ -5632,25 +6013,25 @@ md-toast {
   font-size: 0.9em;
 }
 
-/* line 3966, sass/_base.scss */
+/* line 4343, sass/_base.scss */
 .cartItems .action i {
   color: #d7d7d7;
   margin: 0 2px;
   cursor: pointer;
 }
 
-/* line 3971, sass/_base.scss */
+/* line 4348, sass/_base.scss */
 .cartItems .action i:hover {
   color: black;
 }
 
-/* line 3974, sass/_base.scss */
+/* line 4351, sass/_base.scss */
 .mustSelect a {
   text-decoration: underline;
   color: white;
 }
 
-/* line 3979, sass/_base.scss */
+/* line 4356, sass/_base.scss */
 .cart-float .totals {
   line-height: 30px;
   padding: 12px;
@@ -5658,7 +6039,7 @@ md-toast {
   box-shadow: 0 -5px 15px -8px #888888;
 }
 
-/* line 3985, sass/_base.scss */
+/* line 4362, sass/_base.scss */
 .cart-float .totals a {
   text-decoration: none;
   margin-top: 5px;
@@ -5671,12 +6052,12 @@ md-toast {
   font-family: "Roboto", sans-serif;
 }
 
-/* line 3997, sass/_base.scss */
+/* line 4374, sass/_base.scss */
 .orderpage {
   margin: 0 0 25px 0;
 }
 
-/* line 4002, sass/_base.scss */
+/* line 4379, sass/_base.scss */
 .account h1 {
   text-transform: uppercase;
   font-weight: bold;
@@ -5685,11 +6066,11 @@ md-toast {
   margin-bottom: 10px;
   color: black;
 }
-/* line 4011, sass/_base.scss */
+/* line 4388, sass/_base.scss */
 .account .stack {
   margin-bottom: 10px;
 }
-/* line 4013, sass/_base.scss */
+/* line 4390, sass/_base.scss */
 .account .stack h3 {
   font-family: "Roboto", sans-serif;
   color: #a9a9a9;
@@ -5700,21 +6081,21 @@ md-toast {
   text-transform: uppercase;
   font-weight: 100;
 }
-/* line 4024, sass/_base.scss */
+/* line 4401, sass/_base.scss */
 .account .stack h4 {
   margin: 5px 0 15px 0;
   text-align: center;
   font-style: italic;
 }
-/* line 4031, sass/_base.scss */
+/* line 4408, sass/_base.scss */
 .account .row > div[class*=col-] {
   margin-bottom: 8px;
 }
-/* line 4034, sass/_base.scss */
+/* line 4411, sass/_base.scss */
 .account .row > div[class*=col-] label {
   margin: 10px 0;
 }
-/* line 4040, sass/_base.scss */
+/* line 4417, sass/_base.scss */
 .account .settings h4 {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
@@ -5724,18 +6105,18 @@ md-toast {
   color: #444444;
   padding: 10px;
 }
-/* line 4050, sass/_base.scss */
+/* line 4427, sass/_base.scss */
 .account .settings .row {
   margin: 5px 0;
 }
-/* line 4056, sass/_base.scss */
+/* line 4433, sass/_base.scss */
 .account .orderpage .noItem {
   text-align: center;
   padding: 25px;
   color: #a7a6a6;
   font-size: 1.1em;
 }
-/* line 4062, sass/_base.scss */
+/* line 4439, sass/_base.scss */
 .account .orderpage h4 {
   font-weight: bold;
   font-family: "Roboto", sans-serif;
@@ -5744,7 +6125,7 @@ md-toast {
   margin: 10px 0 25px 0;
   text-align: center;
 }
-/* line 4071, sass/_base.scss */
+/* line 4448, sass/_base.scss */
 .account .orderpage table thead tr td {
   font-size: 0.8em;
   text-align: center;
@@ -5752,14 +6133,14 @@ md-toast {
   background: #f7f7f7;
   font-weight: bold;
 }
-/* line 4078, sass/_base.scss */
+/* line 4455, sass/_base.scss */
 .account .orderpage table tbody tr td {
   font-size: 0.9em;
   vertical-align: middle;
   color: black;
   background: white;
 }
-/* line 4086, sass/_base.scss */
+/* line 4463, sass/_base.scss */
 .account .flatInfoBox {
   background: #ebebeb;
   border: 1px solid #d2d2d2;
@@ -5768,50 +6149,50 @@ md-toast {
   display: table;
   width: 100%;
 }
-/* line 4094, sass/_base.scss */
+/* line 4471, sass/_base.scss */
 .account .flatInfoBox > div {
   width: 50%;
   display: table-cell;
   padding: 25px 10px;
   font-size: 1.2em;
 }
-/* line 4100, sass/_base.scss */
+/* line 4477, sass/_base.scss */
 .account .flatInfoBox > div:first-child {
   box-shadow: inset -1px 0 0 #d2d2d2;
 }
-/* line 4103, sass/_base.scss */
+/* line 4480, sass/_base.scss */
 .account .flatInfoBox > div:last-child {
   box-shadow: inset 1px 0 0 #ffffff;
 }
-/* line 4107, sass/_base.scss */
+/* line 4484, sass/_base.scss */
 .account .login-form {
   width: 500px;
   margin: 20px auto;
 }
-/* line 4111, sass/_base.scss */
+/* line 4488, sass/_base.scss */
 .account .success-reg-msg {
   text-align: center;
   padding: 50px 0;
 }
-/* line 4114, sass/_base.scss */
+/* line 4491, sass/_base.scss */
 .account .success-reg-msg h1 {
   color: black;
   margin: 0 0 15px 0;
 }
-/* line 4116, sass/_base.scss */
+/* line 4493, sass/_base.scss */
 .account .success-reg-msg h1 i {
   color: #b0cb1f;
   font-size: 60px;
   margin-bottom: 20px;
 }
-/* line 4124, sass/_base.scss */
+/* line 4501, sass/_base.scss */
 .account .success-reg-msg p {
   font-size: 1.2em;
   text-align: center;
   line-height: 1.2;
   color: #7c7c7c;
 }
-/* line 4132, sass/_base.scss */
+/* line 4509, sass/_base.scss */
 .account .group-selector .groups {
   width: 80%;
   margin: 0 auto;
@@ -5821,12 +6202,12 @@ md-toast {
   flex-wrap: wrap;
   align-items: center;
 }
-/* line 4141, sass/_base.scss */
+/* line 4518, sass/_base.scss */
 .account .group-selector .groups > div {
   flex-basis: 50%;
   padding: 10px;
 }
-/* line 4146, sass/_base.scss */
+/* line 4523, sass/_base.scss */
 .account .group-selector .groups a {
   background: #ffffff;
   width: 100%;
@@ -5845,26 +6226,26 @@ md-toast {
   -webkit-transition: all .4s;
   transition: all .4s;
 }
-/* line 4161, sass/_base.scss */
+/* line 4538, sass/_base.scss */
 .account .group-selector .groups a:hover {
   background: #007aff;
   color: white;
 }
 
-/* line 4171, sass/_base.scss */
+/* line 4548, sass/_base.scss */
 .account {
   padding: 25px 0;
 }
-/* line 4173, sass/_base.scss */
+/* line 4550, sass/_base.scss */
 .account .grid-layout > .grid-row-80 {
   padding: 0 20px 0 0 !important;
 }
-/* line 4176, sass/_base.scss */
+/* line 4553, sass/_base.scss */
 .account .grid-layout > .grid-row-20 {
   order: 2;
 }
 
-/* line 4182, sass/_base.scss */
+/* line 4559, sass/_base.scss */
 .side-menu ul li a {
   display: block;
   padding: 10px;
@@ -5875,26 +6256,26 @@ md-toast {
   text-decoration: none;
   border-right: 5px solid #e8e8e8;
 }
-/* line 4191, sass/_base.scss */
+/* line 4568, sass/_base.scss */
 .side-menu ul li a:hover {
   background-color: #aeaea;
 }
-/* line 4195, sass/_base.scss */
+/* line 4572, sass/_base.scss */
 .side-menu ul li {
   margin: 5px 0;
 }
-/* line 4199, sass/_base.scss */
+/* line 4576, sass/_base.scss */
 .side-menu ul li.logout a {
   text-align: right;
   color: #cc022e;
   font-size: 0.9em;
   border: none !important;
 }
-/* line 4206, sass/_base.scss */
+/* line 4583, sass/_base.scss */
 .side-menu ul li.head:first-child {
   text-align: right;
 }
-/* line 4211, sass/_base.scss */
+/* line 4588, sass/_base.scss */
 .side-menu ul li.head a,
 .side-menu ul li.head {
   text-transform: uppercase;
@@ -5902,12 +6283,12 @@ md-toast {
   font-size: 1.1em;
   margin: 8px 0;
 }
-/* line 4217, sass/_base.scss */
+/* line 4594, sass/_base.scss */
 .side-menu ul li.active a {
   border-right: 5px solid #d9d9d9;
   font-weight: bold;
 }
-/* line 4222, sass/_base.scss */
+/* line 4599, sass/_base.scss */
 .side-menu .logged-as {
   text-align: center;
   font-size: 1.1em;
@@ -5917,18 +6298,18 @@ md-toast {
   color: #7c7c7c;
   line-height: 1.4;
 }
-/* line 4231, sass/_base.scss */
+/* line 4608, sass/_base.scss */
 .side-menu .logged-as strong {
   font-size: 1.6em;
   color: #cc022e;
 }
 
-/* line 4238, sass/_base.scss */
+/* line 4615, sass/_base.scss */
 input[type=checkbox] {
   display: none;
 }
 
-/* line 4241, sass/_base.scss */
+/* line 4618, sass/_base.scss */
 input[type=checkbox] + label {
   margin-left: 20px !important;
   line-height: 24px !important;
@@ -5936,7 +6317,7 @@ input[type=checkbox] + label {
   position: relative;
 }
 
-/* line 4247, sass/_base.scss */
+/* line 4624, sass/_base.scss */
 input[type=checkbox] + label:before {
   position: absolute;
   content: "";
@@ -5948,7 +6329,7 @@ input[type=checkbox] + label:before {
   border: 0.5px solid #a6a6a6;
 }
 
-/* line 4257, sass/_base.scss */
+/* line 4634, sass/_base.scss */
 input[type=checkbox]:checked + label:before {
   content: "\f00c";
   font-family: FontAwesome;
@@ -5958,12 +6339,12 @@ input[type=checkbox]:checked + label:before {
   line-height: 16px;
 }
 
-/* line 4266, sass/_base.scss */
+/* line 4643, sass/_base.scss */
 .viewSwitcher {
   padding: 0;
 }
 
-/* line 4270, sass/_base.scss */
+/* line 4647, sass/_base.scss */
 .viewSwitcher > div {
   color: #000;
   font-weight: bold;
@@ -5977,7 +6358,7 @@ input[type=checkbox]:checked + label:before {
   cursor: pointer;
 }
 
-/* line 4282, sass/_base.scss */
+/* line 4659, sass/_base.scss */
 .viewSwitcher > div.bluebg {
   background: #396D9A;
   color: #FFF;
@@ -5985,38 +6366,38 @@ input[type=checkbox]:checked + label:before {
   border-bottom: none;
 }
 
-/* line 4288, sass/_base.scss */
+/* line 4665, sass/_base.scss */
 .viewSwitcher > div.bluebg.active {
   color: #000;
 }
 
-/* line 4291, sass/_base.scss */
+/* line 4668, sass/_base.scss */
 .viewSwitcher > div.active {
   background: #474747;
   border: 1px solid #474747;
   border-bottom: none;
 }
 
-/* line 4297, sass/_base.scss */
+/* line 4674, sass/_base.scss */
 .switcherView {
   display: none;
   background: #474747;
   padding: 10px;
 }
-/* line 4301, sass/_base.scss */
+/* line 4678, sass/_base.scss */
 .switcherView .inset {
   background: #fff;
   padding: 10px;
 }
 
-/* line 4308, sass/_base.scss */
+/* line 4685, sass/_base.scss */
 .switcherView.view-downloads a {
   line-height: 220%;
   color: #444;
   font-family: "Roboto", sans-serif;
   text-decoration: none;
 }
-/* line 4315, sass/_base.scss */
+/* line 4692, sass/_base.scss */
 .switcherView.view-downloads a:before {
   font-family: FontAwesome;
   content: "\f0c1";
@@ -6024,17 +6405,17 @@ input[type=checkbox]:checked + label:before {
   margin-right: 8px;
   text-decoration: none;
 }
-/* line 4323, sass/_base.scss */
+/* line 4700, sass/_base.scss */
 .switcherView.view-downloads a:hover {
   color: #d9d9d9;
 }
 
-/* line 4328, sass/_base.scss */
+/* line 4705, sass/_base.scss */
 .switcherView.switch-view-active {
   display: block;
 }
 
-/* line 4332, sass/_base.scss */
+/* line 4709, sass/_base.scss */
 .dropdown-list-container {
   background-color: #f1f1f3;
   padding: 0 13px;
@@ -6046,7 +6427,7 @@ input[type=checkbox]:checked + label:before {
   cursor: pointer;
 }
 
-/* line 4342, sass/_base.scss */
+/* line 4719, sass/_base.scss */
 .dropdown-list-container .dropdown-list-selecting {
   display: none;
   position: absolute;
@@ -6060,17 +6441,17 @@ input[type=checkbox]:checked + label:before {
   width: 100%;
 }
 
-/* line 4355, sass/_base.scss */
+/* line 4732, sass/_base.scss */
 .dropdown-list-container .dropdown-list-selecting > div {
   padding: 5px 0;
 }
 
-/* line 4358, sass/_base.scss */
+/* line 4735, sass/_base.scss */
 .dropdown-list-container .dropdown-list-selecting.showed {
   display: block;
 }
 
-/* line 4363, sass/_base.scss */
+/* line 4740, sass/_base.scss */
 .dropdown-list-container:hover {
   background-color: #e9e9e9;
 }
@@ -6079,34 +6460,34 @@ input[type=checkbox]:checked + label:before {
 	display: block;
 }
 */
-/* line 4370, sass/_base.scss */
+/* line 4747, sass/_base.scss */
 .dropdown-list-container .dropdown-list-selecting > div:hover {
   background-color: #c8c8c8;
   cursor: pointer;
 }
 
-/* line 4376, sass/_base.scss */
+/* line 4753, sass/_base.scss */
 .referring-view .kimelt-link {
   position: absolute;
   right: 15px;
   margin-top: 24px;
   font-size: 0.8em;
 }
-/* line 4383, sass/_base.scss */
+/* line 4760, sass/_base.scss */
 .referring-view .main-info {
   padding: 10px 0;
 }
-/* line 4386, sass/_base.scss */
+/* line 4763, sass/_base.scss */
 .referring-view .main-info .code-view {
   float: right;
   width: 33%;
   padding: 0 0 0 25px;
 }
-/* line 4391, sass/_base.scss */
+/* line 4768, sass/_base.scss */
 .referring-view .main-info .code-view .img {
   text-align: center;
 }
-/* line 4395, sass/_base.scss */
+/* line 4772, sass/_base.scss */
 .referring-view .main-info .code-view .code {
   background: #d9d9d9;
   color: white;
@@ -6117,14 +6498,14 @@ input[type=checkbox]:checked + label:before {
   text-align: center;
   box-shadow: 3px 3px 0 black;
 }
-/* line 4407, sass/_base.scss */
+/* line 4784, sass/_base.scss */
 .referring-view .main-info h2 {
   font-family: "Roboto", sans-serif;
   color: #d9d9d9;
   line-height: 1.3;
   font-size: 1em;
 }
-/* line 4414, sass/_base.scss */
+/* line 4791, sass/_base.scss */
 .referring-view .main-info .desc {
   float: left;
   width: 67%;
@@ -6134,49 +6515,49 @@ input[type=checkbox]:checked + label:before {
   text-align: justify;
   line-height: 135%;
 }
-/* line 4423, sass/_base.scss */
+/* line 4800, sass/_base.scss */
 .referring-view .main-info .desc strong {
   color: black;
 }
-/* line 4429, sass/_base.scss */
+/* line 4806, sass/_base.scss */
 .referring-view .partner-referer-orders h2 {
   font-weight: bold;
   line-height: 2.5;
 }
-/* line 4436, sass/_base.scss */
+/* line 4813, sass/_base.scss */
 .referring-view .partner-referer-orders .row {
   font-size: 0.9em;
   color: #8c8c8c;
   line-height: 1.2;
 }
-/* line 4442, sass/_base.scss */
+/* line 4819, sass/_base.scss */
 .referring-view .partner-referer-orders .row.head {
   color: black;
   line-height: 1.5;
   font-weight: bold;
 }
-/* line 4448, sass/_base.scss */
+/* line 4825, sass/_base.scss */
 .referring-view .partner-referer-orders .price {
   font-weight: bold;
   color: #d9d9d9;
 }
-/* line 4453, sass/_base.scss */
+/* line 4830, sass/_base.scss */
 .referring-view .partner-referer-orders .total {
   border: 1px solid #ECECEC;
   padding: 8px;
   font-size: 1.1em;
 }
-/* line 4459, sass/_base.scss */
+/* line 4836, sass/_base.scss */
 .referring-view .partner-referer-orders .total div {
   margin: 0;
   color: black;
 }
-/* line 4464, sass/_base.scss */
+/* line 4841, sass/_base.scss */
 .referring-view .partner-referer-orders .total strong {
   color: #d9d9d9;
 }
 
-/* line 4472, sass/_base.scss */
+/* line 4849, sass/_base.scss */
 .coupon-sale-view .coupon {
   background: #d9d9d9;
   padding: 8px;
@@ -6185,28 +6566,28 @@ input[type=checkbox]:checked + label:before {
   line-height: 1.2;
   margin: 10px 0 5px 0;
 }
-/* line 4480, sass/_base.scss */
+/* line 4857, sass/_base.scss */
 .coupon-sale-view .coupon strong {
   font-size: 1.15em;
   color: white;
 }
-/* line 4485, sass/_base.scss */
+/* line 4862, sass/_base.scss */
 .coupon-sale-view .coupon em {
   font-size: 0.8em;
 }
-/* line 4491, sass/_base.scss */
+/* line 4868, sass/_base.scss */
 .coupon-sale-view .orders .no-item {
   text-align: center;
   margin: 10px 0;
   color: black;
 }
 
-/* line 4500, sass/_base.scss */
+/* line 4877, sass/_base.scss */
 .referer-code label, .coupon-code label {
   margin: 8px 0;
 }
 
-/* line 4505, sass/_base.scss */
+/* line 4882, sass/_base.scss */
 .info-for-register {
   background: #d9d9d9;
   color: white;
@@ -6214,18 +6595,18 @@ input[type=checkbox]:checked + label:before {
   font-size: 0.8em;
   margin-top: 10px;
 }
-/* line 4512, sass/_base.scss */
+/* line 4889, sass/_base.scss */
 .info-for-register strong {
   font-size: 1.1em;
 }
-/* line 4516, sass/_base.scss */
+/* line 4893, sass/_base.scss */
 .info-for-register a {
   color: white;
   margin: 8px 0;
   font-size: 0.9em;
 }
 
-/* line 4523, sass/_base.scss */
+/* line 4900, sass/_base.scss */
 .partner-box {
   font-size: 0.8em;
   color: white;
@@ -6236,27 +6617,27 @@ input[type=checkbox]:checked + label:before {
   -ms-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 4531, sass/_base.scss */
+/* line 4908, sass/_base.scss */
 .partner-box .title {
   line-height: 1.5;
 }
-/* line 4535, sass/_base.scss */
+/* line 4912, sass/_base.scss */
 .partner-box .partner {
   font-size: 1.3em;
   line-height: 1.5;
 }
-/* line 4539, sass/_base.scss */
+/* line 4916, sass/_base.scss */
 .partner-box .msg {
   text-align: center;
   font-size: 0.8em;
   line-height: 1;
 }
-/* line 4544, sass/_base.scss */
+/* line 4921, sass/_base.scss */
 .partner-box .msg i {
   font-size: 28px;
   width: 30px;
 }
-/* line 4550, sass/_base.scss */
+/* line 4927, sass/_base.scss */
 .partner-box .ico i {
   font-size: 34px;
   width: 35px;
@@ -6265,7 +6646,7 @@ input[type=checkbox]:checked + label:before {
   margin: 0 15px 0 0;
 }
 
-/* line 4558, sass/_base.scss */
+/* line 4935, sass/_base.scss */
 .partner-box:before {
   position: absolute;
   content: "";
@@ -6277,108 +6658,108 @@ input[type=checkbox]:checked + label:before {
   border-width: 13px;
 }
 
-/* line 4570, sass/_base.scss */
+/* line 4947, sass/_base.scss */
 .partner-box.partner-valid {
   background: #00b300;
 }
-/* line 4573, sass/_base.scss */
+/* line 4950, sass/_base.scss */
 .partner-box.partner-valid .ico i {
   font-size: 38px;
   width: 38px;
 }
 
-/* line 4578, sass/_base.scss */
+/* line 4955, sass/_base.scss */
 .partner-box.partner-valid:before {
   border-color: transparent transparent #00b300 transparent;
 }
 
-/* line 4581, sass/_base.scss */
+/* line 4958, sass/_base.scss */
 .partner-box.partner-invalid {
   background: #d9d9d9;
   text-align: left;
   line-height: 18px;
 }
 
-/* line 4586, sass/_base.scss */
+/* line 4963, sass/_base.scss */
 .partner-box.partner-invalid:before {
   border-color: transparent transparent #d9d9d9 transparent;
 }
 
-/* line 4590, sass/_base.scss */
+/* line 4967, sass/_base.scss */
 .partner-box.partner-info {
   background: #F78520;
   text-align: left;
   line-height: 18px;
 }
 
-/* line 4595, sass/_base.scss */
+/* line 4972, sass/_base.scss */
 .partner-box.partner-info:before {
   border-color: transparent transparent #F78520 transparent;
 }
 
-/* line 4601, sass/_base.scss */
+/* line 4978, sass/_base.scss */
 .coupon-code .partner-box {
   margin-top: 16px;
   text-align: left;
   line-height: 18px;
 }
 
-/* line 4607, sass/_base.scss */
+/* line 4984, sass/_base.scss */
 .divider {
-  height: 1px;
-  background: #eceff2;
+  height: 0.1rem;
+  background: #cecece;
   display: block;
 }
 
-/* line 4613, sass/_base.scss */
+/* line 4990, sass/_base.scss */
 .a-up a {
   font-size: 10px;
   color: #8c8c8c;
 }
 
-/* line 4619, sass/_base.scss */
+/* line 4996, sass/_base.scss */
 .documents h2 {
   color: black;
 }
-/* line 4622, sass/_base.scss */
+/* line 4999, sass/_base.scss */
 .documents .item {
   background: #4d4d4d;
   padding: 8px;
   margin: 8px 0;
   border-left: 5px solid transparent;
 }
-/* line 4628, sass/_base.scss */
+/* line 5005, sass/_base.scss */
 .documents .item .icon {
   margin: 0 5px;
 }
-/* line 4632, sass/_base.scss */
+/* line 5009, sass/_base.scss */
 .documents .item .extension {
   font-size: 0.8em;
   color: black;
 }
-/* line 4638, sass/_base.scss */
+/* line 5015, sass/_base.scss */
 .documents .item.unwatched {
   border-left: 5px solid silver;
   background: #d9d9d9;
 }
-/* line 4642, sass/_base.scss */
+/* line 5019, sass/_base.scss */
 .documents .item.unwatched a {
   color: white;
 }
-/* line 4646, sass/_base.scss */
+/* line 5023, sass/_base.scss */
 .documents .item.unwatched .icon {
   color: white;
 }
-/* line 4650, sass/_base.scss */
+/* line 5027, sass/_base.scss */
 .documents .item.unwatched .extension {
   color: white;
 }
 
-/* line 4657, sass/_base.scss */
+/* line 5034, sass/_base.scss */
 .alert-view h2 {
   color: #00a1e3;
 }
-/* line 4661, sass/_base.scss */
+/* line 5038, sass/_base.scss */
 .alert-view .item {
   border: 1px solid #eaeaea;
   background: #f5f5f5;
@@ -6392,15 +6773,15 @@ input[type=checkbox]:checked + label:before {
   -ms-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 4672, sass/_base.scss */
+/* line 5049, sass/_base.scss */
 .alert-view .item .text {
   font-weight: bold;
 }
-/* line 4677, sass/_base.scss */
+/* line 5054, sass/_base.scss */
 .alert-view .item.info {
   border-left: 5px solid #8DDEFF;
 }
-/* line 4680, sass/_base.scss */
+/* line 5057, sass/_base.scss */
 .alert-view .item.info:before {
   content: "\f05a";
   line-height: 1;
@@ -6410,11 +6791,11 @@ input[type=checkbox]:checked + label:before {
   font-size: 22px;
   color: #8DDEFF;
 }
-/* line 4691, sass/_base.scss */
+/* line 5068, sass/_base.scss */
 .alert-view .item.alert {
   border-left: 5px solid #FF7077;
 }
-/* line 4694, sass/_base.scss */
+/* line 5071, sass/_base.scss */
 .alert-view .item.alert:before {
   content: "\f071";
   line-height: 1;
@@ -6424,7 +6805,7 @@ input[type=checkbox]:checked + label:before {
   font-size: 22px;
   color: #FF9CA0;
 }
-/* line 4705, sass/_base.scss */
+/* line 5082, sass/_base.scss */
 .alert-view .url {
   float: right;
   text-decoration: none;
@@ -6439,45 +6820,45 @@ input[type=checkbox]:checked + label:before {
   border-radius: 3px;
 }
 
-/* line 4717, sass/_base.scss */
+/* line 5094, sass/_base.scss */
 .menu-thanks {
   background: #474747;
   text-align: center;
 }
-/* line 4721, sass/_base.scss */
+/* line 5098, sass/_base.scss */
 .menu-thanks .head {
   background: #404040;
   border-bottom: 2px dashed #333333;
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 4728, sass/_base.scss */
+/* line 5105, sass/_base.scss */
 .menu-thanks .cont {
   color: #d9d9d9;
   padding-top: 10px;
   line-height: 1.3;
 }
-/* line 4733, sass/_base.scss */
+/* line 5110, sass/_base.scss */
 .menu-thanks .cont .number {
   font-family: "Roboto", sans-serif;
   font-size: 1.8em;
   font-weight: bold;
 }
 
-/* line 4743, sass/_base.scss */
+/* line 5120, sass/_base.scss */
 .casada-pont .row {
   margin-left: -5px;
   margin-right: -5px;
   font-size: 0.9em;
   color: #a2a2a2;
 }
-/* line 4749, sass/_base.scss */
+/* line 5126, sass/_base.scss */
 .casada-pont .row div[class*=col-sm] {
   padding-left: 5px;
   padding-right: 5px;
   position: relative;
 }
-/* line 4759, sass/_base.scss */
+/* line 5136, sass/_base.scss */
 .casada-pont * input[type=text],
 .casada-pont * input[type=tel],
 .casada-pont * input[type=email],
@@ -6496,58 +6877,58 @@ input[type=checkbox]:checked + label:before {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 4774, sass/_base.scss */
+/* line 5151, sass/_base.scss */
 .casada-pont textarea::-webkit-input-placeholder,
 .casada-pont * input[type=text]::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
   color: #b7b7b7;
 }
-/* line 4778, sass/_base.scss */
+/* line 5155, sass/_base.scss */
 .casada-pont textarea:-moz-placeholder,
 .casada-pont * input[type=text]:-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #b7b7b7;
   opacity: 1;
 }
-/* line 4783, sass/_base.scss */
+/* line 5160, sass/_base.scss */
 .casada-pont textarea::-moz-placeholder,
 .casada-pont * input[type=text]::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #b7b7b7;
   opacity: 1;
 }
-/* line 4788, sass/_base.scss */
+/* line 5165, sass/_base.scss */
 .casada-pont textarea:-ms-input-placeholder,
 .casada-pont * input[type=text]:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #b7b7b7;
 }
-/* line 4792, sass/_base.scss */
+/* line 5169, sass/_base.scss */
 .casada-pont textarea:placeholder-shown,
 .casada-pont * input[type=text]:placeholder-shown {
   /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
   color: #b7b7b7;
 }
-/* line 4796, sass/_base.scss */
+/* line 5173, sass/_base.scss */
 .casada-pont * input[type=text]:focus {
   border: 1px solid #d9d9d9 !important;
 }
-/* line 4801, sass/_base.scss */
+/* line 5178, sass/_base.scss */
 .casada-pont .img-select label {
   cursor: pointer;
   border: 1px solid #d7d7d7;
   padding: 2px;
 }
-/* line 4807, sass/_base.scss */
+/* line 5184, sass/_base.scss */
 .casada-pont .img-select .text {
   text-align: center;
   line-height: 24px;
 }
-/* line 4812, sass/_base.scss */
+/* line 5189, sass/_base.scss */
 .casada-pont .img-select input[type=file] {
   display: none;
 }
-/* line 4817, sass/_base.scss */
+/* line 5194, sass/_base.scss */
 .casada-pont .head-shower {
   background: #8a8a8a;
   color: white;
@@ -6555,7 +6936,7 @@ input[type=checkbox]:checked + label:before {
   font-size: 0.85em;
   line-height: 180%;
 }
-/* line 4824, sass/_base.scss */
+/* line 5201, sass/_base.scss */
 .casada-pont .head-shower .number {
   float: left;
   margin: 0 25px 0 10px;
@@ -6563,7 +6944,7 @@ input[type=checkbox]:checked + label:before {
   line-height: 1;
   font-weight: bold;
 }
-/* line 4833, sass/_base.scss */
+/* line 5210, sass/_base.scss */
 .casada-pont .input-group-addon:first-child {
   background: transparent;
   color: #b2b2b2;
@@ -6575,58 +6956,58 @@ input[type=checkbox]:checked + label:before {
   -ms-border-radius: 0;
   border-radius: 0;
 }
-/* line 4840, sass/_base.scss */
+/* line 5217, sass/_base.scss */
 .casada-pont .input-group-addon:first-child i {
   margin-right: 3px;
 }
-/* line 4847, sass/_base.scss */
+/* line 5224, sass/_base.scss */
 .casada-pont .opens-head {
   background: #b2b2b2;
   color: white;
   padding: 8px 5px;
   font-size: 1.2em;
 }
-/* line 4854, sass/_base.scss */
+/* line 5231, sass/_base.scss */
 .casada-pont .opens {
   margin-bottom: 5px;
 }
-/* line 4857, sass/_base.scss */
+/* line 5234, sass/_base.scss */
 .casada-pont .opens .when {
   color: white;
   width: 40%;
   padding-right: 10px;
 }
-/* line 4862, sass/_base.scss */
+/* line 5239, sass/_base.scss */
 .casada-pont .opens .when .text {
   padding: 0 5px;
   background: #c7c7c7;
 }
-/* line 4867, sass/_base.scss */
+/* line 5244, sass/_base.scss */
 .casada-pont .opens .from {
   width: 25%;
 }
-/* line 4870, sass/_base.scss */
+/* line 5247, sass/_base.scss */
 .casada-pont .opens .sep {
   width: 10%;
   text-align: center;
 }
-/* line 4874, sass/_base.scss */
+/* line 5251, sass/_base.scss */
 .casada-pont .opens .to {
   width: 25%;
 }
-/* line 4878, sass/_base.scss */
+/* line 5255, sass/_base.scss */
 .casada-pont .opens select {
   height: 26px;
   line-height: 26px;
   width: 100%;
   border: 1px solid #d9d9d9;
 }
-/* line 4886, sass/_base.scss */
+/* line 5263, sass/_base.scss */
 .casada-pont .opens > div {
   float: left;
   line-height: 26px;
 }
-/* line 4890, sass/_base.scss */
+/* line 5267, sass/_base.scss */
 .casada-pont .opens:after {
   content: "";
   position: relative;
@@ -6634,21 +7015,21 @@ input[type=checkbox]:checked + label:before {
   clear: both;
   display: block;
 }
-/* line 4900, sass/_base.scss */
+/* line 5277, sass/_base.scss */
 .casada-pont .input-group-addon:first-child + input[type=text],
 .casada-pont .input-group-addon:first-child + input[type=tel],
 .casada-pont .input-group-addon:first-child + input[type=email] {
   border-left: none !important;
 }
-/* line 4904, sass/_base.scss */
+/* line 5281, sass/_base.scss */
 .casada-pont h2 {
   font-size: 1.3em;
 }
-/* line 4908, sass/_base.scss */
+/* line 5285, sass/_base.scss */
 .casada-pont h3 {
   font-size: 1.1em;
 }
-/* line 4912, sass/_base.scss */
+/* line 5289, sass/_base.scss */
 .casada-pont h2, .casada-pont h3 {
   color: #b2b2b2;
   font-weight: bold;
@@ -6656,13 +7037,13 @@ input[type=checkbox]:checked + label:before {
   margin: 5px 0;
   display: block;
 }
-/* line 4919, sass/_base.scss */
+/* line 5296, sass/_base.scss */
 .casada-pont h2 i, .casada-pont h3 i {
   margin-right: 10px;
   color: #a1a1a1;
 }
 
-/* line 4930, sass/_base.scss */
+/* line 5307, sass/_base.scss */
 input[type=text][required].ng-invalid + span:before,
 input[type=tel][required].ng-invalid + span:before,
 input[type=email][required].ng-invalid + span:before {
@@ -6685,7 +7066,7 @@ input[type=email][required].ng-invalid + span:before {
   border-radius: 20px;
 }
 
-/* line 4951, sass/_base.scss */
+/* line 5328, sass/_base.scss */
 input[type=text][required].ng-touched.ng-valid + span:before,
 input[type=tel][required].ng-touched.ng-valid + span:before,
 input[type=email][required].ng-touched.ng-valid + span:before {
@@ -6708,18 +7089,18 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   border-radius: 20px;
 }
 
-/* line 4969, sass/_base.scss */
+/* line 5346, sass/_base.scss */
 .need-fill-form {
   color: #d9d9d9;
   font-size: 0.8em;
 }
 
-/* line 4974, sass/_base.scss */
+/* line 5351, sass/_base.scss */
 .call-module-view * {
   color: black;
 }
 
-/* line 4978, sass/_base.scss */
+/* line 5355, sass/_base.scss */
 .call-module-view .holder-view {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ebecec+100 */
   background: #ffffff;
@@ -6742,35 +7123,35 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   -ms-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 4995, sass/_base.scss */
+/* line 5372, sass/_base.scss */
 .call-module-view .holder-view .tanacsado {
   color: black;
   text-align: center;
   font-size: 0.9em;
   line-height: 1;
 }
-/* line 5001, sass/_base.scss */
+/* line 5378, sass/_base.scss */
 .call-module-view .holder-view .tanacsado .cap {
   font-size: 1.2em;
   line-height: 1.5;
 }
-/* line 5006, sass/_base.scss */
+/* line 5383, sass/_base.scss */
 .call-module-view .holder-view .tanacsado strong {
   font-size: 1.1em;
   line-height: 1.2;
 }
-/* line 5012, sass/_base.scss */
+/* line 5389, sass/_base.scss */
 .call-module-view .holder-view .form {
   margin-bottom: 5px;
 }
-/* line 5015, sass/_base.scss */
+/* line 5392, sass/_base.scss */
 .call-module-view .holder-view .form input[type=text] {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 5020, sass/_base.scss */
+/* line 5397, sass/_base.scss */
 .call-module-view .holder-view .send button {
   background: #d9d9d9;
   color: white;
@@ -6787,79 +7168,79 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   -ms-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 5032, sass/_base.scss */
+/* line 5409, sass/_base.scss */
 .call-module-view .holder-view .send button i {
   color: white;
   font-size: 18px;
   line-height: 2;
 }
-/* line 5041, sass/_base.scss */
+/* line 5418, sass/_base.scss */
 .call-module-view .holder-view .send {
   margin-bottom: 10px;
 }
-/* line 5045, sass/_base.scss */
+/* line 5422, sass/_base.scss */
 .call-module-view .holder-view .phone, .call-module-view .holder-view .kie {
   color: #d9d9d9;
   font-weight: bold;
 }
-/* line 5050, sass/_base.scss */
+/* line 5427, sass/_base.scss */
 .call-module-view .holder-view .phone {
   text-align: center;
   font-size: 1.35em;
 }
-/* line 5056, sass/_base.scss */
+/* line 5433, sass/_base.scss */
 .call-module-view .holder-view .kie {
   line-height: 2;
   text-transform: uppercase;
 }
 
-/* line 5063, sass/_base.scss */
+/* line 5440, sass/_base.scss */
 .call-module-view.map-mod .holder-view {
   font-size: 0.8em !important;
 }
-/* line 5066, sass/_base.scss */
+/* line 5443, sass/_base.scss */
 .call-module-view.map-mod .holder-view h4 {
   font-weight: bold;
   font-family: "Roboto", sans-serif;
 }
-/* line 5071, sass/_base.scss */
+/* line 5448, sass/_base.scss */
 .call-module-view.map-mod .holder-view strong {
   color: black;
 }
-/* line 5075, sass/_base.scss */
+/* line 5452, sass/_base.scss */
 .call-module-view.map-mod .holder-view img {
   width: 100%;
 }
 
-/* line 5083, sass/_base.scss */
+/* line 5460, sass/_base.scss */
 .casada-pont-view .details .head {
   background: #b2b2b2;
   color: white;
   padding: 5px;
   margin-bottom: 8px;
 }
-/* line 5090, sass/_base.scss */
+/* line 5467, sass/_base.scss */
 .casada-pont-view .details .image {
   width: 50%;
   border: 1px solid #d7d7d7;
   padding: 2px;
 }
-/* line 5095, sass/_base.scss */
+/* line 5472, sass/_base.scss */
 .casada-pont-view .details .image img {
   width: 100%;
 }
-/* line 5100, sass/_base.scss */
+/* line 5477, sass/_base.scss */
 .casada-pont-view .details .key {
   color: #cbcbcb;
   line-height: 1;
 }
-/* line 5105, sass/_base.scss */
+/* line 5482, sass/_base.scss */
 .casada-pont-view .details .value {
   color: #444;
   font-weight: bold;
   line-height: 1;
 }
-/* line 5111, sass/_base.scss */
+/* line 5488, sass/_base.scss */
 .casada-pont-view .want-allow {
   margin: 8px 0;
   padding: 8px;
@@ -6871,19 +7252,19 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   -ms-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 5121, sass/_base.scss */
+/* line 5498, sass/_base.scss */
 .casada-pont-view .request-date {
   font-size: 0.7em;
   margin: 10px 0;
   color: #b7b7b7;
 }
-/* line 5126, sass/_base.scss */
+/* line 5503, sass/_base.scss */
 .casada-pont-view .request-date em {
   color: #8c8c8c;
 }
 
 /* Üzletkereső */
-/* line 5135, sass/_base.scss */
+/* line 5512, sass/_base.scss */
 .shop-search-view h1 {
   color: black;
   text-transform: uppercase;
@@ -6891,54 +7272,54 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   margin: 10px 0 20px 0;
   font-weight: bold;
 }
-/* line 5143, sass/_base.scss */
+/* line 5520, sass/_base.scss */
 .shop-search-view #map {
   height: 350px;
   background: #eaeaea;
 }
-/* line 5148, sass/_base.scss */
+/* line 5525, sass/_base.scss */
 .shop-search-view .near-of-me {
   background: #d9d9d9;
   padding: 8px;
   color: white;
 }
-/* line 5153, sass/_base.scss */
+/* line 5530, sass/_base.scss */
 .shop-search-view .near-of-me .infos {
   font-size: 0.8em;
   line-height: 135%;
 }
-/* line 5159, sass/_base.scss */
+/* line 5536, sass/_base.scss */
 .shop-search-view .near-of-me .place-details .head {
   font-size: 0.85em;
 }
-/* line 5162, sass/_base.scss */
+/* line 5539, sass/_base.scss */
 .shop-search-view .near-of-me .place-details .name {
   font-family: "Roboto", sans-serif;
   font-size: 1.3em;
   line-height: 1.6;
 }
-/* line 5170, sass/_base.scss */
+/* line 5547, sass/_base.scss */
 .shop-search-view .shop-list {
   padding: 10px;
 }
-/* line 5173, sass/_base.scss */
+/* line 5550, sass/_base.scss */
 .shop-search-view .shop-list .shop {
   margin: 30px 0;
   line-height: 130%;
   color: #8a8a8a;
 }
-/* line 5178, sass/_base.scss */
+/* line 5555, sass/_base.scss */
 .shop-search-view .shop-list .shop .name {
   font-family: "Roboto", sans-serif;
   color: #d9d9d9;
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 5185, sass/_base.scss */
+/* line 5562, sass/_base.scss */
 .shop-search-view .shop-list .shop .address {
   color: #444;
 }
-/* line 5188, sass/_base.scss */
+/* line 5565, sass/_base.scss */
 .shop-search-view .shop-list .shop .address .map-route {
   background: black;
   font-size: 0.8em;
@@ -6951,21 +7332,21 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   -ms-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 5199, sass/_base.scss */
+/* line 5576, sass/_base.scss */
 .shop-search-view .shop-list .shop .opens {
   font-size: 0.9em;
 }
-/* line 5203, sass/_base.scss */
+/* line 5580, sass/_base.scss */
 .shop-search-view .shop-list .shop .infos {
   font-size: 0.8em;
   line-height: 135%;
 }
-/* line 5207, sass/_base.scss */
+/* line 5584, sass/_base.scss */
 .shop-search-view .shop-list .shop .infos .distributor {
   color: black;
   font-size: 1.2em;
 }
-/* line 5215, sass/_base.scss */
+/* line 5592, sass/_base.scss */
 .shop-search-view .comment {
   color: #acacac;
   font-size: #dadada;
@@ -6973,29 +7354,29 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   font-size: 0.8em;
 }
 
-/* line 5223, sass/_base.scss */
+/* line 5600, sass/_base.scss */
 .tanacsado-card {
   background: #ebedec;
   margin: 10px 0;
   color: #5b5b5b;
   font-size: 0.85em;
 }
-/* line 5229, sass/_base.scss */
+/* line 5606, sass/_base.scss */
 .tanacsado-card .pcode {
   background: #c5c7c6;
   color: #444;
   text-transform: uppercase;
 }
-/* line 5234, sass/_base.scss */
+/* line 5611, sass/_base.scss */
 .tanacsado-card .pcode .text, .tanacsado-card .pcode .code {
   padding: 5px;
 }
-/* line 5238, sass/_base.scss */
+/* line 5615, sass/_base.scss */
 .tanacsado-card .pcode .text {
   font-weight: bold;
   font-size: 1em;
 }
-/* line 5242, sass/_base.scss */
+/* line 5619, sass/_base.scss */
 .tanacsado-card .pcode .code {
   background: #d9d9d9;
   color: white;
@@ -7005,44 +7386,44 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   padding: 15px 0;
   letter-spacing: 2px;
 }
-/* line 5253, sass/_base.scss */
+/* line 5630, sass/_base.scss */
 .tanacsado-card .dist {
   padding: 0;
   line-height: 130%;
 }
-/* line 5257, sass/_base.scss */
+/* line 5634, sass/_base.scss */
 .tanacsado-card .dist .name {
   font-weight: bold;
   font-size: 1.1em;
   color: black;
 }
-/* line 5263, sass/_base.scss */
+/* line 5640, sass/_base.scss */
 .tanacsado-card .dist .face {
   width: 101px;
   height: 101px;
   float: left;
   margin-right: 5px;
 }
-/* line 5270, sass/_base.scss */
+/* line 5647, sass/_base.scss */
 .tanacsado-card .dist .details {
   padding-top: 5px;
 }
-/* line 5274, sass/_base.scss */
+/* line 5651, sass/_base.scss */
 .tanacsado-card .dist .phone {
   font-weight: bold;
   color: #d9d9d9;
   margin-top: 5px;
 }
-/* line 5279, sass/_base.scss */
+/* line 5656, sass/_base.scss */
 .tanacsado-card .dist .phone strong {
   font-size: 1.3em;
   font-family: "Roboto", sans-serif;
 }
-/* line 5286, sass/_base.scss */
+/* line 5663, sass/_base.scss */
 .tanacsado-card .shop {
   color: black;
 }
-/* line 5290, sass/_base.scss */
+/* line 5667, sass/_base.scss */
 .tanacsado-card .who {
   background: #f5f5f5;
   border-top: 1px solid #d7d7d7;
@@ -7054,17 +7435,17 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   box-shadow: inset 0 4px 8px -5px #888888;
 }
 
-/* line 5302, sass/_base.scss */
+/* line 5679, sass/_base.scss */
 .share-box {
   position: absolute;
   right: -65px;
   top: 80px;
 }
-/* line 5307, sass/_base.scss */
+/* line 5684, sass/_base.scss */
 .share-box div {
   background: #738a8d;
 }
-/* line 5309, sass/_base.scss */
+/* line 5686, sass/_base.scss */
 .share-box div a {
   font-size: 24px;
   display: block;
@@ -7072,43 +7453,43 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   color: white;
   text-align: center;
 }
-/* line 5317, sass/_base.scss */
+/* line 5694, sass/_base.scss */
 .share-box div.facebook {
   background: #305891;
 }
-/* line 5320, sass/_base.scss */
+/* line 5697, sass/_base.scss */
 .share-box div.googleplus {
   background: #DD5146;
 }
-/* line 5323, sass/_base.scss */
+/* line 5700, sass/_base.scss */
 .share-box div.twitter {
   background: #2ca8d2;
 }
-/* line 5326, sass/_base.scss */
+/* line 5703, sass/_base.scss */
 .share-box div.youtube {
   background: #df3930;
 }
 
-/* line 5331, sass/_base.scss */
+/* line 5708, sass/_base.scss */
 .searchResult {
   margin-top: 15px;
 }
-/* line 5334, sass/_base.scss */
+/* line 5711, sass/_base.scss */
 .searchResult .pagination {
   margin: 20px;
 }
-/* line 5339, sass/_base.scss */
+/* line 5716, sass/_base.scss */
 .searchResult .pagination > li > a, .searchResult .pagination > li > span {
   color: #d9d9d9;
 }
-/* line 5342, sass/_base.scss */
+/* line 5719, sass/_base.scss */
 .searchResult .pagination > .active > a, .searchResult .pagination > .active > span, .searchResult .pagination > .active > a:hover, .searchResult .pagination > .active > span:hover, .searchResult .pagination > .active > a:focus, .searchResult .pagination > .active > span:focus {
   background-color: #d9d9d9;
   border-color: #d9d9d9;
   color: white;
 }
 
-/* line 5349, sass/_base.scss */
+/* line 5726, sass/_base.scss */
 .not-enought-price-for-order {
   background: #EC4E4E;
   padding: 15px;
@@ -7118,30 +7499,30 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   margin-bottom: 10px;
 }
 
-/* line 5358, sass/_base.scss */
+/* line 5735, sass/_base.scss */
 .empty-cart {
   text-align: center;
   color: #1a1a1a;
   font-size: 1.1em;
 }
-/* line 5363, sass/_base.scss */
+/* line 5740, sass/_base.scss */
 .empty-cart i.ico, .empty-cart strong {
   color: black;
 }
-/* line 5367, sass/_base.scss */
+/* line 5744, sass/_base.scss */
 .empty-cart i.ico {
   font-size: 64px;
 }
-/* line 5371, sass/_base.scss */
+/* line 5748, sass/_base.scss */
 .empty-cart strong {
   font-size: 1.4em;
   line-height: 1.5;
 }
-/* line 5376, sass/_base.scss */
+/* line 5753, sass/_base.scss */
 .empty-cart .srcform {
   margin: 25px 0;
 }
-/* line 5379, sass/_base.scss */
+/* line 5756, sass/_base.scss */
 .empty-cart .srcform input[type=text] {
   border: 1px solid #333333;
   padding: 12px;
@@ -7151,7 +7532,7 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   width: 50%;
   border-radius: 8px 0 0 8px;
 }
-/* line 5390, sass/_base.scss */
+/* line 5767, sass/_base.scss */
 .empty-cart .srcform button {
   height: 45px;
   border: none;
@@ -7160,21 +7541,21 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   border-radius: 0 8px 8px 0;
 }
 
-/* line 5400, sass/_base.scss */
+/* line 5777, sass/_base.scss */
 .referring-promo {
   padding: 10px 20px;
   color: black;
 }
-/* line 5406, sass/_base.scss */
+/* line 5783, sass/_base.scss */
 .referring-promo p {
   text-align: justify;
 }
-/* line 5410, sass/_base.scss */
+/* line 5787, sass/_base.scss */
 .referring-promo .useit {
   color: #d9d9d9;
   text-transform: uppercase;
 }
-/* line 5415, sass/_base.scss */
+/* line 5792, sass/_base.scss */
 .referring-promo .own-code {
   border: 1px solid #333333;
   padding: 15px;
@@ -7182,13 +7563,13 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   font-size: 1.3em;
   font-weight: bold;
 }
-/* line 5422, sass/_base.scss */
+/* line 5799, sass/_base.scss */
 .referring-promo .own-code .code {
   color: #d9d9d9;
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
 }
-/* line 5429, sass/_base.scss */
+/* line 5806, sass/_base.scss */
 .referring-promo .own-code.bg {
   background: #d9d9d9;
   color: white;
@@ -7196,23 +7577,23 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   font-weight: normal;
   font-family: "Roboto", sans-serif;
 }
-/* line 5436, sass/_base.scss */
+/* line 5813, sass/_base.scss */
 .referring-promo .own-code.bg a {
   color: white;
   text-decoration: underline;
 }
-/* line 5443, sass/_base.scss */
+/* line 5820, sass/_base.scss */
 .referring-promo .referer-user {
   font-size: 1.5em;
   font-family: "Roboto", sans-serif;
 }
-/* line 5447, sass/_base.scss */
+/* line 5824, sass/_base.scss */
 .referring-promo .referer-user .partner {
   color: #d9d9d9;
   font-size: 1.6em;
   text-transform: uppercase;
 }
-/* line 5453, sass/_base.scss */
+/* line 5830, sass/_base.scss */
 .referring-promo .referer-user .referer-code {
   margin-top: 35px;
   background: #d41c4f;
@@ -7224,7 +7605,7 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   text-align: center;
   box-shadow: 3px 3px 0 #5a5a5a;
 }
-/* line 5466, sass/_base.scss */
+/* line 5843, sass/_base.scss */
 .referring-promo h1, .referring-promo h2 {
   color: #d9d9d9;
   font-weight: bold;
@@ -7232,44 +7613,44 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   line-height: 2;
   font-size: 2.2em;
 }
-/* line 5474, sass/_base.scss */
+/* line 5851, sass/_base.scss */
 .referring-promo .step {
   font-family: "Roboto", sans-serif;
   line-height: 1.2;
   font-size: 1.1em;
 }
-/* line 5480, sass/_base.scss */
+/* line 5857, sass/_base.scss */
 .referring-promo .desc {
   font-size: 0.9em;
   letter-spacing: -0.3px;
   line-height: 1.3;
 }
-/* line 5488, sass/_base.scss */
+/* line 5865, sass/_base.scss */
 .referring-promo .shower > a > img {
   border: 1px solid #333333;
 }
-/* line 5492, sass/_base.scss */
+/* line 5869, sass/_base.scss */
 .referring-promo .shower {
   position: relative;
 }
-/* line 5494, sass/_base.scss */
+/* line 5871, sass/_base.scss */
 .referring-promo .shower .flowing {
   position: absolute;
   bottom: 0;
   left: 0;
   pointer-events: none;
 }
-/* line 5502, sass/_base.scss */
+/* line 5879, sass/_base.scss */
 .referring-promo small {
   color: #696969;
   font-size: 0.8em;
   letter-spacing: 0;
 }
-/* line 5508, sass/_base.scss */
+/* line 5885, sass/_base.scss */
 .referring-promo .row {
   margin: 25px -15px;
 }
-/* line 5512, sass/_base.scss */
+/* line 5889, sass/_base.scss */
 .referring-promo .subhead {
   color: #d9d9d9;
   font-weight: bold;
@@ -7277,30 +7658,30 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   font-size: 1.25em;
   margin: 12px 0;
 }
-/* line 5520, sass/_base.scss */
+/* line 5897, sass/_base.scss */
 .referring-promo .larger {
   font-size: 1.1em;
   font-family: "Roboto", sans-serif;
 }
-/* line 5525, sass/_base.scss */
+/* line 5902, sass/_base.scss */
 .referring-promo .divider {
   height: 1px;
   background: transparent;
   border-top: 1px dashed #333333;
   margin: 10px 0;
 }
-/* line 5532, sass/_base.scss */
+/* line 5909, sass/_base.scss */
 .referring-promo .ajcode {
   background: #4d4d4d;
   border: 5px dotted #E6E6E6;
   padding: 15px 0;
 }
-/* line 5537, sass/_base.scss */
+/* line 5914, sass/_base.scss */
 .referring-promo .ajcode > .row {
   margin: 0;
 }
 
-/* line 5542, sass/_base.scss */
+/* line 5919, sass/_base.scss */
 #PayUForm button {
   background: url(//www.cp.autoradiokeret.web-pro.hu/src/images/src/images/pay_btn.png);
   width: 196px;
@@ -7309,15 +7690,15 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   cursor: pointer;
 }
 
-/* line 5550, sass/_base.scss */
+/* line 5927, sass/_base.scss */
 .simple-msg {
   padding: 15px;
 }
-/* line 5553, sass/_base.scss */
+/* line 5930, sass/_base.scss */
 .simple-msg .simple-information {
   border: 2px solid #333333;
 }
-/* line 5556, sass/_base.scss */
+/* line 5933, sass/_base.scss */
 .simple-msg .simple-information .head {
   background: #333333;
   padding: 10px;
@@ -7326,12 +7707,12 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   font-weight: bold;
   font-size: 1.3em;
 }
-/* line 5564, sass/_base.scss */
+/* line 5941, sass/_base.scss */
 .simple-msg .simple-information .ft {
   padding: 8px 10px;
   font-weight: bold;
 }
-/* line 5568, sass/_base.scss */
+/* line 5945, sass/_base.scss */
 .simple-msg .simple-information .cth {
   background: #4d4d4d;
   padding: 10px;
@@ -7339,38 +7720,38 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   font-size: 0.85em;
   color: black;
 }
-/* line 5575, sass/_base.scss */
+/* line 5952, sass/_base.scss */
 .simple-msg .simple-information .in {
   padding: 10px;
   line-height: 1.6;
 }
-/* line 5579, sass/_base.scss */
+/* line 5956, sass/_base.scss */
 .simple-msg .simple-information .simple-info-footer {
   background: #4d4d4d;
   padding: 4px 10px;
   font-size: 0.85em;
   line-height: 30px;
 }
-/* line 5585, sass/_base.scss */
+/* line 5962, sass/_base.scss */
 .simple-msg .simple-information .simple-info-footer img {
   height: 25px;
 }
-/* line 5589, sass/_base.scss */
+/* line 5966, sass/_base.scss */
 .simple-msg .simple-information .simple-info-footer a {
   color: #d9d9d9;
   font-size: 0.85em;
 }
-/* line 5595, sass/_base.scss */
+/* line 5972, sass/_base.scss */
 .simple-msg .simple-information.simple-back-success {
   border: 2px solid #6FAB42;
 }
-/* line 5597, sass/_base.scss */
+/* line 5974, sass/_base.scss */
 .simple-msg .simple-information.simple-back-success .head {
   background: #6FAB42;
   color: white;
 }
 
-/* line 5604, sass/_base.scss */
+/* line 5981, sass/_base.scss */
 .floating-box {
   position: fixed;
   right: 0;
@@ -7378,7 +7759,7 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   z-index: 100;
 }
 
-/* line 5611, sass/_base.scss */
+/* line 5988, sass/_base.scss */
 .floating-box.contact-msg {
   top: 50%;
   padding: 8px;
@@ -7410,50 +7791,50 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ebecec',GradientType=0 );
   /* IE6-9 */
 }
-/* line 5642, sass/_base.scss */
+/* line 6019, sass/_base.scss */
 .floating-box.contact-msg .contact {
   float: left;
   width: 40%;
   text-align: center;
   font-size: 0.95em;
 }
-/* line 5648, sass/_base.scss */
+/* line 6025, sass/_base.scss */
 .floating-box.contact-msg .contact .profil {
   margin-top: -40px;
   line-height: 1.3;
 }
-/* line 5652, sass/_base.scss */
+/* line 6029, sass/_base.scss */
 .floating-box.contact-msg .contact .profil .name {
   font-size: 1.1em;
   color: #222;
 }
-/* line 5658, sass/_base.scss */
+/* line 6035, sass/_base.scss */
 .floating-box.contact-msg .contact .hely {
   font-size: 1.1em;
   color: #222;
 }
-/* line 5663, sass/_base.scss */
+/* line 6040, sass/_base.scss */
 .floating-box.contact-msg .contact .opens {
   margin-top: 4px;
 }
-/* line 5668, sass/_base.scss */
+/* line 6045, sass/_base.scss */
 .floating-box.contact-msg .form {
   float: right;
   width: 60%;
   padding-left: 5px;
   line-height: 1.4;
 }
-/* line 5674, sass/_base.scss */
+/* line 6051, sass/_base.scss */
 .floating-box.contact-msg .form .welcome {
   font-size: 1.2em;
 }
-/* line 5678, sass/_base.scss */
+/* line 6055, sass/_base.scss */
 .floating-box.contact-msg .form .clt {
   text-transform: uppercase;
   color: #d9d9d9;
   font-weight: bold;
 }
-/* line 5685, sass/_base.scss */
+/* line 6062, sass/_base.scss */
 .floating-box.contact-msg .form form button {
   background: #d9d9d9;
   color: white;
@@ -7469,7 +7850,7 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   -ms-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 5699, sass/_base.scss */
+/* line 6076, sass/_base.scss */
 .floating-box.contact-msg .form form input[type=text], .floating-box.contact-msg .form form input[type=email], .floating-box.contact-msg .form form textarea {
   padding: 4px;
   font-size: 0.8em;
@@ -7484,17 +7865,17 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 5710, sass/_base.scss */
+/* line 6087, sass/_base.scss */
 .floating-box.contact-msg .form form textarea {
   height: 50px;
 }
-/* line 5715, sass/_base.scss */
+/* line 6092, sass/_base.scss */
 .floating-box.contact-msg .form .phone {
   color: #d9d9d9;
   font-weight: bold;
   font-size: 1.45em;
 }
-/* line 5722, sass/_base.scss */
+/* line 6099, sass/_base.scss */
 .floating-box.contact-msg .exit {
   position: absolute;
   right: 5px;
@@ -7508,7 +7889,7 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   border-radius: 3px;
   padding: 3px;
 }
-/* line 5733, sass/_base.scss */
+/* line 6110, sass/_base.scss */
 .floating-box.contact-msg .labtext {
   background: #eeeeee;
   position: absolute;
@@ -7524,12 +7905,12 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   box-shadow: -5px -5px 15px -8px black;
   border-radius: 8px 8px 0 0;
 }
-/* line 5749, sass/_base.scss */
+/* line 6126, sass/_base.scss */
 .floating-box.contact-msg .labtext .text {
   font-weight: bold;
   color: #8a8a8a;
 }
-/* line 5753, sass/_base.scss */
+/* line 6130, sass/_base.scss */
 .floating-box.contact-msg .labtext .text .ico {
   padding: 5px 10px;
   background: #d9d9d9;
@@ -7538,32 +7919,32 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   border-radius: 8px 0 0 0;
 }
 
-/* line 5763, sass/_base.scss */
+/* line 6140, sass/_base.scss */
 .floating-box.contact-msg.opened {
   right: -1px;
 }
 
-/* line 5767, sass/_base.scss */
+/* line 6144, sass/_base.scss */
 .ep404 {
   text-align: center;
 }
-/* line 5770, sass/_base.scss */
+/* line 6147, sass/_base.scss */
 .ep404 table {
   margin: 0 auto;
 }
-/* line 5774, sass/_base.scss */
+/* line 6151, sass/_base.scss */
 .ep404 .code {
   font-family: "Roboto", sans-serif;
   color: #d9d9d9;
   font-size: 20em;
 }
-/* line 5780, sass/_base.scss */
+/* line 6157, sass/_base.scss */
 .ep404 .light {
   color: #bdbdbd;
   margin: 10px 0;
 }
 
-/* line 5786, sass/_base.scss */
+/* line 6163, sass/_base.scss */
 .payu-paidonly {
   background: orange;
   padding: 2px 4px;
@@ -7572,7 +7953,7 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   font-size: 0.9em;
 }
 
-/* line 5794, sass/_base.scss */
+/* line 6171, sass/_base.scss */
 .payu-paid-done {
   background: green;
   padding: 2px 4px;
@@ -7581,14 +7962,14 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   font-size: 0.9em;
 }
 
-/* line 5803, sass/_base.scss */
+/* line 6180, sass/_base.scss */
 .popupview .overlay {
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: 99999999;
 }
-/* line 5808, sass/_base.scss */
+/* line 6185, sass/_base.scss */
 .popupview .overlay .screen {
   margin: 0 auto;
   position: absolute;
@@ -7599,12 +7980,12 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   transform: translate(-50%, -50%);
 }
 
-/* line 5820, sass/_base.scss */
+/* line 6197, sass/_base.scss */
 .cetelemcalc {
   display: block;
   border: 10px solid #008000;
 }
-/* line 5824, sass/_base.scss */
+/* line 6201, sass/_base.scss */
 .cetelemcalc .head {
   color: white;
   text-shadow: none;
@@ -7614,7 +7995,7 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   font-size: 1.45em;
   font-weight: bold;
 }
-/* line 5833, sass/_base.scss */
+/* line 6210, sass/_base.scss */
 .cetelemcalc .head em {
   font-weight: normal;
   font-size: 0.6em;
@@ -7624,11 +8005,11 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   line-height: 1;
   margin-top: 8px;
 }
-/* line 5844, sass/_base.scss */
+/* line 6221, sass/_base.scss */
 .cetelemcalc .con {
   padding: 25px 0;
 }
-/* line 5847, sass/_base.scss */
+/* line 6224, sass/_base.scss */
 .cetelemcalc .con h2 {
   font-weight: bold;
   text-transform: uppercase;
@@ -7636,23 +8017,23 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   color: #EA5C07;
   font-size: 2.2em;
 }
-/* line 5856, sass/_base.scss */
+/* line 6233, sass/_base.scss */
 .cetelemcalc .no-accept-items {
   padding-left: 20px;
 }
-/* line 5858, sass/_base.scss */
+/* line 6235, sass/_base.scss */
 .cetelemcalc .no-accept-items .head {
   background: #d02f2f;
   padding: 15px;
   font-size: 1.2em;
 }
-/* line 5864, sass/_base.scss */
+/* line 6241, sass/_base.scss */
 .cetelemcalc .no-accept-items .ci {
   font-weight: bold;
   color: black;
   padding: 10px 0;
 }
-/* line 5869, sass/_base.scss */
+/* line 6246, sass/_base.scss */
 .cetelemcalc .no-accept-items .ci .ceexc {
   background: #fd7c7c;
   color: white;
@@ -7661,13 +8042,13 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   padding: 15px;
   margin: 10px;
 }
-/* line 5878, sass/_base.scss */
+/* line 6255, sass/_base.scss */
 .cetelemcalc .no-accept-items .ci .wo {
   font-size: 0.9em;
   font-weight: normal;
   font-style: italic;
 }
-/* line 5884, sass/_base.scss */
+/* line 6261, sass/_base.scss */
 .cetelemcalc .no-accept-items .ci h3.minprice {
   color: #008000;
   text-transform: uppercase;
@@ -7676,7 +8057,7 @@ input[type=email][required].ng-touched.ng-valid + span:before {
   margin: 4px 0;
 }
 
-/* line 5895, sass/_base.scss */
+/* line 6272, sass/_base.scss */
 a.cetelem-startrans {
   background: green;
   color: white;
@@ -7685,48 +8066,48 @@ a.cetelem-startrans {
   margin: 10px;
 }
 
-/* line 5903, sass/_base.scss */
+/* line 6280, sass/_base.scss */
 .cetelem-status {
   padding: 20px 10px;
   background: #B1D6B2;
   color: #1B751E;
 }
-/* line 5908, sass/_base.scss */
+/* line 6285, sass/_base.scss */
 .cetelem-status a {
   color: #1B751E;
   text-decoration: underline;
   font-style: italic;
 }
-/* line 5914, sass/_base.scss */
+/* line 6291, sass/_base.scss */
 .cetelem-status .status {
   padding: 5px;
   color: white;
 }
 
-/* line 5920, sass/_base.scss */
+/* line 6297, sass/_base.scss */
 .cetelem-transaction-view {
   background: #008000;
   color: #FFF;
 }
-/* line 5924, sass/_base.scss */
+/* line 6301, sass/_base.scss */
 .cetelem-transaction-view .head {
   background: #036303 !important;
   font-size: 1.8em !important;
   font-weight: bold;
   padding: 15px !important;
 }
-/* line 5930, sass/_base.scss */
+/* line 6307, sass/_base.scss */
 .cetelem-transaction-view .head .subline {
   font-size: 0.45em;
   margin-top: 8px;
   font-weight: normal;
 }
-/* line 5937, sass/_base.scss */
+/* line 6314, sass/_base.scss */
 .cetelem-transaction-view .con {
   padding: 15px;
   padding-top: 0;
 }
-/* line 5941, sass/_base.scss */
+/* line 6318, sass/_base.scss */
 .cetelem-transaction-view .con .whitebox {
   background: #fff;
   padding: 15px;
@@ -7737,7 +8118,7 @@ a.cetelem-startrans {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 5950, sass/_base.scss */
+/* line 6327, sass/_base.scss */
 .cetelem-transaction-view .con a.trans {
   background: orange;
   padding: 5px 10px;
@@ -7749,7 +8130,7 @@ a.cetelem-startrans {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 5961, sass/_base.scss */
+/* line 6338, sass/_base.scss */
 .cetelem-transaction-view .con .info {
   display: block;
   margin-top: 5px;
@@ -7758,7 +8139,7 @@ a.cetelem-startrans {
   color: #AABDAA;
   font-style: italic;
 }
-/* line 5971, sass/_base.scss */
+/* line 6348, sass/_base.scss */
 .cetelem-transaction-view .statusmsg {
   padding: 10px;
   margin-bottom: 15px;
@@ -7771,96 +8152,96 @@ a.cetelem-startrans {
   -ms-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 5981, sass/_base.scss */
+/* line 6358, sass/_base.scss */
 .cetelem-transaction-view .statusmsg.stat-timeout {
   background: #545454;
   color: white;
 }
-/* line 5986, sass/_base.scss */
+/* line 6363, sass/_base.scss */
 .cetelem-transaction-view .statusmsg.stat-inprogress {
   background: orange;
   color: white;
 }
-/* line 5992, sass/_base.scss */
+/* line 6369, sass/_base.scss */
 .cetelem-transaction-view .statusmsg.stat-cancel {
   background: #E05A25;
   color: white;
 }
-/* line 5996, sass/_base.scss */
+/* line 6373, sass/_base.scss */
 .cetelem-transaction-view .statusmsg.stat-done {
   background: #31CE31;
   color: white;
 }
-/* line 6002, sass/_base.scss */
+/* line 6379, sass/_base.scss */
 .cetelem-transaction-view .statusdesc {
   color: black;
   line-height: 1.4;
 }
-/* line 6006, sass/_base.scss */
+/* line 6383, sass/_base.scss */
 .cetelem-transaction-view .statusdesc h3 {
   display: block;
   margin-bottom: 10px;
 }
-/* line 6012, sass/_base.scss */
+/* line 6389, sass/_base.scss */
 .cetelem-transaction-view .statusipns {
   margin-top: 10px;
 }
-/* line 6015, sass/_base.scss */
+/* line 6392, sass/_base.scss */
 .cetelem-transaction-view .statusipns .divider {
   background: #077307;
 }
-/* line 6019, sass/_base.scss */
+/* line 6396, sass/_base.scss */
 .cetelem-transaction-view .statusipns div.e {
   margin: 18px 0;
 }
-/* line 6022, sass/_base.scss */
+/* line 6399, sass/_base.scss */
 .cetelem-transaction-view .statusipns div.e .statlabel {
   padding: 4px;
 }
-/* line 6026, sass/_base.scss */
+/* line 6403, sass/_base.scss */
 .cetelem-transaction-view .statusipns div.e .time {
   color: #89AD8A;
   font-size: 0.7em;
 }
 
-/* line 6034, sass/_base.scss */
+/* line 6411, sass/_base.scss */
 .subscribe {
   text-align: center;
 }
-/* line 6037, sass/_base.scss */
+/* line 6414, sass/_base.scss */
 .subscribe h1 + .subtitle {
   margin-top: 10px;
 }
-/* line 6040, sass/_base.scss */
+/* line 6417, sass/_base.scss */
 .subscribe .subs-form {
   text-align: center;
   margin: 20px auto;
   width: 500px;
 }
-/* line 6045, sass/_base.scss */
+/* line 6422, sass/_base.scss */
 .subscribe .subs-form label {
   margin: 0 0 10px 0;
   font-size: 1.1em;
   color: #d9d9d9;
 }
-/* line 6051, sass/_base.scss */
+/* line 6428, sass/_base.scss */
 .subscribe .subs-form input[type=text] {
   padding: 10px;
   font-size: 1.2em;
   color: #cc022e;
 }
-/* line 6057, sass/_base.scss */
+/* line 6434, sass/_base.scss */
 .subscribe .unsubscribe {
   margin: 15px 0 0 0;
   font-size: 1.2em;
 }
 
-/* line 6063, sass/_base.scss */
+/* line 6440, sass/_base.scss */
 .cetelem-credit {
   text-align: center;
 }
 
-/* line 6067, sass/_base.scss */
+/* line 6444, sass/_base.scss */
 .page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7868,18 +8249,18 @@ a.cetelem-startrans {
   flex-wrap: wrap;
   align-items: flex-start;
 }
-/* line 6074, sass/_base.scss */
+/* line 6451, sass/_base.scss */
 .page .side-menu {
   order: 2;
   flex-basis: 20%;
 }
-/* line 6078, sass/_base.scss */
+/* line 6455, sass/_base.scss */
 .page .responsive-view {
   order: 1;
   flex: 1;
   padding: 0 25px 0 0;
 }
-/* line 6084, sass/_base.scss */
+/* line 6461, sass/_base.scss */
 .page .image-set {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7888,55 +8269,55 @@ a.cetelem-startrans {
   align-items: center;
   margin: 25px -5px 0 -5px;
 }
-/* line 6093, sass/_base.scss */
+/* line 6470, sass/_base.scss */
 .page .image-set > .img {
   flex-basis: calc(100%/4);
   padding: 5px;
 }
-/* line 6097, sass/_base.scss */
+/* line 6474, sass/_base.scss */
 .page .image-set > .img img {
   max-width: 100%;
   width: 100%;
 }
-/* line 6105, sass/_base.scss */
+/* line 6482, sass/_base.scss */
 .page .page-view h1 {
   margin: 0 0 20px 0;
   font-weight: bold;
   font-size: 2.7em;
 }
-/* line 6111, sass/_base.scss */
+/* line 6488, sass/_base.scss */
 .page .page-view .content {
   line-height: 1.4;
 }
-/* line 6114, sass/_base.scss */
+/* line 6491, sass/_base.scss */
 .page .page-view .content p {
   margin: 10px 0 5px 0;
 }
 
-/* line 6121, sass/_base.scss */
+/* line 6498, sass/_base.scss */
 .cetelem-calc {
   font-size: 0.8em;
   padding: 5px;
   background: #F1F1F3;
   position: relative;
 }
-/* line 6127, sass/_base.scss */
+/* line 6504, sass/_base.scss */
 .cetelem-calc #preload {
   text-align: center;
   padding: 8px;
   color: black;
 }
-/* line 6132, sass/_base.scss */
+/* line 6509, sass/_base.scss */
 .cetelem-calc #preload i {
   font-size: 28px;
 }
-/* line 6137, sass/_base.scss */
+/* line 6514, sass/_base.scss */
 .cetelem-calc .error {
   text-align: center;
   color: red;
   padding: 10px;
 }
-/* line 6143, sass/_base.scss */
+/* line 6520, sass/_base.scss */
 .cetelem-calc #next, .cetelem-calc #prev {
   cursor: pointer;
   background: #85A774;
@@ -7947,27 +8328,27 @@ a.cetelem-startrans {
   bottom: 2px;
   z-index: 1;
 }
-/* line 6153, sass/_base.scss */
+/* line 6530, sass/_base.scss */
 .cetelem-calc #next:hover, .cetelem-calc #prev:hover {
   background: #3E9219;
 }
-/* line 6158, sass/_base.scss */
+/* line 6535, sass/_base.scss */
 .cetelem-calc #prev {
   left: 2px;
 }
-/* line 6162, sass/_base.scss */
+/* line 6539, sass/_base.scss */
 .cetelem-calc #next {
   right: 2px;
 }
-/* line 6167, sass/_base.scss */
+/* line 6544, sass/_base.scss */
 .cetelem-calc #results .result {
   display: none;
 }
-/* line 6171, sass/_base.scss */
+/* line 6548, sass/_base.scss */
 .cetelem-calc #results .result.active {
   display: block;
 }
-/* line 6175, sass/_base.scss */
+/* line 6552, sass/_base.scss */
 .cetelem-calc #results .constuction {
   float: right;
   font-weight: bold;
@@ -7977,40 +8358,40 @@ a.cetelem-startrans {
   margin-bottom: 5px;
   color: #309033;
 }
-/* line 6185, sass/_base.scss */
+/* line 6562, sass/_base.scss */
 .cetelem-calc #results .havi {
   font-style: italic;
   color: #727273;
   font-size: 0.8em;
 }
-/* line 6191, sass/_base.scss */
+/* line 6568, sass/_base.scss */
 .cetelem-calc #results .ownSharePrice {
   border-top: 1px solid #d7d7d7;
   padding-top: 5px;
   margin-top: 5px;
   font-size: 0.8em;
 }
-/* line 6197, sass/_base.scss */
+/* line 6574, sass/_base.scss */
 .cetelem-calc #results .ownSharePrice input {
   border: none;
   padding: 4px;
   width: 60px;
 }
-/* line 6203, sass/_base.scss */
+/* line 6580, sass/_base.scss */
 .cetelem-calc #results .ownSharePrice input + button {
   height: 21px;
   background: #DADADA;
   color: #848484;
   border: none;
 }
-/* line 6211, sass/_base.scss */
+/* line 6588, sass/_base.scss */
 .cetelem-calc #results .futamidok {
   text-align: center;
   margin-top: 8px;
   display: block;
   position: relative;
 }
-/* line 6220, sass/_base.scss */
+/* line 6597, sass/_base.scss */
 .cetelem-calc #results:after {
   content: "";
   background: url("//www.cp.autoradiokeret.web-pro.hu/src/images/src/images/cetelem_babu.png") no-repeat center;
@@ -8021,7 +8402,7 @@ a.cetelem-startrans {
   top: 21px;
 }
 
-/* line 6233, sass/_base.scss */
+/* line 6610, sass/_base.scss */
 .news-page .related-news h2.title {
   margin: 20px 0 35px 0;
   font-weight: bold;
@@ -8029,11 +8410,11 @@ a.cetelem-startrans {
   text-transform: uppercase;
   font-size: 1.8em;
 }
-/* line 6241, sass/_base.scss */
+/* line 6618, sass/_base.scss */
 .news-page .news-content {
   padding: 25px 0;
 }
-/* line 6244, sass/_base.scss */
+/* line 6621, sass/_base.scss */
 .news-page .news-content .head .subline {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8042,7 +8423,7 @@ a.cetelem-startrans {
   flex-wrap: wrap;
   margin: 20px 0 40px 0;
 }
-/* line 6253, sass/_base.scss */
+/* line 6630, sass/_base.scss */
 .news-page .news-content .head .subline .backurl a {
   border: 0.4px solid #acacac;
   padding: 0 5px;
@@ -8056,32 +8437,32 @@ a.cetelem-startrans {
   font-weight: bold;
   text-decoration: none;
 }
-/* line 6266, sass/_base.scss */
+/* line 6643, sass/_base.scss */
 .news-page .news-content .head .subline .backurl a:hover {
   background: #88c9f6;
   border: 0.4px solid #88c9f6;
   color: white;
 }
-/* line 6274, sass/_base.scss */
+/* line 6651, sass/_base.scss */
 .news-page .news-content .head .subline ul {
   margin: 0;
 }
-/* line 6278, sass/_base.scss */
+/* line 6655, sass/_base.scss */
 .news-page .news-content .head .subline > div {
   padding: 0 20px 0 0;
 }
-/* line 6284, sass/_base.scss */
+/* line 6661, sass/_base.scss */
 .news-page .news-content > .content {
   font-size: 1.2em;
   line-height: 1.5;
   margin: 0 0 50px 0;
 }
-/* line 6289, sass/_base.scss */
+/* line 6666, sass/_base.scss */
 .news-page .news-content > .content p {
   margin: 0 0 20px 0;
 }
 
-/* line 6296, sass/_base.scss */
+/* line 6673, sass/_base.scss */
 .news,
 .news-list {
   background: #f1f1f1;
@@ -8089,7 +8470,7 @@ a.cetelem-startrans {
   padding: 20px 0 50px 0;
   position: relative;
 }
-/* line 6302, sass/_base.scss */
+/* line 6679, sass/_base.scss */
 .news .slick-dots,
 .news-list .slick-dots {
   position: absolute;
@@ -8099,7 +8480,7 @@ a.cetelem-startrans {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-/* line 6310, sass/_base.scss */
+/* line 6687, sass/_base.scss */
 .news .slick-dots > li,
 .news-list .slick-dots > li {
   display: inline-block;
@@ -8108,7 +8489,7 @@ a.cetelem-startrans {
   vertical-align: middle;
   padding: 0 4px;
 }
-/* line 6317, sass/_base.scss */
+/* line 6694, sass/_base.scss */
 .news .slick-dots > li > button,
 .news-list .slick-dots > li > button {
   position: relative;
@@ -8116,7 +8497,7 @@ a.cetelem-startrans {
   border: none;
   text-indent: -9999px;
 }
-/* line 6322, sass/_base.scss */
+/* line 6699, sass/_base.scss */
 .news .slick-dots > li > button:after,
 .news-list .slick-dots > li > button:after {
   font-family: 'FontAwesome';
@@ -8133,13 +8514,13 @@ a.cetelem-startrans {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-/* line 6341, sass/_base.scss */
+/* line 6718, sass/_base.scss */
 .news .slick-dots > li.slick-active > button:after,
 .news-list .slick-dots > li.slick-active > button:after {
   content: "\f111";
   color: #666666;
 }
-/* line 6350, sass/_base.scss */
+/* line 6727, sass/_base.scss */
 .news .slick-arrow,
 .news-list .slick-arrow {
   position: absolute;
@@ -8153,7 +8534,7 @@ a.cetelem-startrans {
   z-index: 2;
   border: 0.4px solid #88c9f6;
 }
-/* line 6362, sass/_base.scss */
+/* line 6739, sass/_base.scss */
 .news .slick-arrow:after,
 .news-list .slick-arrow:after {
   font-family: 'FontAwesome';
@@ -8169,55 +8550,55 @@ a.cetelem-startrans {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-/* line 6377, sass/_base.scss */
+/* line 6754, sass/_base.scss */
 .news .slick-arrow.slick-prev,
 .news-list .slick-arrow.slick-prev {
   right: 43px;
 }
-/* line 6379, sass/_base.scss */
+/* line 6756, sass/_base.scss */
 .news .slick-arrow.slick-prev:after,
 .news-list .slick-arrow.slick-prev:after {
   content: "\f104";
 }
-/* line 6383, sass/_base.scss */
+/* line 6760, sass/_base.scss */
 .news .slick-arrow.slick-next,
 .news-list .slick-arrow.slick-next {
   right: 15px;
 }
-/* line 6385, sass/_base.scss */
+/* line 6762, sass/_base.scss */
 .news .slick-arrow.slick-next:after,
 .news-list .slick-arrow.slick-next:after {
   content: "\f105";
 }
-/* line 6390, sass/_base.scss */
+/* line 6767, sass/_base.scss */
 .news .slick-arrow:hover,
 .news-list .slick-arrow:hover {
   background: #88c9f6;
   color: white;
 }
-/* line 6394, sass/_base.scss */
+/* line 6771, sass/_base.scss */
 .news .slick-arrow:hover:after,
 .news-list .slick-arrow:hover:after {
   color: white;
 }
-/* line 6400, sass/_base.scss */
+/* line 6777, sass/_base.scss */
 .news .articles,
 .news-list .articles {
   margin: 0 -15px;
 }
-/* line 6402, sass/_base.scss */
+/* line 6779, sass/_base.scss */
 .news .articles article,
 .news-list .articles article {
   padding: 0 15px;
 }
-/* line 6405, sass/_base.scss */
+/* line 6782, sass/_base.scss */
 .news .articles article > .wrapper,
 .news-list .articles article > .wrapper {
   padding: 0.5px;
   background: white;
   border: 0.5px solid #d9d9d9;
 }
-/* line 6410, sass/_base.scss */
+/* line 6787, sass/_base.scss */
 .news .articles article > .wrapper .img,
 .news-list .articles article > .wrapper .img {
   height: 220px;
@@ -8226,7 +8607,7 @@ a.cetelem-startrans {
   border-bottom: 0.5px solid #d9d9d9;
   background: white;
 }
-/* line 6416, sass/_base.scss */
+/* line 6793, sass/_base.scss */
 .news .articles article > .wrapper .img img,
 .news-list .articles article > .wrapper .img img {
   position: absolute;
@@ -8236,14 +8617,14 @@ a.cetelem-startrans {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-/* line 6426, sass/_base.scss */
+/* line 6803, sass/_base.scss */
 .news .articles article > .wrapper .title,
 .news-list .articles article > .wrapper .title {
   height: 50px;
   position: relative;
   margin: 10px 0;
 }
-/* line 6431, sass/_base.scss */
+/* line 6808, sass/_base.scss */
 .news .articles article > .wrapper .title h2,
 .news-list .articles article > .wrapper .title h2 {
   position: absolute;
@@ -8252,7 +8633,7 @@ a.cetelem-startrans {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 6440, sass/_base.scss */
+/* line 6817, sass/_base.scss */
 .news .articles article > .wrapper h2,
 .news-list .articles article > .wrapper h2 {
   text-align: center;
@@ -8260,13 +8641,13 @@ a.cetelem-startrans {
   margin: 0;
   padding: 0 10px;
 }
-/* line 6446, sass/_base.scss */
+/* line 6823, sass/_base.scss */
 .news .articles article > .wrapper h2 a,
 .news-list .articles article > .wrapper h2 a {
   color: #6e6e6e;
   text-decoration: none;
 }
-/* line 6452, sass/_base.scss */
+/* line 6829, sass/_base.scss */
 .news .articles article > .wrapper .content,
 .news-list .articles article > .wrapper .content {
   padding: 0 10px;
@@ -8277,7 +8658,7 @@ a.cetelem-startrans {
   overflow: hidden;
   position: relative;
 }
-/* line 6461, sass/_base.scss */
+/* line 6838, sass/_base.scss */
 .news .articles article > .wrapper .content:after,
 .news-list .articles article > .wrapper .content:after {
   content: "";
@@ -8296,13 +8677,13 @@ a.cetelem-startrans {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
   /* IE6-9 */
 }
-/* line 6476, sass/_base.scss */
+/* line 6853, sass/_base.scss */
 .news .articles article > .wrapper .more,
 .news-list .articles article > .wrapper .more {
   text-align: center;
   padding: 15px 10px 25px 10px;
 }
-/* line 6480, sass/_base.scss */
+/* line 6857, sass/_base.scss */
 .news .articles article > .wrapper .more a,
 .news-list .articles article > .wrapper .more a {
   padding: 10px 15px;
@@ -8314,29 +8695,29 @@ a.cetelem-startrans {
   border-radius: 3px;
   background: #6e6e6e;
 }
-/* line 6495, sass/_base.scss */
+/* line 6872, sass/_base.scss */
 .news .articles article.no-img > .wrapper .img img,
 .news-list .articles article.no-img > .wrapper .img img {
   width: auto;
   height: 100%;
 }
-/* line 6506, sass/_base.scss */
+/* line 6883, sass/_base.scss */
 .news .articles article:hover > .wrapper .more a,
 .news-list .articles article:hover > .wrapper .more a {
   background: #88c9f6;
 }
 
-/* line 6516, sass/_base.scss */
+/* line 6893, sass/_base.scss */
 .news-list {
   border-top: none;
 }
-/* line 6518, sass/_base.scss */
+/* line 6895, sass/_base.scss */
 .news-list h1 {
   text-align: center;
   margin: 20px 0 40px 0;
   padding: 0 15px;
 }
-/* line 6523, sass/_base.scss */
+/* line 6900, sass/_base.scss */
 .news-list .articles {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8344,41 +8725,41 @@ a.cetelem-startrans {
   flex-wrap: wrap;
   align-items: flex-start;
 }
-/* line 6530, sass/_base.scss */
+/* line 6907, sass/_base.scss */
 .news-list .articles > article {
   padding: 15px;
   flex-basis: calc(100% / 3);
 }
 
-/* line 6539, sass/_base.scss */
+/* line 6916, sass/_base.scss */
 body.homepage footer,
 body.article footer {
   margin-top: 0;
 }
 
-/* line 6545, sass/_base.scss */
+/* line 6922, sass/_base.scss */
 body.article .site-container {
   background: white;
   padding: 0;
 }
-/* line 6549, sass/_base.scss */
+/* line 6926, sass/_base.scss */
 body.article .website {
   width: 100%;
 }
 
-/* line 6555, sass/_base.scss */
+/* line 6932, sass/_base.scss */
 body.product-page .website {
   width: 100%;
 }
-/* line 6559, sass/_base.scss */
+/* line 6936, sass/_base.scss */
 body.product-page footer {
   margin-top: 0;
 }
-/* line 6562, sass/_base.scss */
+/* line 6939, sass/_base.scss */
 body.product-page header .bottom > .pw > .flex {
   padding-left: 0;
 }
-/* line 6566, sass/_base.scss */
+/* line 6943, sass/_base.scss */
 body.product-page .nav.nav-fix {
   flex: 1;
 }

@@ -7,6 +7,8 @@ class termek extends Controller{
 			parent::__construct();
 			$title = '';
 
+			$this->out('bodyclass', 'product-page');
+
 			$products = new Products( array(
 				'db' => $this->db,
 				'user' => $this->User->get()
