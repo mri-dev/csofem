@@ -119,6 +119,20 @@
 								</div>
 							</div>
 							<div class="row">
+								<div class="col-md-12">
+									<label for="">Termék besorolása</label>
+									<br><br>
+									<div class="" style="font-size: 1.6rem;">
+										<strong title="MAIN GROUP"><?=$this->termek['crm']['MAIN_GROUP_NAME']?></strong>
+										<?php if ($this->termek['crm']['MAIN_SUB_NAME']): ?>
+										/ 	<strong title="SUB GROUP"><?=$this->termek['crm']['MAIN_SUB_NAME']?></strong>
+										<?php endif; ?>
+										<?php if ($this->termek['crm']['MAIN_ELEMENT_NAME']): ?>
+										/ 	<strong title="ELEMENT GROUP"><?=$this->termek['crm']['MAIN_ELEMENT_NAME']?></strong>
+										<?php endif; ?>
+									</div>
+									<br>
+								</div>
 								<div class="col-md-8">
 									<input type="hidden" name="crm[prod_id]" value="<?=$this->termek[crm][prod_id]?>" class="form-control">
 									<label for="crm_termek_nev">Termék neve</label>
@@ -765,4 +779,4 @@
 	}
 </script>
 <? endif; ?>
-<pre><? //print_r($this->termek); ?></pre>
+<pre><? print_r($this->termek); ?></pre>

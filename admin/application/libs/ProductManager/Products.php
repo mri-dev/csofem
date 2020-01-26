@@ -1756,7 +1756,16 @@ class Products
 
 	public function getFullCRMItemData( $origin, $id )
 	{
-		$data = $this->db->squery("SELECT * FROM xml_temp_products as t WHERE t.ID = :id", array('id' => $id));
+		$data = $this->db->squery("SELECT
+			t.*,
+			agm.name as MAIN_GROUP_NAME,
+			ags.name as MAIN_SUB_NAME,
+			age.name as MAIN_ELEMENT_NAME
+		FROM xml_temp_products as t
+		LEFT OUTER JOIN ARTICLE_MAIN_GROUPS as agm ON agm.ID = t.MAIN_GROUP_ID
+		LEFT OUTER JOIN ARTICLE_SUB_GROUPS as ags ON ags.ID = t.SUB_GROUP_ID
+		LEFT OUTER JOIN ARTICLE_ELEMENT_GROUPS as age ON age.ID = t.ELEMENT_GROUP_ID
+		WHERE t.ID = :id", array('id' => $id));
 
 		if ($data->rowCount() == 0) {
 			return array();

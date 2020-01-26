@@ -1,6 +1,7 @@
 <?
 use ProductManager\Products;
 use Applications\XMLParser;
+use Applications\IrodaplusImport;
 
 class app extends Controller{
 		function __construct(){
@@ -21,6 +22,39 @@ class app extends Controller{
 			$SEO .= $this->view->addOG('site_name',TITLE);
 
 			$this->view->SEOSERVICE = $SEO;
+		}
+
+		function importToTermekek($value='')
+		{
+			if (!isset($_GET['key']) && $_GET['key'] != '3431738ras5d6532xr5s632r728s7234') {
+				header('HTTP/1.0 403 Forbidden');
+				exit;
+			}
+
+			$irodaplus = new IrodaplusImport(array('db' => $this->db));
+			$irodaplus->importToTermekek();
+		}
+
+		// https://www.csofem.web-pro.hu/app/ip_sync?key=3431738ras5d6532xr5s632r728s7234
+		function ip_sync()
+		{
+			if (!isset($_GET['key']) && $_GET['key'] != '3431738ras5d6532xr5s632r728s7234') {
+				header('HTTP/1.0 403 Forbidden');
+				exit;
+			}
+			$irodaplus = new IrodaplusImport(array('db' => $this->db));
+
+			// Termék csoportok letöltése - KÉSZ
+			$irodaplus->syncGroups();
+
+			// Termékek betöltése - KÉSZ
+			$irodaplus->syncArticles();
+
+			// Készlet szinkron - Kész
+			$irodaplus->syncStock();
+
+			// Termékek frissítése a shop-ban - KÉSZ
+			$irodaplus->importToTermekek();
 		}
 
 		function test()
