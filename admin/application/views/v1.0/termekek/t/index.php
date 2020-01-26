@@ -779,4 +779,4 @@
 	}
 </script>
 <? endif; ?>
-<pre><? print_r($this->termek); ?></pre>
+<pre><? //print_r($this->termek); ?></pre>
